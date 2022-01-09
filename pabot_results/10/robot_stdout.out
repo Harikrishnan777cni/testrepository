@@ -1,0 +1,53 @@
+==============================================================================
+TestCases                                                                     
+==============================================================================
+TestCases.Login                                                               
+==============================================================================
+TestCases.Login.Logintest                                                     
+==============================================================================
+LoginTest                                                             23
+sign out
+Images
+Browse, search and organise images.
+Images - Touch UI
+Browse, search and organise images using Touch UI.
+Publications
+Browse and search titles, layouts and pages.
+Content creators contracts
+Browse and manage content creators contracts.
+Videos
+Video assets from Conde Nast Markets.
+Syndication after publication
+Manage syndication requests for content already published.
+Syndication before publication
+Manage syndication requests for content not yet published.
+Fashion Shows
+Browse content sent from the runways.
+Fashion Shows - Touch UI
+Browse content sent from the runways using Touch UI.
+Inbox
+Manage your inbox items.
+
+
+
+
+
+
+
+
+
+
+
+
+| PASS |
+------------------------------------------------------------------------------
+TestCases.Login.Logintest                                             | PASS |
+1 test, 1 passed, 0 failed
+==============================================================================
+TestCases.Login                                                       | PASS |
+1 test, 1 passed, 0 failed
+==============================================================================
+TestCases                                                             | PASS |
+1 test, 1 passed, 0 failed
+==============================================================================
+Output:  /Users/hsreekum/PycharmProjects/DAMrobotAutomationframeworktwo/pabot_results/10/output.xml

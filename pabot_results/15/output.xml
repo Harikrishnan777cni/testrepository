@@ -1,0 +1,935 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 4.0.3 (Python 3.9.5 on darwin)" generated="20210719 10:22:41.612" rpa="false" schemaversion="2">
+<suite id="s1" name="TestCases" source="/Users/hsreekum/PycharmProjects/DAMrobotAutomationframeworktwo/TestCases">
+<suite id="s1-s1" name="Searchtests" source="/Users/hsreekum/PycharmProjects/DAMrobotAutomationframeworktwo/TestCases/Searchtests">
+<suite id="s1-s1-s1" name="Publicationsearch" source="/Users/hsreekum/PycharmProjects/DAMrobotAutomationframeworktwo/TestCases/Searchtests/Publicationsearch.robot">
+<test id="s1-s1-s1-t1" name="Publicationsearchwithcsv using harikrishnan.sreekumaran@condenast.com and Mondaytuesday2021!">
+<kw name="Start TestCase" library="CommonFunctionality" type="SETUP">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>https://google.com</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20210719 10:22:41.925" level="INFO">Opening browser 'chrome' to base url 'https://google.com'.</msg>
+<status status="PASS" starttime="20210719 10:22:41.925" endtime="20210719 10:22:45.452"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20210719 10:22:45.454" endtime="20210719 10:22:45.592"/>
+</kw>
+<status status="PASS" starttime="20210719 10:22:41.924" endtime="20210719 10:22:45.593"/>
+</kw>
+<kw name="Publicationsearchtest">
+<arg>https://emea-staging.cnidam.com</arg>
+<arg>harikrishnan.sreekumaran@condenast.com</arg>
+<arg>Mondaytuesday2021!</arg>
+<arg>globaladmin</arg>
+<arg>hayden</arg>
+<tag>Smoke</tag>
+<kw name="Open my url" library="LoginKeywords">
+<arg>${SiteUrl}</arg>
+<kw name="Go To" library="SeleniumLibrary">
+<arg>${SiteUrl}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20210719 10:22:45.596" level="INFO">Opening url 'https://emea-staging.cnidam.com'</msg>
+<status status="PASS" starttime="20210719 10:22:45.596" endtime="20210719 10:22:48.227"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20210719 10:22:48.228" endtime="20210719 10:22:48.367"/>
+</kw>
+<status status="PASS" starttime="20210719 10:22:45.595" endtime="20210719 10:22:48.368"/>
+</kw>
+<kw name="Enter UserName" library="LoginKeywords">
+<arg>${username}</arg>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>${txt_loginUserName_lctr}</arg>
+<arg>timeout=30s</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20210719 10:22:48.369" endtime="20210719 10:22:48.378"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${txt_loginUserName_lctr}</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20210719 10:22:48.379" level="INFO">Typing text 'harikrishnan.sreekumaran@condenast.com' into text field 'id:idp-discovery-username'.</msg>
+<status status="PASS" starttime="20210719 10:22:48.379" endtime="20210719 10:22:48.513"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>${submitbutton_lctr}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20210719 10:22:48.514" level="INFO">Clicking button 'id:idp-discovery-submit'.</msg>
+<status status="PASS" starttime="20210719 10:22:48.514" endtime="20210719 10:22:48.563"/>
+</kw>
+<status status="PASS" starttime="20210719 10:22:48.368" endtime="20210719 10:22:48.564"/>
+</kw>
+<kw name="Enter Password" library="LoginKeywords">
+<arg>${password}</arg>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>${txt_loginps_lctr}</arg>
+<arg>timeout=30s</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20210719 10:22:48.565" endtime="20210719 10:22:50.725"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${txt_loginps_lctr}</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20210719 10:22:50.727" level="INFO">Typing text 'Mondaytuesday2021!' into text field 'class:password-with-toggle'.</msg>
+<status status="PASS" starttime="20210719 10:22:50.726" endtime="20210719 10:22:50.833"/>
+</kw>
+<status status="PASS" starttime="20210719 10:22:48.564" endtime="20210719 10:22:50.836"/>
+</kw>
+<kw name="Click Verify" library="LoginKeywords">
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>${txt_verify_lctr}</arg>
+<arg>timeout=30s</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20210719 10:22:50.838" endtime="20210719 10:22:50.856"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>${txt_verify_lctr}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20210719 10:22:50.858" level="INFO">Clicking button 'css:input[class='button button-primary']'.</msg>
+<status status="PASS" starttime="20210719 10:22:50.857" endtime="20210719 10:22:50.922"/>
+</kw>
+<status status="PASS" starttime="20210719 10:22:50.837" endtime="20210719 10:22:50.924"/>
+</kw>
+<kw name="Check welcomemessage" library="LoginKeywords">
+<arg>${username}</arg>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>${welcomemessage_lctr}</arg>
+<arg>timeout=30s</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20210719 10:22:50.926" endtime="20210719 10:22:54.008"/>
+</kw>
+<kw name="Element Should Contain" library="SeleniumLibrary">
+<arg>${welcomemessage_lctr}</arg>
+<arg>${usernameinput}</arg>
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<msg timestamp="20210719 10:22:54.023" level="INFO">Element 'xpath://div[@id='welcome-message']' contains text 'harikrishnan.sreekumaran@condenast.com'.</msg>
+<status status="PASS" starttime="20210719 10:22:54.008" endtime="20210719 10:22:54.023"/>
+</kw>
+<status status="PASS" starttime="20210719 10:22:50.925" endtime="20210719 10:22:54.024"/>
+</kw>
+<kw name="Get Title" library="SeleniumLibrary">
+<var>${act_title}</var>
+<doc>Returns the title of the current page.</doc>
+<msg timestamp="20210719 10:22:54.029" level="INFO">${act_title} = Staging EMEA | Welcome to AEM</msg>
+<status status="PASS" starttime="20210719 10:22:54.025" endtime="20210719 10:22:54.029"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>'${act_title}' == '${expectedpagetitle_emea}' and '${SiteUrl}' == '${expectedsiteurl_emea}' or '${act_title}' == '${expectedpagetitle_apac}' and '${SiteUrl}' == '${expectedsiteurl_apac}'</arg>
+<arg>Verify successful login</arg>
+<arg>ELSE</arg>
+<arg>Verify unsuccessful login</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<kw name="Verify successful login" library="LoginKeywords">
+<kw name="Log" library="BuiltIn">
+<arg>**********Login test is passed**********</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20210719 10:22:54.031" level="INFO">**********Login test is passed**********</msg>
+<status status="PASS" starttime="20210719 10:22:54.031" endtime="20210719 10:22:54.031"/>
+</kw>
+<kw name="Log Title" library="SeleniumLibrary">
+<doc>Logs and returns the title of the current page.</doc>
+<msg timestamp="20210719 10:22:54.035" level="INFO">Staging EMEA | Welcome to AEM</msg>
+<status status="PASS" starttime="20210719 10:22:54.032" endtime="20210719 10:22:54.035"/>
+</kw>
+<status status="PASS" starttime="20210719 10:22:54.031" endtime="20210719 10:22:54.036"/>
+</kw>
+<status status="PASS" starttime="20210719 10:22:54.030" endtime="20210719 10:22:54.037"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>'${userrole}' == 'piced' or '${userrole}' == 'ebt'</arg>
+<arg>Welcomepagetabscheck_ebtorpiced</arg>
+<arg>ELSE</arg>
+<arg>Welcomepagetabscheck_globaladmin</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<kw name="Welcomepagetabscheck_globaladmin" library="LoginKeywords">
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>${tabcontent_lctr}</arg>
+<arg>timeout=30s</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20210719 10:22:54.038" endtime="20210719 10:22:54.047"/>
+</kw>
+<kw name="Get Element Count" library="SeleniumLibrary">
+<var>${AllTabsCount}</var>
+<arg>${tabcontent_lctr}</arg>
+<doc>Returns the number of elements matching ``locator``.</doc>
+<msg timestamp="20210719 10:22:54.055" level="INFO">${AllTabsCount} = 13</msg>
+<status status="PASS" starttime="20210719 10:22:54.048" endtime="20210719 10:22:54.055"/>
+</kw>
+<kw name="Get WebElements" library="SeleniumLibrary">
+<var>@{TabItems}</var>
+<arg>${tabcontent_lctr}</arg>
+<doc>Returns a list of WebElement objects matching the ``locator``.</doc>
+<msg timestamp="20210719 10:22:54.062" level="INFO">@{TabItems} = [ &lt;selenium.webdriver.remote.webelement.WebElement (session="589faf0d942fc22f875bbe99d08a3afd", element="e3ac8955-f747-46b1-afb7-66902145f15f")&gt; | &lt;selenium.webdriver.remote.webelement.WebElement (ses...</msg>
+<status status="PASS" starttime="20210719 10:22:54.056" endtime="20210719 10:22:54.062"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>${AllTabsCount}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20210719 10:22:54.063" level="INFO">13</msg>
+<status status="PASS" starttime="20210719 10:22:54.063" endtime="20210719 10:22:54.063"/>
+</kw>
+<for flavor="IN RANGE">
+<var>${i}</var>
+<value>0</value>
+<value>${${AllTabsCount}}</value>
+<iter>
+<var name="${i}">0</var>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${TabText}</var>
+<arg>${TabItems}[${i}]</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20210719 10:22:54.078" level="INFO">${TabText} = Images</msg>
+<status status="PASS" starttime="20210719 10:22:54.068" endtime="20210719 10:22:54.078"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>${TabText}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20210719 10:22:54.080" level="INFO">Images</msg>
+<status status="PASS" starttime="20210719 10:22:54.079" endtime="20210719 10:22:54.080"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>${welcomepagetabs_globaladmin}[${i}]</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20210719 10:22:54.081" level="INFO">Images</msg>
+<status status="PASS" starttime="20210719 10:22:54.081" endtime="20210719 10:22:54.081"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>'${welcomepagetabs_globaladmin}[${i}]' == '${TabText}'</arg>
+<arg>Log</arg>
+<arg>pass</arg>
+<arg>ELSE</arg>
+<arg>FAIL</arg>
+<arg>***Title mismatch***</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<kw name="Log" library="BuiltIn">
+<arg>pass</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20210719 10:22:54.083" level="INFO">pass</msg>
+<status status="PASS" starttime="20210719 10:22:54.083" endtime="20210719 10:22:54.083"/>
+</kw>
+<status status="PASS" starttime="20210719 10:22:54.082" endtime="20210719 10:22:54.084"/>
+</kw>
+<status status="PASS" starttime="20210719 10:22:54.067" endtime="20210719 10:22:54.084"/>
+</iter>
+<iter>
+<var name="${i}">1</var>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${TabText}</var>
+<arg>${TabItems}[${i}]</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20210719 10:22:54.095" level="INFO">${TabText} = Images - Touch UI</msg>
+<status status="PASS" starttime="20210719 10:22:54.085" endtime="20210719 10:22:54.095"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>${TabText}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20210719 10:22:54.096" level="INFO">Images - Touch UI</msg>
+<status status="PASS" starttime="20210719 10:22:54.096" endtime="20210719 10:22:54.096"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>${welcomepagetabs_globaladmin}[${i}]</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20210719 10:22:54.097" level="INFO">Images - Touch UI</msg>
+<status status="PASS" starttime="20210719 10:22:54.097" endtime="20210719 10:22:54.097"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>'${welcomepagetabs_globaladmin}[${i}]' == '${TabText}'</arg>
+<arg>Log</arg>
+<arg>pass</arg>
+<arg>ELSE</arg>
+<arg>FAIL</arg>
+<arg>***Title mismatch***</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<kw name="Log" library="BuiltIn">
+<arg>pass</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20210719 10:22:54.099" level="INFO">pass</msg>
+<status status="PASS" starttime="20210719 10:22:54.099" endtime="20210719 10:22:54.099"/>
+</kw>
+<status status="PASS" starttime="20210719 10:22:54.098" endtime="20210719 10:22:54.100"/>
+</kw>
+<status status="PASS" starttime="20210719 10:22:54.085" endtime="20210719 10:22:54.100"/>
+</iter>
+<iter>
+<var name="${i}">2</var>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${TabText}</var>
+<arg>${TabItems}[${i}]</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20210719 10:22:54.110" level="INFO">${TabText} = Publications</msg>
+<status status="PASS" starttime="20210719 10:22:54.101" endtime="20210719 10:22:54.110"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>${TabText}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20210719 10:22:54.111" level="INFO">Publications</msg>
+<status status="PASS" starttime="20210719 10:22:54.111" endtime="20210719 10:22:54.111"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>${welcomepagetabs_globaladmin}[${i}]</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20210719 10:22:54.113" level="INFO">Publications</msg>
+<status status="PASS" starttime="20210719 10:22:54.112" endtime="20210719 10:22:54.113"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>'${welcomepagetabs_globaladmin}[${i}]' == '${TabText}'</arg>
+<arg>Log</arg>
+<arg>pass</arg>
+<arg>ELSE</arg>
+<arg>FAIL</arg>
+<arg>***Title mismatch***</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<kw name="Log" library="BuiltIn">
+<arg>pass</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20210719 10:22:54.114" level="INFO">pass</msg>
+<status status="PASS" starttime="20210719 10:22:54.114" endtime="20210719 10:22:54.114"/>
+</kw>
+<status status="PASS" starttime="20210719 10:22:54.113" endtime="20210719 10:22:54.115"/>
+</kw>
+<status status="PASS" starttime="20210719 10:22:54.100" endtime="20210719 10:22:54.115"/>
+</iter>
+<iter>
+<var name="${i}">3</var>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${TabText}</var>
+<arg>${TabItems}[${i}]</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20210719 10:22:54.126" level="INFO">${TabText} = Content creators contracts</msg>
+<status status="PASS" starttime="20210719 10:22:54.116" endtime="20210719 10:22:54.126"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>${TabText}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20210719 10:22:54.127" level="INFO">Content creators contracts</msg>
+<status status="PASS" starttime="20210719 10:22:54.127" endtime="20210719 10:22:54.127"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>${welcomepagetabs_globaladmin}[${i}]</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20210719 10:22:54.128" level="INFO">Content creators contracts</msg>
+<status status="PASS" starttime="20210719 10:22:54.128" endtime="20210719 10:22:54.128"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>'${welcomepagetabs_globaladmin}[${i}]' == '${TabText}'</arg>
+<arg>Log</arg>
+<arg>pass</arg>
+<arg>ELSE</arg>
+<arg>FAIL</arg>
+<arg>***Title mismatch***</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<kw name="Log" library="BuiltIn">
+<arg>pass</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20210719 10:22:54.130" level="INFO">pass</msg>
+<status status="PASS" starttime="20210719 10:22:54.129" endtime="20210719 10:22:54.130"/>
+</kw>
+<status status="PASS" starttime="20210719 10:22:54.129" endtime="20210719 10:22:54.130"/>
+</kw>
+<status status="PASS" starttime="20210719 10:22:54.116" endtime="20210719 10:22:54.131"/>
+</iter>
+<iter>
+<var name="${i}">4</var>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${TabText}</var>
+<arg>${TabItems}[${i}]</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20210719 10:22:54.141" level="INFO">${TabText} = Videos</msg>
+<status status="PASS" starttime="20210719 10:22:54.131" endtime="20210719 10:22:54.141"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>${TabText}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20210719 10:22:54.143" level="INFO">Videos</msg>
+<status status="PASS" starttime="20210719 10:22:54.142" endtime="20210719 10:22:54.143"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>${welcomepagetabs_globaladmin}[${i}]</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20210719 10:22:54.144" level="INFO">Videos</msg>
+<status status="PASS" starttime="20210719 10:22:54.143" endtime="20210719 10:22:54.144"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>'${welcomepagetabs_globaladmin}[${i}]' == '${TabText}'</arg>
+<arg>Log</arg>
+<arg>pass</arg>
+<arg>ELSE</arg>
+<arg>FAIL</arg>
+<arg>***Title mismatch***</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<kw name="Log" library="BuiltIn">
+<arg>pass</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20210719 10:22:54.145" level="INFO">pass</msg>
+<status status="PASS" starttime="20210719 10:22:54.145" endtime="20210719 10:22:54.145"/>
+</kw>
+<status status="PASS" starttime="20210719 10:22:54.144" endtime="20210719 10:22:54.146"/>
+</kw>
+<status status="PASS" starttime="20210719 10:22:54.131" endtime="20210719 10:22:54.146"/>
+</iter>
+<iter>
+<var name="${i}">5</var>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${TabText}</var>
+<arg>${TabItems}[${i}]</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20210719 10:22:54.156" level="INFO">${TabText} = Syndication after publication</msg>
+<status status="PASS" starttime="20210719 10:22:54.147" endtime="20210719 10:22:54.156"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>${TabText}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20210719 10:22:54.157" level="INFO">Syndication after publication</msg>
+<status status="PASS" starttime="20210719 10:22:54.157" endtime="20210719 10:22:54.157"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>${welcomepagetabs_globaladmin}[${i}]</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20210719 10:22:54.158" level="INFO">Syndication after publication</msg>
+<status status="PASS" starttime="20210719 10:22:54.158" endtime="20210719 10:22:54.159"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>'${welcomepagetabs_globaladmin}[${i}]' == '${TabText}'</arg>
+<arg>Log</arg>
+<arg>pass</arg>
+<arg>ELSE</arg>
+<arg>FAIL</arg>
+<arg>***Title mismatch***</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<kw name="Log" library="BuiltIn">
+<arg>pass</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20210719 10:22:54.160" level="INFO">pass</msg>
+<status status="PASS" starttime="20210719 10:22:54.160" endtime="20210719 10:22:54.160"/>
+</kw>
+<status status="PASS" starttime="20210719 10:22:54.159" endtime="20210719 10:22:54.161"/>
+</kw>
+<status status="PASS" starttime="20210719 10:22:54.146" endtime="20210719 10:22:54.161"/>
+</iter>
+<iter>
+<var name="${i}">6</var>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${TabText}</var>
+<arg>${TabItems}[${i}]</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20210719 10:22:54.171" level="INFO">${TabText} = Syndication before publication</msg>
+<status status="PASS" starttime="20210719 10:22:54.162" endtime="20210719 10:22:54.172"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>${TabText}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20210719 10:22:54.173" level="INFO">Syndication before publication</msg>
+<status status="PASS" starttime="20210719 10:22:54.172" endtime="20210719 10:22:54.173"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>${welcomepagetabs_globaladmin}[${i}]</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20210719 10:22:54.174" level="INFO">Syndication before publication</msg>
+<status status="PASS" starttime="20210719 10:22:54.174" endtime="20210719 10:22:54.174"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>'${welcomepagetabs_globaladmin}[${i}]' == '${TabText}'</arg>
+<arg>Log</arg>
+<arg>pass</arg>
+<arg>ELSE</arg>
+<arg>FAIL</arg>
+<arg>***Title mismatch***</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<kw name="Log" library="BuiltIn">
+<arg>pass</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20210719 10:22:54.175" level="INFO">pass</msg>
+<status status="PASS" starttime="20210719 10:22:54.175" endtime="20210719 10:22:54.176"/>
+</kw>
+<status status="PASS" starttime="20210719 10:22:54.175" endtime="20210719 10:22:54.176"/>
+</kw>
+<status status="PASS" starttime="20210719 10:22:54.161" endtime="20210719 10:22:54.176"/>
+</iter>
+<iter>
+<var name="${i}">7</var>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${TabText}</var>
+<arg>${TabItems}[${i}]</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20210719 10:22:54.187" level="INFO">${TabText} = Fashion Shows</msg>
+<status status="PASS" starttime="20210719 10:22:54.177" endtime="20210719 10:22:54.187"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>${TabText}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20210719 10:22:54.188" level="INFO">Fashion Shows</msg>
+<status status="PASS" starttime="20210719 10:22:54.188" endtime="20210719 10:22:54.188"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>${welcomepagetabs_globaladmin}[${i}]</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20210719 10:22:54.189" level="INFO">Fashion Shows</msg>
+<status status="PASS" starttime="20210719 10:22:54.189" endtime="20210719 10:22:54.189"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>'${welcomepagetabs_globaladmin}[${i}]' == '${TabText}'</arg>
+<arg>Log</arg>
+<arg>pass</arg>
+<arg>ELSE</arg>
+<arg>FAIL</arg>
+<arg>***Title mismatch***</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<kw name="Log" library="BuiltIn">
+<arg>pass</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20210719 10:22:54.191" level="INFO">pass</msg>
+<status status="PASS" starttime="20210719 10:22:54.191" endtime="20210719 10:22:54.191"/>
+</kw>
+<status status="PASS" starttime="20210719 10:22:54.190" endtime="20210719 10:22:54.192"/>
+</kw>
+<status status="PASS" starttime="20210719 10:22:54.177" endtime="20210719 10:22:54.192"/>
+</iter>
+<iter>
+<var name="${i}">8</var>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${TabText}</var>
+<arg>${TabItems}[${i}]</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20210719 10:22:54.203" level="INFO">${TabText} = Fashion Shows - Touch UI</msg>
+<status status="PASS" starttime="20210719 10:22:54.192" endtime="20210719 10:22:54.203"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>${TabText}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20210719 10:22:54.204" level="INFO">Fashion Shows - Touch UI</msg>
+<status status="PASS" starttime="20210719 10:22:54.204" endtime="20210719 10:22:54.204"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>${welcomepagetabs_globaladmin}[${i}]</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20210719 10:22:54.206" level="INFO">Fashion Shows - Touch UI</msg>
+<status status="PASS" starttime="20210719 10:22:54.205" endtime="20210719 10:22:54.206"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>'${welcomepagetabs_globaladmin}[${i}]' == '${TabText}'</arg>
+<arg>Log</arg>
+<arg>pass</arg>
+<arg>ELSE</arg>
+<arg>FAIL</arg>
+<arg>***Title mismatch***</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<kw name="Log" library="BuiltIn">
+<arg>pass</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20210719 10:22:54.207" level="INFO">pass</msg>
+<status status="PASS" starttime="20210719 10:22:54.207" endtime="20210719 10:22:54.208"/>
+</kw>
+<status status="PASS" starttime="20210719 10:22:54.206" endtime="20210719 10:22:54.208"/>
+</kw>
+<status status="PASS" starttime="20210719 10:22:54.192" endtime="20210719 10:22:54.208"/>
+</iter>
+<iter>
+<var name="${i}">9</var>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${TabText}</var>
+<arg>${TabItems}[${i}]</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20210719 10:22:54.220" level="INFO">${TabText} = Inbox</msg>
+<status status="PASS" starttime="20210719 10:22:54.209" endtime="20210719 10:22:54.220"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>${TabText}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20210719 10:22:54.221" level="INFO">Inbox</msg>
+<status status="PASS" starttime="20210719 10:22:54.221" endtime="20210719 10:22:54.221"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>${welcomepagetabs_globaladmin}[${i}]</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20210719 10:22:54.222" level="INFO">Inbox</msg>
+<status status="PASS" starttime="20210719 10:22:54.222" endtime="20210719 10:22:54.222"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>'${welcomepagetabs_globaladmin}[${i}]' == '${TabText}'</arg>
+<arg>Log</arg>
+<arg>pass</arg>
+<arg>ELSE</arg>
+<arg>FAIL</arg>
+<arg>***Title mismatch***</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<kw name="Log" library="BuiltIn">
+<arg>pass</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20210719 10:22:54.224" level="INFO">pass</msg>
+<status status="PASS" starttime="20210719 10:22:54.224" endtime="20210719 10:22:54.224"/>
+</kw>
+<status status="PASS" starttime="20210719 10:22:54.223" endtime="20210719 10:22:54.225"/>
+</kw>
+<status status="PASS" starttime="20210719 10:22:54.209" endtime="20210719 10:22:54.225"/>
+</iter>
+<iter>
+<var name="${i}">10</var>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${TabText}</var>
+<arg>${TabItems}[${i}]</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20210719 10:22:54.236" level="INFO">${TabText} = Users</msg>
+<status status="PASS" starttime="20210719 10:22:54.225" endtime="20210719 10:22:54.236"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>${TabText}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20210719 10:22:54.237" level="INFO">Users</msg>
+<status status="PASS" starttime="20210719 10:22:54.237" endtime="20210719 10:22:54.237"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>${welcomepagetabs_globaladmin}[${i}]</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20210719 10:22:54.239" level="INFO">Users</msg>
+<status status="PASS" starttime="20210719 10:22:54.238" endtime="20210719 10:22:54.239"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>'${welcomepagetabs_globaladmin}[${i}]' == '${TabText}'</arg>
+<arg>Log</arg>
+<arg>pass</arg>
+<arg>ELSE</arg>
+<arg>FAIL</arg>
+<arg>***Title mismatch***</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<kw name="Log" library="BuiltIn">
+<arg>pass</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20210719 10:22:54.241" level="INFO">pass</msg>
+<status status="PASS" starttime="20210719 10:22:54.240" endtime="20210719 10:22:54.241"/>
+</kw>
+<status status="PASS" starttime="20210719 10:22:54.240" endtime="20210719 10:22:54.241"/>
+</kw>
+<status status="PASS" starttime="20210719 10:22:54.225" endtime="20210719 10:22:54.242"/>
+</iter>
+<iter>
+<var name="${i}">11</var>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${TabText}</var>
+<arg>${TabItems}[${i}]</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20210719 10:22:54.253" level="INFO">${TabText} = Tools</msg>
+<status status="PASS" starttime="20210719 10:22:54.242" endtime="20210719 10:22:54.253"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>${TabText}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20210719 10:22:54.255" level="INFO">Tools</msg>
+<status status="PASS" starttime="20210719 10:22:54.254" endtime="20210719 10:22:54.255"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>${welcomepagetabs_globaladmin}[${i}]</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20210719 10:22:54.260" level="INFO">Tools</msg>
+<status status="PASS" starttime="20210719 10:22:54.260" endtime="20210719 10:22:54.261"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>'${welcomepagetabs_globaladmin}[${i}]' == '${TabText}'</arg>
+<arg>Log</arg>
+<arg>pass</arg>
+<arg>ELSE</arg>
+<arg>FAIL</arg>
+<arg>***Title mismatch***</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<kw name="Log" library="BuiltIn">
+<arg>pass</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20210719 10:22:54.262" level="INFO">pass</msg>
+<status status="PASS" starttime="20210719 10:22:54.262" endtime="20210719 10:22:54.262"/>
+</kw>
+<status status="PASS" starttime="20210719 10:22:54.261" endtime="20210719 10:22:54.263"/>
+</kw>
+<status status="PASS" starttime="20210719 10:22:54.242" endtime="20210719 10:22:54.264"/>
+</iter>
+<iter>
+<var name="${i}">12</var>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${TabText}</var>
+<arg>${TabItems}[${i}]</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20210719 10:22:54.275" level="INFO">${TabText} = Tagging</msg>
+<status status="PASS" starttime="20210719 10:22:54.264" endtime="20210719 10:22:54.275"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>${TabText}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20210719 10:22:54.276" level="INFO">Tagging</msg>
+<status status="PASS" starttime="20210719 10:22:54.276" endtime="20210719 10:22:54.276"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>${welcomepagetabs_globaladmin}[${i}]</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20210719 10:22:54.278" level="INFO">Tagging</msg>
+<status status="PASS" starttime="20210719 10:22:54.277" endtime="20210719 10:22:54.278"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>'${welcomepagetabs_globaladmin}[${i}]' == '${TabText}'</arg>
+<arg>Log</arg>
+<arg>pass</arg>
+<arg>ELSE</arg>
+<arg>FAIL</arg>
+<arg>***Title mismatch***</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<kw name="Log" library="BuiltIn">
+<arg>pass</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20210719 10:22:54.279" level="INFO">pass</msg>
+<status status="PASS" starttime="20210719 10:22:54.279" endtime="20210719 10:22:54.279"/>
+</kw>
+<status status="PASS" starttime="20210719 10:22:54.278" endtime="20210719 10:22:54.280"/>
+</kw>
+<status status="PASS" starttime="20210719 10:22:54.264" endtime="20210719 10:22:54.280"/>
+</iter>
+<status status="PASS" starttime="20210719 10:22:54.064" endtime="20210719 10:22:54.281"/>
+</for>
+<status status="PASS" starttime="20210719 10:22:54.038" endtime="20210719 10:22:54.281"/>
+</kw>
+<status status="PASS" starttime="20210719 10:22:54.037" endtime="20210719 10:22:54.281"/>
+</kw>
+<kw name="Go to Publications tab" library="PublicationsearchKeywords">
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>${Publicationstab_lctr}</arg>
+<arg>timeout=30s</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20210719 10:22:54.282" endtime="20210719 10:22:54.292"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${Publicationstab_lctr}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20210719 10:22:54.293" level="INFO">Clicking element 'xpath://div[text()='Publications']'.</msg>
+<status status="PASS" starttime="20210719 10:22:54.292" endtime="20210719 10:22:55.733"/>
+</kw>
+<status status="PASS" starttime="20210719 10:22:54.282" endtime="20210719 10:22:55.734"/>
+</kw>
+<kw name="Go to Publications search tab" library="PublicationsearchKeywords">
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>${Publicationssearchtab_lctr}</arg>
+<arg>timeout=30s</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20210719 10:22:55.735" endtime="20210719 10:22:56.972"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${Publicationssearchtab_lctr}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20210719 10:22:56.973" level="INFO">Clicking element 'xpath://span[text()='Search']'.</msg>
+<status status="PASS" starttime="20210719 10:22:56.972" endtime="20210719 10:22:57.320"/>
+</kw>
+<status status="PASS" starttime="20210719 10:22:55.735" endtime="20210719 10:22:57.322"/>
+</kw>
+<kw name="Enter Publications search text" library="PublicationsearchKeywords">
+<arg>${searchinput1}</arg>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>${Publicationssearchtextfield_lctr}</arg>
+<arg>timeout=30s</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20210719 10:22:57.324" endtime="20210719 10:22:57.338"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${Publicationssearchtextfield_lctr}</arg>
+<arg>${Publicationssearch_input}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20210719 10:22:57.339" level="INFO">Typing text 'hayden' into text field 'xpath://input[@name='0_group.tagsearch']'.</msg>
+<status status="PASS" starttime="20210719 10:22:57.338" endtime="20210719 10:22:57.409"/>
+</kw>
+<status status="PASS" starttime="20210719 10:22:57.323" endtime="20210719 10:22:57.410"/>
+</kw>
+<kw name="Enter Publications search button" library="PublicationsearchKeywords">
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>${Publicationssearchbutton_lctr}</arg>
+<arg>timeout=30s</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20210719 10:22:57.412" endtime="20210719 10:22:57.421"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${Publicationssearchbutton_lctr}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20210719 10:22:57.422" level="INFO">Clicking element 'xpath://button[text()='Search']'.</msg>
+<status status="PASS" starttime="20210719 10:22:57.421" endtime="20210719 10:22:57.491"/>
+</kw>
+<kw name="Wait Until Page Does Not Contain Element" library="SeleniumLibrary">
+<arg>${Publications_noresult_lctr}</arg>
+<arg>timeout=30s</arg>
+<arg>error=No search resultsPlease try again</arg>
+<doc>Waits until the element ``locator`` disappears from the current page.</doc>
+<status status="PASS" starttime="20210719 10:22:57.492" endtime="20210719 10:22:57.728"/>
+</kw>
+<status status="PASS" starttime="20210719 10:22:57.411" endtime="20210719 10:22:57.729"/>
+</kw>
+<kw name="Click pleaseaddfilterokbutton and retry search for publication search" library="PublicationsearchKeywords">
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>${basicsearch_pleaseaddfilterokbutton_lctr}</arg>
+<arg>timeout=30s</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20210719 10:22:57.730" endtime="20210719 10:22:57.746"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>${basicsearch_pleaseaddfilterokbutton_lctr}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20210719 10:22:57.748" level="INFO">Clicking button 'xpath://button[text()='OK']'.</msg>
+<status status="PASS" starttime="20210719 10:22:57.747" endtime="20210719 10:22:57.799"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>${basicsearch_searchbutton_lctr}</arg>
+<arg>timeout=30s</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20210719 10:22:57.801" endtime="20210719 10:22:57.808"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${basicsearch_searchbutton_lctr}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20210719 10:22:57.809" level="INFO">Clicking element 'xpath://button[text()='Search']'.</msg>
+<status status="PASS" starttime="20210719 10:22:57.808" endtime="20210719 10:22:57.844"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>${basicsearch_searchbutton_lctr}</arg>
+<arg>timeout=30s</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20210719 10:22:57.846" endtime="20210719 10:22:57.855"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${publicationnumberofresultlocator}</arg>
+<arg>timeout=30s</arg>
+<arg>error=Search timeout.Please search for more specific keyword</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20210719 10:22:57.856" endtime="20210719 10:22:58.315"/>
+</kw>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20210719 10:22:58.981" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-1.png"&gt;&lt;img src="selenium-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20210719 10:22:58.315" endtime="20210719 10:22:58.981"/>
+</kw>
+<status status="PASS" starttime="20210719 10:22:57.729" endtime="20210719 10:22:58.982"/>
+</kw>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20210719 10:22:59.768" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-2.png"&gt;&lt;img src="selenium-screenshot-2.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20210719 10:22:58.982" endtime="20210719 10:22:59.768"/>
+</kw>
+<kw name="Page Should Not Contain Element" library="SeleniumLibrary">
+<arg>${Publications_noresult_lctr}</arg>
+<arg>message=no results found.please try again</arg>
+<doc>Verifies that element ``locator`` is not found on the current page.</doc>
+<msg timestamp="20210719 10:22:59.775" level="INFO">Current page does not contain element 'xpath://div[text()='No Results Found']'.</msg>
+<status status="PASS" starttime="20210719 10:22:59.769" endtime="20210719 10:22:59.775"/>
+</kw>
+<kw name="Run Keyword And Return Status" library="BuiltIn">
+<var>${verificationstatus}</var>
+<arg>Verify successful publication search</arg>
+<arg>${searchinput1}</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<kw name="Verify successful publication search" library="PublicationsearchKeywords">
+<arg>${searchinput1}</arg>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>${firstpublicationsearchresult_lctr}</arg>
+<arg>timeout=30s</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20210719 10:22:59.777" endtime="20210719 10:22:59.785"/>
+</kw>
+<kw name="Element Should Contain" library="SeleniumLibrary">
+<arg>${Publicationsresultdiv_lctr}</arg>
+<arg>${searchinput}</arg>
+<arg>True</arg>
+<arg>True</arg>
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20210719 10:23:00.621" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-3.png"&gt;&lt;img src="selenium-screenshot-3.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20210719 10:22:59.892" endtime="20210719 10:23:00.621"/>
+</kw>
+<msg timestamp="20210719 10:23:00.623" level="FAIL">True</msg>
+<status status="FAIL" starttime="20210719 10:22:59.785" endtime="20210719 10:23:00.623"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>Success</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="NOT RUN" starttime="20210719 10:23:00.624" endtime="20210719 10:23:00.624"/>
+</kw>
+<status status="FAIL" starttime="20210719 10:22:59.776" endtime="20210719 10:23:00.624"/>
+</kw>
+<msg timestamp="20210719 10:23:00.625" level="INFO">${verificationstatus} = False</msg>
+<status status="PASS" starttime="20210719 10:22:59.776" endtime="20210719 10:23:00.625"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>'${verificationstatus}' == 'False'</arg>
+<arg>DoubleclickandcheckkeywordinPDP</arg>
+<arg>${searchinput1}</arg>
+<arg>ELSE</arg>
+<arg>Log</arg>
+<arg>Exactmatchfound</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<kw name="DoubleclickandcheckkeywordinPDP" library="PublicationsearchKeywords">
+<arg>${searchinput1}</arg>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>${firstpublicationsearchresult_lctr}</arg>
+<arg>timeout=30s</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20210719 10:23:00.626" endtime="20210719 10:23:00.633"/>
+</kw>
+<kw name="Double Click Element" library="SeleniumLibrary">
+<arg>${firstpublicationsearchresult_lctr}</arg>
+<doc>Double clicks the element identified by ``locator``.</doc>
+<msg timestamp="20210719 10:23:00.634" level="INFO">Double clicking element 'xpath://div[@class='data-view-item layout-page-thumbnail-medium thumbnail-medium']'.</msg>
+<status status="PASS" starttime="20210719 10:23:00.633" endtime="20210719 10:23:03.957"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>${Pagespane_lctr}</arg>
+<arg>timeout=30s</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20210719 10:23:03.959" endtime="20210719 10:23:03.975"/>
+</kw>
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<arg>${searchtext}</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<msg timestamp="20210719 10:23:03.994" level="INFO">Current page contains text 'hayden'.</msg>
+<status status="PASS" starttime="20210719 10:23:03.976" endtime="20210719 10:23:03.994"/>
+</kw>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20210719 10:23:04.680" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-4.png"&gt;&lt;img src="selenium-screenshot-4.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20210719 10:23:03.995" endtime="20210719 10:23:04.680"/>
+</kw>
+<status status="PASS" starttime="20210719 10:23:00.625" endtime="20210719 10:23:04.681"/>
+</kw>
+<status status="PASS" starttime="20210719 10:23:00.625" endtime="20210719 10:23:04.681"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>${verificationstatus}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20210719 10:23:04.682" level="INFO">False</msg>
+<status status="PASS" starttime="20210719 10:23:04.682" endtime="20210719 10:23:04.683"/>
+</kw>
+<status status="PASS" starttime="20210719 10:22:45.594" endtime="20210719 10:23:04.684"/>
+</kw>
+<kw name="Finish TestCase" library="CommonFunctionality" type="TEARDOWN">
+<kw name="Close All Browsers" library="SeleniumLibrary">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" starttime="20210719 10:23:04.685" endtime="20210719 10:23:04.861"/>
+</kw>
+<status status="PASS" starttime="20210719 10:23:04.684" endtime="20210719 10:23:04.862"/>
+</kw>
+<status status="PASS" starttime="20210719 10:22:41.923" endtime="20210719 10:23:04.862"/>
+</test>
+<status status="PASS" starttime="20210719 10:22:41.695" endtime="20210719 10:23:04.867"/>
+</suite>
+<status status="PASS" starttime="20210719 10:22:41.693" endtime="20210719 10:23:04.886"/>
+</suite>
+<status status="PASS" starttime="20210719 10:22:41.672" endtime="20210719 10:23:04.890"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="TestCases">TestCases</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s1" name="Searchtests">TestCases.Searchtests</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s1-s1" name="Publicationsearch">TestCases.Searchtests.Publicationsearch</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

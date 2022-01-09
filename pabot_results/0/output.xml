@@ -1,0 +1,3500 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 4.0.3 (Python 3.9.5 on darwin)" generated="20210719 10:19:12.962" rpa="false" schemaversion="2">
+<suite id="s1" name="TestCases" source="/Users/hsreekum/PycharmProjects/DAMrobotAutomationframeworktwo/TestCases">
+<suite id="s1-s1" name="Assetnavigationtests" source="/Users/hsreekum/PycharmProjects/DAMrobotAutomationframeworktwo/TestCases/Assetnavigationtests">
+<suite id="s1-s1-s1" name="Differentmarketpublicassetnavigationtest" source="/Users/hsreekum/PycharmProjects/DAMrobotAutomationframeworktwo/TestCases/Assetnavigationtests/Differentmarketpublicassetnavigationtest.robot">
+<test id="s1-s1-s1-t1" name="DifferentmarketPublicassetnavigationtest using tw-gq-ebt2@condenast.com.tw and -c44QRUTng_y2y-">
+<kw name="Start TestCase" library="CommonFunctionality" type="SETUP">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>https://google.com</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20210719 10:19:13.381" level="INFO">Opening browser 'chrome' to base url 'https://google.com'.</msg>
+<status status="PASS" starttime="20210719 10:19:13.381" endtime="20210719 10:19:20.294"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20210719 10:19:20.296" endtime="20210719 10:19:20.430"/>
+</kw>
+<status status="PASS" starttime="20210719 10:19:13.380" endtime="20210719 10:19:20.430"/>
+</kw>
+<kw name="DifferentmarketPublicassetnavigationtest">
+<arg>https://apac-staging.cnidam.com</arg>
+<arg>tw-gq-ebt2@condenast.com.tw</arg>
+<arg>-c44QRUTng_y2y-</arg>
+<arg>ebt</arg>
+<tag>Smoke</tag>
+<kw name="Get CSV Data" library="Datamanager">
+<var>${marketfolders}</var>
+<arg>${marketinputcsv}</arg>
+<kw name="Read Csv File" library="Csv">
+<var>${Data}</var>
+<arg>${FilePath}</arg>
+<msg timestamp="20210719 10:19:20.440" level="INFO">${Data} = [['UK', 'Wired', 'public', '2021', '2020 Wired World 2021', 'Print', 'Editorial', '11-20-WiredWorld-Business', 'Assets', 'unknown', 'ingested', '1120WiredWorldBusiness01', ''], ['China', 'AD', 'public...</msg>
+<status status="PASS" starttime="20210719 10:19:20.433" endtime="20210719 10:19:20.440"/>
+</kw>
+<msg timestamp="20210719 10:19:20.441" level="INFO">${marketfolders} = [['UK', 'Wired', 'public', '2021', '2020 Wired World 2021', 'Print', 'Editorial', '11-20-WiredWorld-Business', 'Assets', 'unknown', 'ingested', '1120WiredWorldBusiness01', ''], ['China', 'AD', 'public...</msg>
+<status status="PASS" starttime="20210719 10:19:20.432" endtime="20210719 10:19:20.442"/>
+</kw>
+<kw name="Open my url" library="LoginKeywords">
+<arg>${SiteUrl}</arg>
+<kw name="Go To" library="SeleniumLibrary">
+<arg>${SiteUrl}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20210719 10:19:20.445" level="INFO">Opening url 'https://apac-staging.cnidam.com'</msg>
+<status status="PASS" starttime="20210719 10:19:20.444" endtime="20210719 10:19:24.850"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20210719 10:19:24.851" endtime="20210719 10:19:25.129"/>
+</kw>
+<status status="PASS" starttime="20210719 10:19:20.443" endtime="20210719 10:19:25.130"/>
+</kw>
+<kw name="Enter UserName" library="LoginKeywords">
+<arg>${username}</arg>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>${txt_loginUserName_lctr}</arg>
+<arg>timeout=30s</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20210719 10:19:25.132" endtime="20210719 10:19:25.147"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${txt_loginUserName_lctr}</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20210719 10:19:25.149" level="INFO">Typing text 'tw-gq-ebt2@condenast.com.tw' into text field 'id:idp-discovery-username'.</msg>
+<status status="PASS" starttime="20210719 10:19:25.148" endtime="20210719 10:19:25.333"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>${submitbutton_lctr}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20210719 10:19:25.336" level="INFO">Clicking button 'id:idp-discovery-submit'.</msg>
+<status status="PASS" starttime="20210719 10:19:25.335" endtime="20210719 10:19:25.419"/>
+</kw>
+<status status="PASS" starttime="20210719 10:19:25.131" endtime="20210719 10:19:25.420"/>
+</kw>
+<kw name="Enter Password" library="LoginKeywords">
+<arg>${password}</arg>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>${txt_loginps_lctr}</arg>
+<arg>timeout=30s</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20210719 10:19:25.421" endtime="20210719 10:19:27.531"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${txt_loginps_lctr}</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20210719 10:19:27.533" level="INFO">Typing text '-c44QRUTng_y2y-' into text field 'class:password-with-toggle'.</msg>
+<status status="PASS" starttime="20210719 10:19:27.532" endtime="20210719 10:19:27.627"/>
+</kw>
+<status status="PASS" starttime="20210719 10:19:25.420" endtime="20210719 10:19:27.628"/>
+</kw>
+<kw name="Click Verify" library="LoginKeywords">
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>${txt_verify_lctr}</arg>
+<arg>timeout=30s</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20210719 10:19:27.629" endtime="20210719 10:19:27.640"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>${txt_verify_lctr}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20210719 10:19:27.642" level="INFO">Clicking button 'css:input[class='button button-primary']'.</msg>
+<status status="PASS" starttime="20210719 10:19:27.641" endtime="20210719 10:19:27.727"/>
+</kw>
+<status status="PASS" starttime="20210719 10:19:27.628" endtime="20210719 10:19:27.728"/>
+</kw>
+<kw name="Check welcomemessage" library="LoginKeywords">
+<arg>${username}</arg>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>${welcomemessage_lctr}</arg>
+<arg>timeout=30s</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20210719 10:19:27.729" endtime="20210719 10:19:30.148"/>
+</kw>
+<kw name="Element Should Contain" library="SeleniumLibrary">
+<arg>${welcomemessage_lctr}</arg>
+<arg>${usernameinput}</arg>
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<msg timestamp="20210719 10:19:30.180" level="INFO">Element 'xpath://div[@id='welcome-message']' contains text 'tw-gq-ebt2@condenast.com.tw'.</msg>
+<status status="PASS" starttime="20210719 10:19:30.148" endtime="20210719 10:19:30.180"/>
+</kw>
+<status status="PASS" starttime="20210719 10:19:27.728" endtime="20210719 10:19:30.181"/>
+</kw>
+<kw name="Get Title" library="SeleniumLibrary">
+<var>${act_title}</var>
+<doc>Returns the title of the current page.</doc>
+<msg timestamp="20210719 10:19:30.192" level="INFO">${act_title} = Staging APAC | Welcome to AEM</msg>
+<status status="PASS" starttime="20210719 10:19:30.182" endtime="20210719 10:19:30.192"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>'${act_title}' == '${expectedpagetitle_emea}' and '${SiteUrl}' == '${expectedsiteurl_emea}' or '${act_title}' == '${expectedpagetitle_apac}' and '${SiteUrl}' == '${expectedsiteurl_apac}'</arg>
+<arg>Verify successful login</arg>
+<arg>ELSE</arg>
+<arg>Verify unsuccessful login</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<kw name="Verify successful login" library="LoginKeywords">
+<kw name="Log" library="BuiltIn">
+<arg>**********Login test is passed**********</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20210719 10:19:30.196" level="INFO">**********Login test is passed**********</msg>
+<status status="PASS" starttime="20210719 10:19:30.196" endtime="20210719 10:19:30.196"/>
+</kw>
+<kw name="Log Title" library="SeleniumLibrary">
+<doc>Logs and returns the title of the current page.</doc>
+<msg timestamp="20210719 10:19:30.205" level="INFO">Staging APAC | Welcome to AEM</msg>
+<status status="PASS" starttime="20210719 10:19:30.198" endtime="20210719 10:19:30.205"/>
+</kw>
+<status status="PASS" starttime="20210719 10:19:30.195" endtime="20210719 10:19:30.207"/>
+</kw>
+<status status="PASS" starttime="20210719 10:19:30.193" endtime="20210719 10:19:30.208"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>'${userrole}' == 'piced' or '${userrole}' == 'ebt'</arg>
+<arg>Welcomepagetabscheck_ebtorpiced</arg>
+<arg>ELSE</arg>
+<arg>Welcomepagetabscheck_globaladmin</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<kw name="Welcomepagetabscheck_ebtorpiced" library="LoginKeywords">
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>${tabcontent_lctr}</arg>
+<arg>timeout=30s</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20210719 10:19:30.212" endtime="20210719 10:19:30.229"/>
+</kw>
+<kw name="Get Element Count" library="SeleniumLibrary">
+<var>${AllTabsCount}</var>
+<arg>${tabcontent_lctr}</arg>
+<doc>Returns the number of elements matching ``locator``.</doc>
+<msg timestamp="20210719 10:19:30.237" level="INFO">${AllTabsCount} = 8</msg>
+<status status="PASS" starttime="20210719 10:19:30.230" endtime="20210719 10:19:30.237"/>
+</kw>
+<kw name="Get WebElements" library="SeleniumLibrary">
+<var>@{TabItems}</var>
+<arg>${tabcontent_lctr}</arg>
+<doc>Returns a list of WebElement objects matching the ``locator``.</doc>
+<msg timestamp="20210719 10:19:30.247" level="INFO">@{TabItems} = [ &lt;selenium.webdriver.remote.webelement.WebElement (session="f9fa7d1318b34d1f701ce7823372ff2e", element="e689cec3-ee74-4542-bab9-fc3983bf68bf")&gt; | &lt;selenium.webdriver.remote.webelement.WebElement (ses...</msg>
+<status status="PASS" starttime="20210719 10:19:30.238" endtime="20210719 10:19:30.247"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>${AllTabsCount}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20210719 10:19:30.251" level="INFO">8</msg>
+<status status="PASS" starttime="20210719 10:19:30.250" endtime="20210719 10:19:30.251"/>
+</kw>
+<for flavor="IN RANGE">
+<var>${i}</var>
+<value>0</value>
+<value>${${AllTabsCount}}</value>
+<iter>
+<var name="${i}">0</var>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${TabText}</var>
+<arg>${TabItems}[${i}]</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20210719 10:19:30.268" level="INFO">${TabText} = Images</msg>
+<status status="PASS" starttime="20210719 10:19:30.256" endtime="20210719 10:19:30.268"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>${TabText}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20210719 10:19:30.270" level="INFO">Images</msg>
+<status status="PASS" starttime="20210719 10:19:30.269" endtime="20210719 10:19:30.270"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>${welcomepagetabs}[${i}]</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20210719 10:19:30.271" level="INFO">Images</msg>
+<status status="PASS" starttime="20210719 10:19:30.270" endtime="20210719 10:19:30.271"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>'${welcomepagetabs}[${i}]' == '${TabText}'</arg>
+<arg>Log</arg>
+<arg>pass</arg>
+<arg>ELSE</arg>
+<arg>FAIL</arg>
+<arg>***Title mismatch***</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<kw name="Log" library="BuiltIn">
+<arg>pass</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20210719 10:19:30.274" level="INFO">pass</msg>
+<status status="PASS" starttime="20210719 10:19:30.274" endtime="20210719 10:19:30.274"/>
+</kw>
+<status status="PASS" starttime="20210719 10:19:30.272" endtime="20210719 10:19:30.275"/>
+</kw>
+<status status="PASS" starttime="20210719 10:19:30.255" endtime="20210719 10:19:30.276"/>
+</iter>
+<iter>
+<var name="${i}">1</var>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${TabText}</var>
+<arg>${TabItems}[${i}]</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20210719 10:19:30.294" level="INFO">${TabText} = Images - Touch UI</msg>
+<status status="PASS" starttime="20210719 10:19:30.279" endtime="20210719 10:19:30.294"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>${TabText}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20210719 10:19:30.296" level="INFO">Images - Touch UI</msg>
+<status status="PASS" starttime="20210719 10:19:30.295" endtime="20210719 10:19:30.296"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>${welcomepagetabs}[${i}]</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20210719 10:19:30.300" level="INFO">Images - Touch UI</msg>
+<status status="PASS" starttime="20210719 10:19:30.297" endtime="20210719 10:19:30.300"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>'${welcomepagetabs}[${i}]' == '${TabText}'</arg>
+<arg>Log</arg>
+<arg>pass</arg>
+<arg>ELSE</arg>
+<arg>FAIL</arg>
+<arg>***Title mismatch***</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<kw name="Log" library="BuiltIn">
+<arg>pass</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20210719 10:19:30.304" level="INFO">pass</msg>
+<status status="PASS" starttime="20210719 10:19:30.303" endtime="20210719 10:19:30.304"/>
+</kw>
+<status status="PASS" starttime="20210719 10:19:30.302" endtime="20210719 10:19:30.306"/>
+</kw>
+<status status="PASS" starttime="20210719 10:19:30.277" endtime="20210719 10:19:30.307"/>
+</iter>
+<iter>
+<var name="${i}">2</var>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${TabText}</var>
+<arg>${TabItems}[${i}]</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20210719 10:19:30.334" level="INFO">${TabText} = Publications</msg>
+<status status="PASS" starttime="20210719 10:19:30.308" endtime="20210719 10:19:30.335"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>${TabText}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20210719 10:19:30.338" level="INFO">Publications</msg>
+<status status="PASS" starttime="20210719 10:19:30.336" endtime="20210719 10:19:30.338"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>${welcomepagetabs}[${i}]</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20210719 10:19:30.341" level="INFO">Publications</msg>
+<status status="PASS" starttime="20210719 10:19:30.340" endtime="20210719 10:19:30.341"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>'${welcomepagetabs}[${i}]' == '${TabText}'</arg>
+<arg>Log</arg>
+<arg>pass</arg>
+<arg>ELSE</arg>
+<arg>FAIL</arg>
+<arg>***Title mismatch***</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<kw name="Log" library="BuiltIn">
+<arg>pass</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20210719 10:19:30.346" level="INFO">pass</msg>
+<status status="PASS" starttime="20210719 10:19:30.346" endtime="20210719 10:19:30.347"/>
+</kw>
+<status status="PASS" starttime="20210719 10:19:30.344" endtime="20210719 10:19:30.347"/>
+</kw>
+<status status="PASS" starttime="20210719 10:19:30.307" endtime="20210719 10:19:30.348"/>
+</iter>
+<iter>
+<var name="${i}">3</var>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${TabText}</var>
+<arg>${TabItems}[${i}]</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20210719 10:19:30.362" level="INFO">${TabText} = Content creators contracts</msg>
+<status status="PASS" starttime="20210719 10:19:30.349" endtime="20210719 10:19:30.362"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>${TabText}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20210719 10:19:30.364" level="INFO">Content creators contracts</msg>
+<status status="PASS" starttime="20210719 10:19:30.364" endtime="20210719 10:19:30.364"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>${welcomepagetabs}[${i}]</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20210719 10:19:30.366" level="INFO">Content creators contracts</msg>
+<status status="PASS" starttime="20210719 10:19:30.365" endtime="20210719 10:19:30.366"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>'${welcomepagetabs}[${i}]' == '${TabText}'</arg>
+<arg>Log</arg>
+<arg>pass</arg>
+<arg>ELSE</arg>
+<arg>FAIL</arg>
+<arg>***Title mismatch***</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<kw name="Log" library="BuiltIn">
+<arg>pass</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20210719 10:19:30.371" level="INFO">pass</msg>
+<status status="PASS" starttime="20210719 10:19:30.370" endtime="20210719 10:19:30.371"/>
+</kw>
+<status status="PASS" starttime="20210719 10:19:30.369" endtime="20210719 10:19:30.373"/>
+</kw>
+<status status="PASS" starttime="20210719 10:19:30.348" endtime="20210719 10:19:30.374"/>
+</iter>
+<iter>
+<var name="${i}">4</var>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${TabText}</var>
+<arg>${TabItems}[${i}]</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20210719 10:19:30.387" level="INFO">${TabText} = Videos</msg>
+<status status="PASS" starttime="20210719 10:19:30.374" endtime="20210719 10:19:30.387"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>${TabText}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20210719 10:19:30.389" level="INFO">Videos</msg>
+<status status="PASS" starttime="20210719 10:19:30.388" endtime="20210719 10:19:30.389"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>${welcomepagetabs}[${i}]</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20210719 10:19:30.392" level="INFO">Videos</msg>
+<status status="PASS" starttime="20210719 10:19:30.390" endtime="20210719 10:19:30.392"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>'${welcomepagetabs}[${i}]' == '${TabText}'</arg>
+<arg>Log</arg>
+<arg>pass</arg>
+<arg>ELSE</arg>
+<arg>FAIL</arg>
+<arg>***Title mismatch***</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<kw name="Log" library="BuiltIn">
+<arg>pass</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20210719 10:19:30.394" level="INFO">pass</msg>
+<status status="PASS" starttime="20210719 10:19:30.393" endtime="20210719 10:19:30.394"/>
+</kw>
+<status status="PASS" starttime="20210719 10:19:30.393" endtime="20210719 10:19:30.394"/>
+</kw>
+<status status="PASS" starttime="20210719 10:19:30.374" endtime="20210719 10:19:30.395"/>
+</iter>
+<iter>
+<var name="${i}">5</var>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${TabText}</var>
+<arg>${TabItems}[${i}]</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20210719 10:19:30.410" level="INFO">${TabText} = Syndication after publication</msg>
+<status status="PASS" starttime="20210719 10:19:30.395" endtime="20210719 10:19:30.410"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>${TabText}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20210719 10:19:30.412" level="INFO">Syndication after publication</msg>
+<status status="PASS" starttime="20210719 10:19:30.411" endtime="20210719 10:19:30.412"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>${welcomepagetabs}[${i}]</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20210719 10:19:30.414" level="INFO">Syndication after publication</msg>
+<status status="PASS" starttime="20210719 10:19:30.413" endtime="20210719 10:19:30.414"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>'${welcomepagetabs}[${i}]' == '${TabText}'</arg>
+<arg>Log</arg>
+<arg>pass</arg>
+<arg>ELSE</arg>
+<arg>FAIL</arg>
+<arg>***Title mismatch***</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<kw name="Log" library="BuiltIn">
+<arg>pass</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20210719 10:19:30.416" level="INFO">pass</msg>
+<status status="PASS" starttime="20210719 10:19:30.416" endtime="20210719 10:19:30.416"/>
+</kw>
+<status status="PASS" starttime="20210719 10:19:30.415" endtime="20210719 10:19:30.418"/>
+</kw>
+<status status="PASS" starttime="20210719 10:19:30.395" endtime="20210719 10:19:30.418"/>
+</iter>
+<iter>
+<var name="${i}">6</var>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${TabText}</var>
+<arg>${TabItems}[${i}]</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20210719 10:19:30.440" level="INFO">${TabText} = Syndication before publication</msg>
+<status status="PASS" starttime="20210719 10:19:30.419" endtime="20210719 10:19:30.440"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>${TabText}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20210719 10:19:30.442" level="INFO">Syndication before publication</msg>
+<status status="PASS" starttime="20210719 10:19:30.441" endtime="20210719 10:19:30.442"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>${welcomepagetabs}[${i}]</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20210719 10:19:30.444" level="INFO">Syndication before publication</msg>
+<status status="PASS" starttime="20210719 10:19:30.443" endtime="20210719 10:19:30.444"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>'${welcomepagetabs}[${i}]' == '${TabText}'</arg>
+<arg>Log</arg>
+<arg>pass</arg>
+<arg>ELSE</arg>
+<arg>FAIL</arg>
+<arg>***Title mismatch***</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<kw name="Log" library="BuiltIn">
+<arg>pass</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20210719 10:19:30.447" level="INFO">pass</msg>
+<status status="PASS" starttime="20210719 10:19:30.446" endtime="20210719 10:19:30.447"/>
+</kw>
+<status status="PASS" starttime="20210719 10:19:30.446" endtime="20210719 10:19:30.448"/>
+</kw>
+<status status="PASS" starttime="20210719 10:19:30.419" endtime="20210719 10:19:30.448"/>
+</iter>
+<iter>
+<var name="${i}">7</var>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${TabText}</var>
+<arg>${TabItems}[${i}]</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20210719 10:19:30.461" level="INFO">${TabText} = Inbox</msg>
+<status status="PASS" starttime="20210719 10:19:30.449" endtime="20210719 10:19:30.462"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>${TabText}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20210719 10:19:30.464" level="INFO">Inbox</msg>
+<status status="PASS" starttime="20210719 10:19:30.463" endtime="20210719 10:19:30.464"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>${welcomepagetabs}[${i}]</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20210719 10:19:30.466" level="INFO">Inbox</msg>
+<status status="PASS" starttime="20210719 10:19:30.465" endtime="20210719 10:19:30.466"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>'${welcomepagetabs}[${i}]' == '${TabText}'</arg>
+<arg>Log</arg>
+<arg>pass</arg>
+<arg>ELSE</arg>
+<arg>FAIL</arg>
+<arg>***Title mismatch***</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<kw name="Log" library="BuiltIn">
+<arg>pass</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20210719 10:19:30.469" level="INFO">pass</msg>
+<status status="PASS" starttime="20210719 10:19:30.469" endtime="20210719 10:19:30.470"/>
+</kw>
+<status status="PASS" starttime="20210719 10:19:30.467" endtime="20210719 10:19:30.472"/>
+</kw>
+<status status="PASS" starttime="20210719 10:19:30.448" endtime="20210719 10:19:30.474"/>
+</iter>
+<status status="PASS" starttime="20210719 10:19:30.252" endtime="20210719 10:19:30.475"/>
+</for>
+<status status="PASS" starttime="20210719 10:19:30.210" endtime="20210719 10:19:30.476"/>
+</kw>
+<status status="PASS" starttime="20210719 10:19:30.209" endtime="20210719 10:19:30.477"/>
+</kw>
+<kw name="Go to images page" library="Publicassetnavigationkeywords">
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>${Imagestabicon_lctr}</arg>
+<arg>timeout=30s</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20210719 10:19:30.479" endtime="20210719 10:19:30.491"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${Imagestabicon_lctr}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20210719 10:19:30.493" level="INFO">Clicking element 'xpath://div[@class='icon damadmin']'.</msg>
+<status status="PASS" starttime="20210719 10:19:30.491" endtime="20210719 10:19:43.528"/>
+</kw>
+<status status="PASS" starttime="20210719 10:19:30.478" endtime="20210719 10:19:43.529"/>
+</kw>
+<kw name="Differentmarketpublicassetnavigation using the csvfile" library="differentmarketpublicassetnavigationkeywords">
+<arg>${marketfolders}</arg>
+<for flavor="IN">
+<var>${marketlist}</var>
+<value>@{marketfolders}</value>
+<iter>
+<var name="${marketlist}">['UK', 'Wired', 'public', '2021', '2020 Wired World 2021', 'Print', 'Editorial', '11-20-WiredWorld-Business', 'Assets', 'unknown', 'ingested', '1120WiredWorldBusiness01', '']</var>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20210719 10:19:45.532" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20210719 10:19:43.531" endtime="20210719 10:19:45.532"/>
+</kw>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<arg>3x</arg>
+<arg>4s</arg>
+<arg>Go to Imagestab</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<kw name="Go to Imagestab" library="Publicassetnavigationkeywords">
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>${Imagestab_lctr}</arg>
+<arg>timeout=30s</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20210719 10:19:45.534" endtime="20210719 10:19:45.545"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${Imagestab_lctr}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20210719 10:19:45.546" level="INFO">Clicking element 'xpath://span[@class='x-tab-strip-inner']/span[text()='Images']'.</msg>
+<status status="PASS" starttime="20210719 10:19:45.546" endtime="20210719 10:19:45.584"/>
+</kw>
+<status status="PASS" starttime="20210719 10:19:45.534" endtime="20210719 10:19:45.585"/>
+</kw>
+<status status="PASS" starttime="20210719 10:19:45.533" endtime="20210719 10:19:45.585"/>
+</kw>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<arg>3x</arg>
+<arg>4s</arg>
+<arg>Go to CNIfolder</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<kw name="Go to CNIfolder" library="Publicassetnavigationkeywords">
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>${diffmarket_CNIfolder_lctr}</arg>
+<arg>timeout=30s</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20210719 10:19:45.587" endtime="20210719 10:19:45.595"/>
+</kw>
+<kw name="Double Click Element" library="SeleniumLibrary">
+<arg>${diffmarket_CNIfolder_lctr}</arg>
+<doc>Double clicks the element identified by ``locator``.</doc>
+<msg timestamp="20210719 10:19:45.596" level="INFO">Double clicking element 'xpath://span[text()='CNI']'.</msg>
+<status status="PASS" starttime="20210719 10:19:45.596" endtime="20210719 10:19:45.902"/>
+</kw>
+<status status="PASS" starttime="20210719 10:19:45.586" endtime="20210719 10:19:45.903"/>
+</kw>
+<status status="PASS" starttime="20210719 10:19:45.586" endtime="20210719 10:19:45.903"/>
+</kw>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<arg>3x</arg>
+<arg>4s</arg>
+<arg>Go to Marketfolder</arg>
+<arg>${marketlist}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<kw name="Go to Marketfolder" library="Publicassetnavigationkeywords">
+<arg>${marketlist}</arg>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${display_all_lctr}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20210719 10:19:45.906" level="INFO">Clicking element 'xpath:(//button[text()='Display All'])[1]'.</msg>
+<status status="PASS" starttime="20210719 10:19:45.905" endtime="20210719 10:19:46.313"/>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<var>${diffmarket_Marketfolder_lctr}</var>
+<arg>xpath://div[text()='${markettestinput[0]}']/parent::td</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20210719 10:19:46.319" level="INFO">${diffmarket_Marketfolder_lctr} = xpath://div[text()='UK']/parent::td</msg>
+<status status="PASS" starttime="20210719 10:19:46.314" endtime="20210719 10:19:46.319"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>${diffmarket_Marketfolder_lctr}</arg>
+<arg>timeout=30s</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20210719 10:19:46.320" endtime="20210719 10:19:46.575"/>
+</kw>
+<kw name="Scroll Element Into View" library="SeleniumLibrary">
+<arg>${diffmarket_Marketfolder_lctr}</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" starttime="20210719 10:19:46.576" endtime="20210719 10:19:46.850"/>
+</kw>
+<kw name="Mouse Down" library="SeleniumLibrary">
+<arg>${diffmarket_Marketfolder_lctr}</arg>
+<doc>Simulates pressing the left mouse button on the element ``locator``.</doc>
+<msg timestamp="20210719 10:19:46.852" level="INFO">Simulating Mouse Down on element 'xpath://div[text()='UK']/parent::td'.</msg>
+<status status="PASS" starttime="20210719 10:19:46.851" endtime="20210719 10:19:47.131"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20210719 10:19:49.134" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20210719 10:19:47.132" endtime="20210719 10:19:49.134"/>
+</kw>
+<kw name="Double Click Element" library="SeleniumLibrary">
+<arg>${diffmarket_Marketfolder_lctr}</arg>
+<doc>Double clicks the element identified by ``locator``.</doc>
+<msg timestamp="20210719 10:19:49.135" level="INFO">Double clicking element 'xpath://div[text()='UK']/parent::td'.</msg>
+<status status="PASS" starttime="20210719 10:19:49.134" endtime="20210719 10:19:49.442"/>
+</kw>
+<status status="PASS" starttime="20210719 10:19:45.904" endtime="20210719 10:19:49.442"/>
+</kw>
+<status status="PASS" starttime="20210719 10:19:45.904" endtime="20210719 10:19:49.443"/>
+</kw>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<arg>3x</arg>
+<arg>4s</arg>
+<arg>Go to Titlefolder</arg>
+<arg>${marketlist}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<kw name="Go to Titlefolder" library="Publicassetnavigationkeywords">
+<arg>${marketlist}</arg>
+<kw name="Set Variable" library="BuiltIn">
+<var>${diffmarket_Titlefolder_lctr}</var>
+<arg>xpath://div[text()='${markettestinput[1]}']/parent::td</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20210719 10:19:49.448" level="INFO">${diffmarket_Titlefolder_lctr} = xpath://div[text()='Wired']/parent::td</msg>
+<status status="PASS" starttime="20210719 10:19:49.444" endtime="20210719 10:19:49.449"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>${diffmarket_Titlefolder_lctr}</arg>
+<arg>timeout=30s</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20210719 10:19:49.449" endtime="20210719 10:19:49.732"/>
+</kw>
+<kw name="Scroll Element Into View" library="SeleniumLibrary">
+<arg>${diffmarket_Titlefolder_lctr}</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" starttime="20210719 10:19:49.733" endtime="20210719 10:19:50.006"/>
+</kw>
+<kw name="Mouse Down" library="SeleniumLibrary">
+<arg>${diffmarket_Titlefolder_lctr}</arg>
+<doc>Simulates pressing the left mouse button on the element ``locator``.</doc>
+<msg timestamp="20210719 10:19:50.008" level="INFO">Simulating Mouse Down on element 'xpath://div[text()='Wired']/parent::td'.</msg>
+<status status="PASS" starttime="20210719 10:19:50.007" endtime="20210719 10:19:50.276"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20210719 10:19:52.278" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20210719 10:19:50.277" endtime="20210719 10:19:52.278"/>
+</kw>
+<kw name="Double Click Element" library="SeleniumLibrary">
+<arg>${diffmarket_Titlefolder_lctr}</arg>
+<doc>Double clicks the element identified by ``locator``.</doc>
+<msg timestamp="20210719 10:19:52.279" level="INFO">Double clicking element 'xpath://div[text()='Wired']/parent::td'.</msg>
+<status status="PASS" starttime="20210719 10:19:52.279" endtime="20210719 10:19:52.576"/>
+</kw>
+<status status="PASS" starttime="20210719 10:19:49.444" endtime="20210719 10:19:52.577"/>
+</kw>
+<status status="PASS" starttime="20210719 10:19:49.443" endtime="20210719 10:19:52.577"/>
+</kw>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<arg>3x</arg>
+<arg>4s</arg>
+<arg>Check whether Commissioned, Non-Commissioned, Studio folders not acessible</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<kw name="Check whether Commissioned, Non-Commissioned, Studio folders not acessible" library="Publicassetnavigationkeywords">
+<kw name="Element Should Not Contain" library="SeleniumLibrary">
+<arg>${uploadfolderlist_lctr}</arg>
+<arg>commissioned</arg>
+<doc>Verifies that element ``locator`` does not contain text ``expected``.</doc>
+<msg timestamp="20210719 10:19:52.824" level="INFO">Element 'xpath:(//div[@class='x-grid3-scroller'])[1]' does not contain text 'commissioned'.</msg>
+<status status="PASS" starttime="20210719 10:19:52.579" endtime="20210719 10:19:52.824"/>
+</kw>
+<kw name="Element Should Not Contain" library="SeleniumLibrary">
+<arg>${uploadfolderlist_lctr}</arg>
+<arg>non-commissioned</arg>
+<doc>Verifies that element ``locator`` does not contain text ``expected``.</doc>
+<msg timestamp="20210719 10:19:52.869" level="INFO">Element 'xpath:(//div[@class='x-grid3-scroller'])[1]' does not contain text 'non-commissioned'.</msg>
+<status status="PASS" starttime="20210719 10:19:52.825" endtime="20210719 10:19:52.869"/>
+</kw>
+<kw name="Element Should Not Contain" library="SeleniumLibrary">
+<arg>${uploadfolderlist_lctr}</arg>
+<arg>studio</arg>
+<doc>Verifies that element ``locator`` does not contain text ``expected``.</doc>
+<msg timestamp="20210719 10:19:52.917" level="INFO">Element 'xpath:(//div[@class='x-grid3-scroller'])[1]' does not contain text 'studio'.</msg>
+<status status="PASS" starttime="20210719 10:19:52.870" endtime="20210719 10:19:52.918"/>
+</kw>
+<status status="PASS" starttime="20210719 10:19:52.578" endtime="20210719 10:19:52.919"/>
+</kw>
+<status status="PASS" starttime="20210719 10:19:52.578" endtime="20210719 10:19:52.919"/>
+</kw>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<arg>3x</arg>
+<arg>4s</arg>
+<arg>Go to diff_Public folder</arg>
+<arg>${marketlist}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<kw name="Go to diff_Public folder" library="Publicassetnavigationkeywords">
+<arg>${marketlist}</arg>
+<kw name="Set Variable" library="BuiltIn">
+<var>${different_publicfolder_lctr}</var>
+<arg>xpath://div[text()='${markettestinput[2]}']/parent::td</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20210719 10:19:52.926" level="INFO">${different_publicfolder_lctr} = xpath://div[text()='public']/parent::td</msg>
+<status status="PASS" starttime="20210719 10:19:52.922" endtime="20210719 10:19:52.926"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>${different_publicfolder_lctr}</arg>
+<arg>timeout=30s</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20210719 10:19:52.927" endtime="20210719 10:19:52.943"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20210719 10:19:54.945" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20210719 10:19:52.944" endtime="20210719 10:19:54.945"/>
+</kw>
+<kw name="Double Click Element" library="SeleniumLibrary">
+<arg>${different_publicfolder_lctr}</arg>
+<doc>Double clicks the element identified by ``locator``.</doc>
+<msg timestamp="20210719 10:19:54.946" level="INFO">Double clicking element 'xpath://div[text()='public']/parent::td'.</msg>
+<status status="PASS" starttime="20210719 10:19:54.946" endtime="20210719 10:19:55.575"/>
+</kw>
+<status status="PASS" starttime="20210719 10:19:52.921" endtime="20210719 10:19:55.576"/>
+</kw>
+<status status="PASS" starttime="20210719 10:19:52.920" endtime="20210719 10:19:55.577"/>
+</kw>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<arg>3x</arg>
+<arg>4s</arg>
+<arg>Go to year folder</arg>
+<arg>${marketlist}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<kw name="Go to year folder" library="Publicassetnavigationkeywords">
+<arg>${marketlist}</arg>
+<kw name="Set Variable" library="BuiltIn">
+<var>${different_yearfolder_lctr}</var>
+<arg>xpath://div[text()='${markettestinput[3]}']/parent::td</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20210719 10:19:55.584" level="INFO">${different_yearfolder_lctr} = xpath://div[text()='2021']/parent::td</msg>
+<status status="PASS" starttime="20210719 10:19:55.580" endtime="20210719 10:19:55.585"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${different_yearfolder_lctr}</arg>
+<arg>timeout=30s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20210719 10:19:55.586" endtime="20210719 10:19:55.632"/>
+</kw>
+<kw name="Scroll Element Into View" library="SeleniumLibrary">
+<arg>${different_yearfolder_lctr}</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" starttime="20210719 10:19:55.633" endtime="20210719 10:19:55.917"/>
+</kw>
+<kw name="Mouse Down" library="SeleniumLibrary">
+<arg>${different_yearfolder_lctr}</arg>
+<doc>Simulates pressing the left mouse button on the element ``locator``.</doc>
+<msg timestamp="20210719 10:19:55.918" level="INFO">Simulating Mouse Down on element 'xpath://div[text()='2021']/parent::td'.</msg>
+<status status="PASS" starttime="20210719 10:19:55.917" endtime="20210719 10:19:56.197"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20210719 10:19:58.199" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20210719 10:19:56.198" endtime="20210719 10:19:58.199"/>
+</kw>
+<kw name="Double Click Element" library="SeleniumLibrary">
+<arg>${different_yearfolder_lctr}</arg>
+<doc>Double clicks the element identified by ``locator``.</doc>
+<msg timestamp="20210719 10:19:58.201" level="INFO">Double clicking element 'xpath://div[text()='2021']/parent::td'.</msg>
+<status status="PASS" starttime="20210719 10:19:58.200" endtime="20210719 10:19:58.499"/>
+</kw>
+<status status="PASS" starttime="20210719 10:19:55.579" endtime="20210719 10:19:58.500"/>
+</kw>
+<status status="PASS" starttime="20210719 10:19:55.578" endtime="20210719 10:19:58.501"/>
+</kw>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<arg>3x</arg>
+<arg>4s</arg>
+<arg>Go to issue folder</arg>
+<arg>${marketlist}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<kw name="Go to issue folder" library="Publicassetnavigationkeywords">
+<arg>${marketlist}</arg>
+<kw name="Set Variable" library="BuiltIn">
+<var>${different_sectionfolder_lctr}</var>
+<arg>xpath://div[text()='${markettestinput[4]}']/parent::td</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20210719 10:19:58.509" level="INFO">${different_sectionfolder_lctr} = xpath://div[text()='2020 Wired World 2021']/parent::td</msg>
+<status status="PASS" starttime="20210719 10:19:58.503" endtime="20210719 10:19:58.509"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${different_sectionfolder_lctr}</arg>
+<arg>timeout=30s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20210719 10:19:58.510" endtime="20210719 10:19:58.752"/>
+</kw>
+<kw name="Scroll Element Into View" library="SeleniumLibrary">
+<arg>${different_sectionfolder_lctr}</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" starttime="20210719 10:19:58.752" endtime="20210719 10:19:59.025"/>
+</kw>
+<kw name="Mouse Down" library="SeleniumLibrary">
+<arg>${different_sectionfolder_lctr}</arg>
+<doc>Simulates pressing the left mouse button on the element ``locator``.</doc>
+<msg timestamp="20210719 10:19:59.026" level="INFO">Simulating Mouse Down on element 'xpath://div[text()='2020 Wired World 2021']/parent::td'.</msg>
+<status status="PASS" starttime="20210719 10:19:59.026" endtime="20210719 10:19:59.298"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20210719 10:20:01.300" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20210719 10:19:59.299" endtime="20210719 10:20:01.300"/>
+</kw>
+<kw name="Double Click Element" library="SeleniumLibrary">
+<arg>${different_sectionfolder_lctr}</arg>
+<doc>Double clicks the element identified by ``locator``.</doc>
+<msg timestamp="20210719 10:20:01.301" level="INFO">Double clicking element 'xpath://div[text()='2020 Wired World 2021']/parent::td'.</msg>
+<status status="PASS" starttime="20210719 10:20:01.301" endtime="20210719 10:20:01.588"/>
+</kw>
+<status status="PASS" starttime="20210719 10:19:58.502" endtime="20210719 10:20:01.589"/>
+</kw>
+<status status="PASS" starttime="20210719 10:19:58.501" endtime="20210719 10:20:01.590"/>
+</kw>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<arg>3x</arg>
+<arg>4s</arg>
+<arg>Go to print folder</arg>
+<arg>${marketlist}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<kw name="Go to print folder" library="Publicassetnavigationkeywords">
+<arg>${marketlist}</arg>
+<kw name="Set Variable" library="BuiltIn">
+<var>${different_printfolder_lctr}</var>
+<arg>xpath://div[text()='${markettestinput[5]}']/parent::td</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20210719 10:20:01.595" level="INFO">${different_printfolder_lctr} = xpath://div[text()='Print']/parent::td</msg>
+<status status="PASS" starttime="20210719 10:20:01.591" endtime="20210719 10:20:01.595"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${different_printfolder_lctr}</arg>
+<arg>timeout=30s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20210719 10:20:01.596" endtime="20210719 10:20:01.826"/>
+</kw>
+<kw name="Mouse Down" library="SeleniumLibrary">
+<arg>${different_printfolder_lctr}</arg>
+<doc>Simulates pressing the left mouse button on the element ``locator``.</doc>
+<msg timestamp="20210719 10:20:01.827" level="INFO">Simulating Mouse Down on element 'xpath://div[text()='Print']/parent::td'.</msg>
+<status status="PASS" starttime="20210719 10:20:01.826" endtime="20210719 10:20:02.101"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20210719 10:20:04.104" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20210719 10:20:02.102" endtime="20210719 10:20:04.104"/>
+</kw>
+<kw name="Double Click Element" library="SeleniumLibrary">
+<arg>${different_printfolder_lctr}</arg>
+<doc>Double clicks the element identified by ``locator``.</doc>
+<msg timestamp="20210719 10:20:04.106" level="INFO">Double clicking element 'xpath://div[text()='Print']/parent::td'.</msg>
+<status status="PASS" starttime="20210719 10:20:04.106" endtime="20210719 10:20:04.402"/>
+</kw>
+<status status="PASS" starttime="20210719 10:20:01.591" endtime="20210719 10:20:04.403"/>
+</kw>
+<status status="PASS" starttime="20210719 10:20:01.590" endtime="20210719 10:20:04.404"/>
+</kw>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<arg>3x</arg>
+<arg>4s</arg>
+<arg>Go to section folder</arg>
+<arg>${marketlist}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<kw name="Go to section folder" library="Publicassetnavigationkeywords">
+<arg>${marketlist}</arg>
+<kw name="Set Variable" library="BuiltIn">
+<var>${different_layoutparentfolder_lctr}</var>
+<arg>xpath://div[text()='${markettestinput[6]}']/parent::td</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20210719 10:20:04.410" level="INFO">${different_layoutparentfolder_lctr} = xpath://div[text()='Editorial']/parent::td</msg>
+<status status="PASS" starttime="20210719 10:20:04.406" endtime="20210719 10:20:04.410"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${different_layoutparentfolder_lctr}</arg>
+<arg>timeout=30s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20210719 10:20:04.411" endtime="20210719 10:20:04.645"/>
+</kw>
+<kw name="Scroll Element Into View" library="SeleniumLibrary">
+<arg>${different_layoutparentfolder_lctr}</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" starttime="20210719 10:20:04.646" endtime="20210719 10:20:04.925"/>
+</kw>
+<kw name="Mouse Down" library="SeleniumLibrary">
+<arg>${different_layoutparentfolder_lctr}</arg>
+<doc>Simulates pressing the left mouse button on the element ``locator``.</doc>
+<msg timestamp="20210719 10:20:04.926" level="INFO">Simulating Mouse Down on element 'xpath://div[text()='Editorial']/parent::td'.</msg>
+<status status="PASS" starttime="20210719 10:20:04.926" endtime="20210719 10:20:05.201"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20210719 10:20:07.203" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20210719 10:20:05.202" endtime="20210719 10:20:07.204"/>
+</kw>
+<kw name="Double Click Element" library="SeleniumLibrary">
+<arg>${different_layoutparentfolder_lctr}</arg>
+<doc>Double clicks the element identified by ``locator``.</doc>
+<msg timestamp="20210719 10:20:07.206" level="INFO">Double clicking element 'xpath://div[text()='Editorial']/parent::td'.</msg>
+<status status="PASS" starttime="20210719 10:20:07.205" endtime="20210719 10:20:07.504"/>
+</kw>
+<status status="PASS" starttime="20210719 10:20:04.405" endtime="20210719 10:20:07.505"/>
+</kw>
+<status status="PASS" starttime="20210719 10:20:04.405" endtime="20210719 10:20:07.505"/>
+</kw>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<arg>3x</arg>
+<arg>4s</arg>
+<arg>Go to layout folder</arg>
+<arg>${marketlist}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<kw name="Go to layout folder" library="Publicassetnavigationkeywords">
+<arg>${marketlist}</arg>
+<kw name="Set Variable" library="BuiltIn">
+<var>${different_layoutchildfolder_lctr}</var>
+<arg>xpath://div[text()='${markettestinput[7]}']/parent::td</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20210719 10:20:07.516" level="INFO">${different_layoutchildfolder_lctr} = xpath://div[text()='11-20-WiredWorld-Business']/parent::td</msg>
+<status status="PASS" starttime="20210719 10:20:07.508" endtime="20210719 10:20:07.516"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${different_layoutchildfolder_lctr}</arg>
+<arg>timeout=30s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<msg timestamp="20210719 10:20:07.950" level="INFO">Suppressing StaleElementReferenceException from Selenium.</msg>
+<status status="PASS" starttime="20210719 10:20:07.517" endtime="20210719 10:20:08.180"/>
+</kw>
+<kw name="Scroll Element Into View" library="SeleniumLibrary">
+<arg>${different_layoutchildfolder_lctr}</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" starttime="20210719 10:20:08.181" endtime="20210719 10:20:08.473"/>
+</kw>
+<kw name="Mouse Down" library="SeleniumLibrary">
+<arg>${different_layoutchildfolder_lctr}</arg>
+<doc>Simulates pressing the left mouse button on the element ``locator``.</doc>
+<msg timestamp="20210719 10:20:08.474" level="INFO">Simulating Mouse Down on element 'xpath://div[text()='11-20-WiredWorld-Business']/parent::td'.</msg>
+<status status="PASS" starttime="20210719 10:20:08.474" endtime="20210719 10:20:08.746"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20210719 10:20:10.748" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20210719 10:20:08.747" endtime="20210719 10:20:10.748"/>
+</kw>
+<kw name="Double Click Element" library="SeleniumLibrary">
+<arg>${different_layoutchildfolder_lctr}</arg>
+<doc>Double clicks the element identified by ``locator``.</doc>
+<msg timestamp="20210719 10:20:10.750" level="INFO">Double clicking element 'xpath://div[text()='11-20-WiredWorld-Business']/parent::td'.</msg>
+<status status="PASS" starttime="20210719 10:20:10.750" endtime="20210719 10:20:11.094"/>
+</kw>
+<status status="PASS" starttime="20210719 10:20:07.507" endtime="20210719 10:20:11.095"/>
+</kw>
+<status status="PASS" starttime="20210719 10:20:07.506" endtime="20210719 10:20:11.096"/>
+</kw>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<arg>3x</arg>
+<arg>4s</arg>
+<arg>Go to assetfolder</arg>
+<arg>${marketlist}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<kw name="Go to assetfolder" library="Publicassetnavigationkeywords">
+<arg>${marketlist}</arg>
+<kw name="Set Variable" library="BuiltIn">
+<var>${different_assetsfolder_lctr}</var>
+<arg>xpath://div[text()='${markettestinput[8]}']/parent::td</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20210719 10:20:11.102" level="INFO">${different_assetsfolder_lctr} = xpath://div[text()='Assets']/parent::td</msg>
+<status status="PASS" starttime="20210719 10:20:11.097" endtime="20210719 10:20:11.102"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${different_assetsfolder_lctr}</arg>
+<arg>timeout=30s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20210719 10:20:11.102" endtime="20210719 10:20:11.699"/>
+</kw>
+<kw name="Scroll Element Into View" library="SeleniumLibrary">
+<arg>${different_assetsfolder_lctr}</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" starttime="20210719 10:20:11.700" endtime="20210719 10:20:11.975"/>
+</kw>
+<kw name="Mouse Down" library="SeleniumLibrary">
+<arg>${different_assetsfolder_lctr}</arg>
+<doc>Simulates pressing the left mouse button on the element ``locator``.</doc>
+<msg timestamp="20210719 10:20:11.977" level="INFO">Simulating Mouse Down on element 'xpath://div[text()='Assets']/parent::td'.</msg>
+<status status="PASS" starttime="20210719 10:20:11.976" endtime="20210719 10:20:12.251"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20210719 10:20:14.254" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20210719 10:20:12.252" endtime="20210719 10:20:14.254"/>
+</kw>
+<kw name="Double Click Element" library="SeleniumLibrary">
+<arg>${different_assetsfolder_lctr}</arg>
+<doc>Double clicks the element identified by ``locator``.</doc>
+<msg timestamp="20210719 10:20:14.256" level="INFO">Double clicking element 'xpath://div[text()='Assets']/parent::td'.</msg>
+<status status="PASS" starttime="20210719 10:20:14.255" endtime="20210719 10:20:14.622"/>
+</kw>
+<status status="PASS" starttime="20210719 10:20:11.096" endtime="20210719 10:20:14.623"/>
+</kw>
+<status status="PASS" starttime="20210719 10:20:11.096" endtime="20210719 10:20:14.624"/>
+</kw>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<arg>3x</arg>
+<arg>4s</arg>
+<arg>Go to publishertypefolder</arg>
+<arg>${marketlist}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<kw name="Go to publishertypefolder" library="Publicassetnavigationkeywords">
+<arg>${marketlist}</arg>
+<kw name="Set Variable" library="BuiltIn">
+<var>${different_unknownfolder_lctr}</var>
+<arg>xpath://div[text()='${markettestinput[9]}']/parent::td</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20210719 10:20:14.632" level="INFO">${different_unknownfolder_lctr} = xpath://div[text()='unknown']/parent::td</msg>
+<status status="PASS" starttime="20210719 10:20:14.627" endtime="20210719 10:20:14.632"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${different_unknownfolder_lctr}</arg>
+<arg>timeout=30s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20210719 10:20:14.633" endtime="20210719 10:20:14.912"/>
+</kw>
+<kw name="Scroll Element Into View" library="SeleniumLibrary">
+<arg>${different_unknownfolder_lctr}</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" starttime="20210719 10:20:14.912" endtime="20210719 10:20:15.195"/>
+</kw>
+<kw name="Mouse Down" library="SeleniumLibrary">
+<arg>${different_unknownfolder_lctr}</arg>
+<doc>Simulates pressing the left mouse button on the element ``locator``.</doc>
+<msg timestamp="20210719 10:20:15.196" level="INFO">Simulating Mouse Down on element 'xpath://div[text()='unknown']/parent::td'.</msg>
+<status status="PASS" starttime="20210719 10:20:15.196" endtime="20210719 10:20:15.474"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20210719 10:20:17.477" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20210719 10:20:15.475" endtime="20210719 10:20:17.477"/>
+</kw>
+<kw name="Double Click Element" library="SeleniumLibrary">
+<arg>${different_unknownfolder_lctr}</arg>
+<doc>Double clicks the element identified by ``locator``.</doc>
+<msg timestamp="20210719 10:20:17.479" level="INFO">Double clicking element 'xpath://div[text()='unknown']/parent::td'.</msg>
+<status status="PASS" starttime="20210719 10:20:17.478" endtime="20210719 10:20:17.787"/>
+</kw>
+<status status="PASS" starttime="20210719 10:20:14.626" endtime="20210719 10:20:17.789"/>
+</kw>
+<status status="PASS" starttime="20210719 10:20:14.625" endtime="20210719 10:20:17.789"/>
+</kw>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<arg>3x</arg>
+<arg>4s</arg>
+<arg>Go to ingestedfolder</arg>
+<arg>${marketlist}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<kw name="Go to ingestedfolder" library="Publicassetnavigationkeywords">
+<arg>${marketlist}</arg>
+<kw name="Set Variable" library="BuiltIn">
+<var>${different_ingestedfolder_lctr}</var>
+<arg>xpath://div[text()='${markettestinput[10]}']/parent::td</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20210719 10:20:17.795" level="INFO">${different_ingestedfolder_lctr} = xpath://div[text()='ingested']/parent::td</msg>
+<status status="PASS" starttime="20210719 10:20:17.791" endtime="20210719 10:20:17.795"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${different_ingestedfolder_lctr}</arg>
+<arg>timeout=30s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20210719 10:20:17.796" endtime="20210719 10:20:18.046"/>
+</kw>
+<kw name="Scroll Element Into View" library="SeleniumLibrary">
+<arg>${different_ingestedfolder_lctr}</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" starttime="20210719 10:20:18.046" endtime="20210719 10:20:18.328"/>
+</kw>
+<kw name="Mouse Down" library="SeleniumLibrary">
+<arg>${different_ingestedfolder_lctr}</arg>
+<doc>Simulates pressing the left mouse button on the element ``locator``.</doc>
+<msg timestamp="20210719 10:20:18.330" level="INFO">Simulating Mouse Down on element 'xpath://div[text()='ingested']/parent::td'.</msg>
+<status status="PASS" starttime="20210719 10:20:18.329" endtime="20210719 10:20:18.607"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20210719 10:20:20.608" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20210719 10:20:18.608" endtime="20210719 10:20:20.609"/>
+</kw>
+<kw name="Double Click Element" library="SeleniumLibrary">
+<arg>${different_ingestedfolder_lctr}</arg>
+<doc>Double clicks the element identified by ``locator``.</doc>
+<msg timestamp="20210719 10:20:20.611" level="INFO">Double clicking element 'xpath://div[text()='ingested']/parent::td'.</msg>
+<status status="PASS" starttime="20210719 10:20:20.610" endtime="20210719 10:20:20.922"/>
+</kw>
+<status status="PASS" starttime="20210719 10:20:17.790" endtime="20210719 10:20:20.923"/>
+</kw>
+<status status="PASS" starttime="20210719 10:20:17.790" endtime="20210719 10:20:20.924"/>
+</kw>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<arg>3x</arg>
+<arg>4s</arg>
+<arg>Go to asset</arg>
+<arg>${marketlist}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<kw name="Go to asset" library="Publicassetnavigationkeywords">
+<arg>${marketlist}</arg>
+<kw name="Set Variable" library="BuiltIn">
+<var>${different_asset_lctr}</var>
+<arg>xpath://div[text()='${markettestinput[11]}']</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20210719 10:20:20.930" level="INFO">${different_asset_lctr} = xpath://div[text()='1120WiredWorldBusiness01']</msg>
+<status status="PASS" starttime="20210719 10:20:20.926" endtime="20210719 10:20:20.930"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${different_asset_lctr}</arg>
+<arg>timeout=30s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20210719 10:20:20.931" endtime="20210719 10:20:21.456"/>
+</kw>
+<kw name="Scroll Element Into View" library="SeleniumLibrary">
+<arg>${different_asset_lctr}</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" starttime="20210719 10:20:21.457" endtime="20210719 10:20:21.805"/>
+</kw>
+<kw name="Mouse Down" library="SeleniumLibrary">
+<arg>${different_asset_lctr}</arg>
+<doc>Simulates pressing the left mouse button on the element ``locator``.</doc>
+<msg timestamp="20210719 10:20:21.806" level="INFO">Simulating Mouse Down on element 'xpath://div[text()='1120WiredWorldBusiness01']'.</msg>
+<status status="PASS" starttime="20210719 10:20:21.806" endtime="20210719 10:20:22.101"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20210719 10:20:24.105" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20210719 10:20:22.103" endtime="20210719 10:20:24.105"/>
+</kw>
+<kw name="Double Click Element" library="SeleniumLibrary">
+<arg>${different_asset_lctr}</arg>
+<doc>Double clicks the element identified by ``locator``.</doc>
+<msg timestamp="20210719 10:20:24.106" level="INFO">Double clicking element 'xpath://div[text()='1120WiredWorldBusiness01']'.</msg>
+<status status="PASS" starttime="20210719 10:20:24.106" endtime="20210719 10:20:26.012"/>
+</kw>
+<status status="PASS" starttime="20210719 10:20:20.925" endtime="20210719 10:20:26.013"/>
+</kw>
+<status status="PASS" starttime="20210719 10:20:20.925" endtime="20210719 10:20:26.014"/>
+</kw>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<arg>3x</arg>
+<arg>4s</arg>
+<arg>Check asset thumbnail</arg>
+<arg>${marketlist}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<kw name="Check asset thumbnail" library="Publicassetnavigationkeywords">
+<arg>${marketlist}</arg>
+<kw name="Set Variable" library="BuiltIn">
+<var>${different_assetthumbnail_lctr}</var>
+<arg>xpath://img[contains(@src,'${markettestinput[11]}')and contains(@src,'thumb.319.319')]</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20210719 10:20:26.021" level="INFO">${different_assetthumbnail_lctr} = xpath://img[contains(@src,'1120WiredWorldBusiness01')and contains(@src,'thumb.319.319')]</msg>
+<status status="PASS" starttime="20210719 10:20:26.016" endtime="20210719 10:20:26.021"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${different_assetthumbnail_lctr}</arg>
+<arg>timeout=30s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20210719 10:20:26.022" endtime="20210719 10:20:26.412"/>
+</kw>
+<kw name="Get Element Size" library="SeleniumLibrary">
+<var>${trunkimagesize}</var>
+<arg>${different_assetthumbnail_lctr}</arg>
+<doc>Returns width and height of the element identified by ``locator``.</doc>
+<msg timestamp="20210719 10:20:26.431" level="INFO">${trunkimagesize} = (293, 319)</msg>
+<status status="PASS" starttime="20210719 10:20:26.413" endtime="20210719 10:20:26.431"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>${trunkimagesize}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20210719 10:20:26.432" level="INFO">(293, 319)</msg>
+<status status="PASS" starttime="20210719 10:20:26.432" endtime="20210719 10:20:26.432"/>
+</kw>
+<status status="PASS" starttime="20210719 10:20:26.015" endtime="20210719 10:20:26.433"/>
+</kw>
+<status status="PASS" starttime="20210719 10:20:26.014" endtime="20210719 10:20:26.433"/>
+</kw>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<arg>3x</arg>
+<arg>4s</arg>
+<arg>Check productiondigitallink is not present on trunk</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<kw name="Check productiondigitallink is not present on trunk" library="Publicassetnavigationkeywords">
+<kw name="Page Should Not Contain Link" library="SeleniumLibrary">
+<arg>${own_productiondigitallink_lctr}</arg>
+<doc>Verifies link identified by ``locator`` is not found from current page.</doc>
+<msg timestamp="20210719 10:20:26.452" level="INFO">Current page does not contain link 'xpath://a[@title='Download production digital']'.</msg>
+<status status="PASS" starttime="20210719 10:20:26.435" endtime="20210719 10:20:26.452"/>
+</kw>
+<kw name="Page Should Not Contain" library="SeleniumLibrary">
+<arg>Download</arg>
+<doc>Verifies the current page does not contain ``text``.</doc>
+<msg timestamp="20210719 10:20:26.523" level="INFO">Current page does not contain text 'Download'.</msg>
+<status status="PASS" starttime="20210719 10:20:26.453" endtime="20210719 10:20:26.523"/>
+</kw>
+<kw name="Page Should Not Contain" library="SeleniumLibrary">
+<arg>Download productiondigital</arg>
+<doc>Verifies the current page does not contain ``text``.</doc>
+<msg timestamp="20210719 10:20:26.557" level="INFO">Current page does not contain text 'Download productiondigital'.</msg>
+<status status="PASS" starttime="20210719 10:20:26.524" endtime="20210719 10:20:26.557"/>
+</kw>
+<status status="PASS" starttime="20210719 10:20:26.434" endtime="20210719 10:20:26.558"/>
+</kw>
+<status status="PASS" starttime="20210719 10:20:26.434" endtime="20210719 10:20:26.558"/>
+</kw>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<arg>3x</arg>
+<arg>4s</arg>
+<arg>Check downloadoriginalrenditionlink is not present on trunk</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<kw name="Check downloadoriginalrenditionlink is not present on trunk" library="Publicassetnavigationkeywords">
+<kw name="Page Should Not Contain Link" library="SeleniumLibrary">
+<arg>${own_downloadtrunk_lctr}</arg>
+<doc>Verifies link identified by ``locator`` is not found from current page.</doc>
+<msg timestamp="20210719 10:20:26.568" level="INFO">Current page does not contain link 'xpath://a[@title='Download']'.</msg>
+<status status="PASS" starttime="20210719 10:20:26.559" endtime="20210719 10:20:26.568"/>
+</kw>
+<status status="PASS" starttime="20210719 10:20:26.559" endtime="20210719 10:20:26.569"/>
+</kw>
+<status status="PASS" starttime="20210719 10:20:26.559" endtime="20210719 10:20:26.570"/>
+</kw>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<arg>3x</arg>
+<arg>4s</arg>
+<arg>Expand branch</arg>
+<arg>${marketlist}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<kw name="Expand branch" library="Publicassetnavigationkeywords">
+<arg>${marketlist}</arg>
+<kw name="Set Variable" library="BuiltIn">
+<var>${different_branchexpandbutton_lctr}</var>
+<arg>xpath:(//div[@class='x-layout-collapsed x-layout-collapsed-east x-layout-cmini-east' and contains(@id,'${markettestinput[11]}')])</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20210719 10:20:26.574" level="INFO">${different_branchexpandbutton_lctr} = xpath:(//div[@class='x-layout-collapsed x-layout-collapsed-east x-layout-cmini-east' and contains(@id,'1120WiredWorldBusiness01')])</msg>
+<status status="PASS" starttime="20210719 10:20:26.571" endtime="20210719 10:20:26.574"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${different_branchexpandbutton_lctr}</arg>
+<arg>timeout=30s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20210719 10:20:26.575" endtime="20210719 10:20:26.592"/>
+</kw>
+<kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
+<arg>${different_branchexpandbutton_lctr}</arg>
+<arg>timeout=30s</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="PASS" starttime="20210719 10:20:26.593" endtime="20210719 10:20:26.609"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${different_branchexpandbutton_lctr}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20210719 10:20:26.610" level="INFO">Clicking element 'xpath:(//div[@class='x-layout-collapsed x-layout-collapsed-east x-layout-cmini-east' and contains(@id,'1120WiredWorldBusiness01')])'.</msg>
+<status status="PASS" starttime="20210719 10:20:26.610" endtime="20210719 10:20:26.665"/>
+</kw>
+<status status="PASS" starttime="20210719 10:20:26.570" endtime="20210719 10:20:26.666"/>
+</kw>
+<status status="PASS" starttime="20210719 10:20:26.570" endtime="20210719 10:20:26.667"/>
+</kw>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<arg>3x</arg>
+<arg>4s</arg>
+<arg>Check branch thumbnail</arg>
+<arg>${marketlist}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<kw name="Check branch thumbnail" library="Publicassetnavigationkeywords">
+<arg>${marketlist}</arg>
+<kw name="Set Variable" library="BuiltIn">
+<var>${different_branchthumbnail_lctr}</var>
+<arg>xpath://img[contains(@src,'${markettestinput[11]}')and contains(@src,'_jcr_content/renditions/thumbnail_branch')]</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20210719 10:20:26.674" level="INFO">${different_branchthumbnail_lctr} = xpath://img[contains(@src,'1120WiredWorldBusiness01')and contains(@src,'_jcr_content/renditions/thumbnail_branch')]</msg>
+<status status="PASS" starttime="20210719 10:20:26.670" endtime="20210719 10:20:26.674"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${different_branchthumbnail_lctr}</arg>
+<arg>timeout=30s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20210719 10:20:26.675" endtime="20210719 10:20:26.711"/>
+</kw>
+<kw name="Get Element Size" library="SeleniumLibrary">
+<var>${branchimagesize}</var>
+<arg>${different_branchthumbnail_lctr}</arg>
+<doc>Returns width and height of the element identified by ``locator``.</doc>
+<msg timestamp="20210719 10:20:26.743" level="INFO">${branchimagesize} = (293, 319)</msg>
+<status status="PASS" starttime="20210719 10:20:26.711" endtime="20210719 10:20:26.743"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>${branchimagesize}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20210719 10:20:26.745" level="INFO">(293, 319)</msg>
+<status status="PASS" starttime="20210719 10:20:26.744" endtime="20210719 10:20:26.745"/>
+</kw>
+<status status="PASS" starttime="20210719 10:20:26.669" endtime="20210719 10:20:26.746"/>
+</kw>
+<status status="PASS" starttime="20210719 10:20:26.668" endtime="20210719 10:20:26.746"/>
+</kw>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<arg>3x</arg>
+<arg>4s</arg>
+<arg>Check downloadproductionlink is not present on branch</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<kw name="Check downloadproductionlink is not present on branch" library="Publicassetnavigationkeywords">
+<kw name="Page Should Not Contain Link" library="SeleniumLibrary">
+<arg>${own_downloadproduction_branch_lctr}</arg>
+<doc>Verifies link identified by ``locator`` is not found from current page.</doc>
+<msg timestamp="20210719 10:20:26.764" level="INFO">Current page does not contain link 'xpath://a[text()='Download production']'.</msg>
+<status status="PASS" starttime="20210719 10:20:26.747" endtime="20210719 10:20:26.764"/>
+</kw>
+<status status="PASS" starttime="20210719 10:20:26.747" endtime="20210719 10:20:26.765"/>
+</kw>
+<status status="PASS" starttime="20210719 10:20:26.746" endtime="20210719 10:20:26.765"/>
+</kw>
+<status status="PASS" starttime="20210719 10:19:43.531" endtime="20210719 10:20:26.765"/>
+</iter>
+<iter>
+<var name="${marketlist}">['China', 'AD', 'public', '2019', 'AD100 2019', 'Print', 'AD Feature', 'AD100-2019-AB-ADC', 'Assets', 'unknown', 'ingested', 'AD100_2019_AB_ADC_001', '']</var>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20210719 10:20:28.767" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20210719 10:20:26.766" endtime="20210719 10:20:28.767"/>
+</kw>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<arg>3x</arg>
+<arg>4s</arg>
+<arg>Go to Imagestab</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<kw name="Go to Imagestab" library="Publicassetnavigationkeywords">
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>${Imagestab_lctr}</arg>
+<arg>timeout=30s</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20210719 10:20:28.769" endtime="20210719 10:20:28.781"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${Imagestab_lctr}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20210719 10:20:28.782" level="INFO">Clicking element 'xpath://span[@class='x-tab-strip-inner']/span[text()='Images']'.</msg>
+<status status="PASS" starttime="20210719 10:20:28.781" endtime="20210719 10:20:28.902"/>
+</kw>
+<status status="PASS" starttime="20210719 10:20:28.769" endtime="20210719 10:20:28.903"/>
+</kw>
+<status status="PASS" starttime="20210719 10:20:28.768" endtime="20210719 10:20:28.904"/>
+</kw>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<arg>3x</arg>
+<arg>4s</arg>
+<arg>Go to CNIfolder</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<kw name="Go to CNIfolder" library="Publicassetnavigationkeywords">
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>${diffmarket_CNIfolder_lctr}</arg>
+<arg>timeout=30s</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20210719 10:20:28.905" endtime="20210719 10:20:28.916"/>
+</kw>
+<kw name="Double Click Element" library="SeleniumLibrary">
+<arg>${diffmarket_CNIfolder_lctr}</arg>
+<doc>Double clicks the element identified by ``locator``.</doc>
+<msg timestamp="20210719 10:20:28.917" level="INFO">Double clicking element 'xpath://span[text()='CNI']'.</msg>
+<status status="PASS" starttime="20210719 10:20:28.917" endtime="20210719 10:20:29.264"/>
+</kw>
+<status status="PASS" starttime="20210719 10:20:28.904" endtime="20210719 10:20:29.265"/>
+</kw>
+<status status="PASS" starttime="20210719 10:20:28.904" endtime="20210719 10:20:29.266"/>
+</kw>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<arg>3x</arg>
+<arg>4s</arg>
+<arg>Go to Marketfolder</arg>
+<arg>${marketlist}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<kw name="Go to Marketfolder" library="Publicassetnavigationkeywords">
+<arg>${marketlist}</arg>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${display_all_lctr}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20210719 10:20:29.268" level="INFO">Clicking element 'xpath:(//button[text()='Display All'])[1]'.</msg>
+<status status="PASS" starttime="20210719 10:20:29.268" endtime="20210719 10:20:29.637"/>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<var>${diffmarket_Marketfolder_lctr}</var>
+<arg>xpath://div[text()='${markettestinput[0]}']/parent::td</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20210719 10:20:29.641" level="INFO">${diffmarket_Marketfolder_lctr} = xpath://div[text()='China']/parent::td</msg>
+<status status="PASS" starttime="20210719 10:20:29.638" endtime="20210719 10:20:29.642"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>${diffmarket_Marketfolder_lctr}</arg>
+<arg>timeout=30s</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20210719 10:20:29.642" endtime="20210719 10:20:29.654"/>
+</kw>
+<kw name="Scroll Element Into View" library="SeleniumLibrary">
+<arg>${diffmarket_Marketfolder_lctr}</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" starttime="20210719 10:20:29.655" endtime="20210719 10:20:29.950"/>
+</kw>
+<kw name="Mouse Down" library="SeleniumLibrary">
+<arg>${diffmarket_Marketfolder_lctr}</arg>
+<doc>Simulates pressing the left mouse button on the element ``locator``.</doc>
+<msg timestamp="20210719 10:20:29.952" level="INFO">Simulating Mouse Down on element 'xpath://div[text()='China']/parent::td'.</msg>
+<status status="PASS" starttime="20210719 10:20:29.951" endtime="20210719 10:20:30.260"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20210719 10:20:32.262" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20210719 10:20:30.261" endtime="20210719 10:20:32.262"/>
+</kw>
+<kw name="Double Click Element" library="SeleniumLibrary">
+<arg>${diffmarket_Marketfolder_lctr}</arg>
+<doc>Double clicks the element identified by ``locator``.</doc>
+<msg timestamp="20210719 10:20:32.264" level="INFO">Double clicking element 'xpath://div[text()='China']/parent::td'.</msg>
+<status status="PASS" starttime="20210719 10:20:32.263" endtime="20210719 10:20:32.606"/>
+</kw>
+<status status="PASS" starttime="20210719 10:20:29.267" endtime="20210719 10:20:32.607"/>
+</kw>
+<status status="PASS" starttime="20210719 10:20:29.267" endtime="20210719 10:20:32.607"/>
+</kw>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<arg>3x</arg>
+<arg>4s</arg>
+<arg>Go to Titlefolder</arg>
+<arg>${marketlist}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<kw name="Go to Titlefolder" library="Publicassetnavigationkeywords">
+<arg>${marketlist}</arg>
+<kw name="Set Variable" library="BuiltIn">
+<var>${diffmarket_Titlefolder_lctr}</var>
+<arg>xpath://div[text()='${markettestinput[1]}']/parent::td</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20210719 10:20:32.612" level="INFO">${diffmarket_Titlefolder_lctr} = xpath://div[text()='AD']/parent::td</msg>
+<status status="PASS" starttime="20210719 10:20:32.608" endtime="20210719 10:20:32.612"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>${diffmarket_Titlefolder_lctr}</arg>
+<arg>timeout=30s</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20210719 10:20:32.613" endtime="20210719 10:20:33.025"/>
+</kw>
+<kw name="Scroll Element Into View" library="SeleniumLibrary">
+<arg>${diffmarket_Titlefolder_lctr}</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" starttime="20210719 10:20:33.025" endtime="20210719 10:20:33.312"/>
+</kw>
+<kw name="Mouse Down" library="SeleniumLibrary">
+<arg>${diffmarket_Titlefolder_lctr}</arg>
+<doc>Simulates pressing the left mouse button on the element ``locator``.</doc>
+<msg timestamp="20210719 10:20:33.313" level="INFO">Simulating Mouse Down on element 'xpath://div[text()='AD']/parent::td'.</msg>
+<status status="PASS" starttime="20210719 10:20:33.312" endtime="20210719 10:20:33.598"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20210719 10:20:35.600" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20210719 10:20:33.599" endtime="20210719 10:20:35.600"/>
+</kw>
+<kw name="Double Click Element" library="SeleniumLibrary">
+<arg>${diffmarket_Titlefolder_lctr}</arg>
+<doc>Double clicks the element identified by ``locator``.</doc>
+<msg timestamp="20210719 10:20:35.602" level="INFO">Double clicking element 'xpath://div[text()='AD']/parent::td'.</msg>
+<status status="PASS" starttime="20210719 10:20:35.601" endtime="20210719 10:20:35.940"/>
+</kw>
+<status status="PASS" starttime="20210719 10:20:32.608" endtime="20210719 10:20:35.941"/>
+</kw>
+<status status="PASS" starttime="20210719 10:20:32.607" endtime="20210719 10:20:35.941"/>
+</kw>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<arg>3x</arg>
+<arg>4s</arg>
+<arg>Check whether Commissioned, Non-Commissioned, Studio folders not acessible</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<kw name="Check whether Commissioned, Non-Commissioned, Studio folders not acessible" library="Publicassetnavigationkeywords">
+<kw name="Element Should Not Contain" library="SeleniumLibrary">
+<arg>${uploadfolderlist_lctr}</arg>
+<arg>commissioned</arg>
+<doc>Verifies that element ``locator`` does not contain text ``expected``.</doc>
+<msg timestamp="20210719 10:20:36.328" level="INFO">Element 'xpath:(//div[@class='x-grid3-scroller'])[1]' does not contain text 'commissioned'.</msg>
+<status status="PASS" starttime="20210719 10:20:35.943" endtime="20210719 10:20:36.328"/>
+</kw>
+<kw name="Element Should Not Contain" library="SeleniumLibrary">
+<arg>${uploadfolderlist_lctr}</arg>
+<arg>non-commissioned</arg>
+<doc>Verifies that element ``locator`` does not contain text ``expected``.</doc>
+<msg timestamp="20210719 10:20:36.405" level="INFO">Element 'xpath:(//div[@class='x-grid3-scroller'])[1]' does not contain text 'non-commissioned'.</msg>
+<status status="PASS" starttime="20210719 10:20:36.330" endtime="20210719 10:20:36.405"/>
+</kw>
+<kw name="Element Should Not Contain" library="SeleniumLibrary">
+<arg>${uploadfolderlist_lctr}</arg>
+<arg>studio</arg>
+<doc>Verifies that element ``locator`` does not contain text ``expected``.</doc>
+<msg timestamp="20210719 10:20:36.447" level="INFO">Element 'xpath:(//div[@class='x-grid3-scroller'])[1]' does not contain text 'studio'.</msg>
+<status status="PASS" starttime="20210719 10:20:36.407" endtime="20210719 10:20:36.447"/>
+</kw>
+<status status="PASS" starttime="20210719 10:20:35.942" endtime="20210719 10:20:36.448"/>
+</kw>
+<status status="PASS" starttime="20210719 10:20:35.942" endtime="20210719 10:20:36.448"/>
+</kw>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<arg>3x</arg>
+<arg>4s</arg>
+<arg>Go to diff_Public folder</arg>
+<arg>${marketlist}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<kw name="Go to diff_Public folder" library="Publicassetnavigationkeywords">
+<arg>${marketlist}</arg>
+<kw name="Set Variable" library="BuiltIn">
+<var>${different_publicfolder_lctr}</var>
+<arg>xpath://div[text()='${markettestinput[2]}']/parent::td</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20210719 10:20:36.454" level="INFO">${different_publicfolder_lctr} = xpath://div[text()='public']/parent::td</msg>
+<status status="PASS" starttime="20210719 10:20:36.450" endtime="20210719 10:20:36.454"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>${different_publicfolder_lctr}</arg>
+<arg>timeout=30s</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20210719 10:20:36.455" endtime="20210719 10:20:36.468"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20210719 10:20:38.469" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20210719 10:20:36.468" endtime="20210719 10:20:38.470"/>
+</kw>
+<kw name="Double Click Element" library="SeleniumLibrary">
+<arg>${different_publicfolder_lctr}</arg>
+<doc>Double clicks the element identified by ``locator``.</doc>
+<msg timestamp="20210719 10:20:38.473" level="INFO">Double clicking element 'xpath://div[text()='public']/parent::td'.</msg>
+<status status="PASS" starttime="20210719 10:20:38.472" endtime="20210719 10:20:41.738"/>
+</kw>
+<status status="PASS" starttime="20210719 10:20:36.449" endtime="20210719 10:20:41.739"/>
+</kw>
+<status status="PASS" starttime="20210719 10:20:36.449" endtime="20210719 10:20:41.740"/>
+</kw>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<arg>3x</arg>
+<arg>4s</arg>
+<arg>Go to year folder</arg>
+<arg>${marketlist}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<kw name="Go to year folder" library="Publicassetnavigationkeywords">
+<arg>${marketlist}</arg>
+<kw name="Set Variable" library="BuiltIn">
+<var>${different_yearfolder_lctr}</var>
+<arg>xpath://div[text()='${markettestinput[3]}']/parent::td</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20210719 10:20:41.750" level="INFO">${different_yearfolder_lctr} = xpath://div[text()='2019']/parent::td</msg>
+<status status="PASS" starttime="20210719 10:20:41.743" endtime="20210719 10:20:41.750"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${different_yearfolder_lctr}</arg>
+<arg>timeout=30s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20210719 10:20:41.752" endtime="20210719 10:20:42.346"/>
+</kw>
+<kw name="Scroll Element Into View" library="SeleniumLibrary">
+<arg>${different_yearfolder_lctr}</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" starttime="20210719 10:20:42.346" endtime="20210719 10:20:42.673"/>
+</kw>
+<kw name="Mouse Down" library="SeleniumLibrary">
+<arg>${different_yearfolder_lctr}</arg>
+<doc>Simulates pressing the left mouse button on the element ``locator``.</doc>
+<msg timestamp="20210719 10:20:42.674" level="INFO">Simulating Mouse Down on element 'xpath://div[text()='2019']/parent::td'.</msg>
+<status status="PASS" starttime="20210719 10:20:42.674" endtime="20210719 10:20:42.959"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20210719 10:20:44.962" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20210719 10:20:42.960" endtime="20210719 10:20:44.962"/>
+</kw>
+<kw name="Double Click Element" library="SeleniumLibrary">
+<arg>${different_yearfolder_lctr}</arg>
+<doc>Double clicks the element identified by ``locator``.</doc>
+<msg timestamp="20210719 10:20:44.964" level="INFO">Double clicking element 'xpath://div[text()='2019']/parent::td'.</msg>
+<status status="PASS" starttime="20210719 10:20:44.964" endtime="20210719 10:20:45.321"/>
+</kw>
+<status status="PASS" starttime="20210719 10:20:41.741" endtime="20210719 10:20:45.322"/>
+</kw>
+<status status="PASS" starttime="20210719 10:20:41.741" endtime="20210719 10:20:45.322"/>
+</kw>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<arg>3x</arg>
+<arg>4s</arg>
+<arg>Go to issue folder</arg>
+<arg>${marketlist}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<kw name="Go to issue folder" library="Publicassetnavigationkeywords">
+<arg>${marketlist}</arg>
+<kw name="Set Variable" library="BuiltIn">
+<var>${different_sectionfolder_lctr}</var>
+<arg>xpath://div[text()='${markettestinput[4]}']/parent::td</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20210719 10:20:45.328" level="INFO">${different_sectionfolder_lctr} = xpath://div[text()='AD100 2019']/parent::td</msg>
+<status status="PASS" starttime="20210719 10:20:45.323" endtime="20210719 10:20:45.328"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${different_sectionfolder_lctr}</arg>
+<arg>timeout=30s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20210719 10:20:45.328" endtime="20210719 10:20:45.927"/>
+</kw>
+<kw name="Scroll Element Into View" library="SeleniumLibrary">
+<arg>${different_sectionfolder_lctr}</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" starttime="20210719 10:20:45.928" endtime="20210719 10:20:46.276"/>
+</kw>
+<kw name="Mouse Down" library="SeleniumLibrary">
+<arg>${different_sectionfolder_lctr}</arg>
+<doc>Simulates pressing the left mouse button on the element ``locator``.</doc>
+<msg timestamp="20210719 10:20:46.277" level="INFO">Simulating Mouse Down on element 'xpath://div[text()='AD100 2019']/parent::td'.</msg>
+<status status="PASS" starttime="20210719 10:20:46.276" endtime="20210719 10:20:46.577"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20210719 10:20:48.580" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20210719 10:20:46.578" endtime="20210719 10:20:48.580"/>
+</kw>
+<kw name="Double Click Element" library="SeleniumLibrary">
+<arg>${different_sectionfolder_lctr}</arg>
+<doc>Double clicks the element identified by ``locator``.</doc>
+<msg timestamp="20210719 10:20:48.581" level="INFO">Double clicking element 'xpath://div[text()='AD100 2019']/parent::td'.</msg>
+<status status="PASS" starttime="20210719 10:20:48.581" endtime="20210719 10:20:48.922"/>
+</kw>
+<status status="PASS" starttime="20210719 10:20:45.323" endtime="20210719 10:20:48.922"/>
+</kw>
+<status status="PASS" starttime="20210719 10:20:45.322" endtime="20210719 10:20:48.923"/>
+</kw>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<arg>3x</arg>
+<arg>4s</arg>
+<arg>Go to print folder</arg>
+<arg>${marketlist}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<kw name="Go to print folder" library="Publicassetnavigationkeywords">
+<arg>${marketlist}</arg>
+<kw name="Set Variable" library="BuiltIn">
+<var>${different_printfolder_lctr}</var>
+<arg>xpath://div[text()='${markettestinput[5]}']/parent::td</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20210719 10:20:48.928" level="INFO">${different_printfolder_lctr} = xpath://div[text()='Print']/parent::td</msg>
+<status status="PASS" starttime="20210719 10:20:48.924" endtime="20210719 10:20:48.928"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${different_printfolder_lctr}</arg>
+<arg>timeout=30s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20210719 10:20:48.929" endtime="20210719 10:20:49.432"/>
+</kw>
+<kw name="Mouse Down" library="SeleniumLibrary">
+<arg>${different_printfolder_lctr}</arg>
+<doc>Simulates pressing the left mouse button on the element ``locator``.</doc>
+<msg timestamp="20210719 10:20:49.433" level="INFO">Simulating Mouse Down on element 'xpath://div[text()='Print']/parent::td'.</msg>
+<status status="PASS" starttime="20210719 10:20:49.433" endtime="20210719 10:20:49.812"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20210719 10:20:51.814" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20210719 10:20:49.813" endtime="20210719 10:20:51.814"/>
+</kw>
+<kw name="Double Click Element" library="SeleniumLibrary">
+<arg>${different_printfolder_lctr}</arg>
+<doc>Double clicks the element identified by ``locator``.</doc>
+<msg timestamp="20210719 10:20:51.816" level="INFO">Double clicking element 'xpath://div[text()='Print']/parent::td'.</msg>
+<status status="PASS" starttime="20210719 10:20:51.815" endtime="20210719 10:20:52.163"/>
+</kw>
+<status status="PASS" starttime="20210719 10:20:48.924" endtime="20210719 10:20:52.164"/>
+</kw>
+<status status="PASS" starttime="20210719 10:20:48.923" endtime="20210719 10:20:52.164"/>
+</kw>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<arg>3x</arg>
+<arg>4s</arg>
+<arg>Go to section folder</arg>
+<arg>${marketlist}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<kw name="Go to section folder" library="Publicassetnavigationkeywords">
+<arg>${marketlist}</arg>
+<kw name="Set Variable" library="BuiltIn">
+<var>${different_layoutparentfolder_lctr}</var>
+<arg>xpath://div[text()='${markettestinput[6]}']/parent::td</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20210719 10:20:52.186" level="INFO">${different_layoutparentfolder_lctr} = xpath://div[text()='AD Feature']/parent::td</msg>
+<status status="PASS" starttime="20210719 10:20:52.166" endtime="20210719 10:20:52.187"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${different_layoutparentfolder_lctr}</arg>
+<arg>timeout=30s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20210719 10:20:52.188" endtime="20210719 10:20:52.748"/>
+</kw>
+<kw name="Scroll Element Into View" library="SeleniumLibrary">
+<arg>${different_layoutparentfolder_lctr}</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" starttime="20210719 10:20:52.748" endtime="20210719 10:20:53.070"/>
+</kw>
+<kw name="Mouse Down" library="SeleniumLibrary">
+<arg>${different_layoutparentfolder_lctr}</arg>
+<doc>Simulates pressing the left mouse button on the element ``locator``.</doc>
+<msg timestamp="20210719 10:20:53.071" level="INFO">Simulating Mouse Down on element 'xpath://div[text()='AD Feature']/parent::td'.</msg>
+<status status="PASS" starttime="20210719 10:20:53.070" endtime="20210719 10:20:53.363"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20210719 10:20:55.365" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20210719 10:20:53.364" endtime="20210719 10:20:55.366"/>
+</kw>
+<kw name="Double Click Element" library="SeleniumLibrary">
+<arg>${different_layoutparentfolder_lctr}</arg>
+<doc>Double clicks the element identified by ``locator``.</doc>
+<msg timestamp="20210719 10:20:55.374" level="INFO">Double clicking element 'xpath://div[text()='AD Feature']/parent::td'.</msg>
+<status status="PASS" starttime="20210719 10:20:55.373" endtime="20210719 10:20:55.723"/>
+</kw>
+<status status="PASS" starttime="20210719 10:20:52.165" endtime="20210719 10:20:55.724"/>
+</kw>
+<status status="PASS" starttime="20210719 10:20:52.165" endtime="20210719 10:20:55.725"/>
+</kw>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<arg>3x</arg>
+<arg>4s</arg>
+<arg>Go to layout folder</arg>
+<arg>${marketlist}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<kw name="Go to layout folder" library="Publicassetnavigationkeywords">
+<arg>${marketlist}</arg>
+<kw name="Set Variable" library="BuiltIn">
+<var>${different_layoutchildfolder_lctr}</var>
+<arg>xpath://div[text()='${markettestinput[7]}']/parent::td</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20210719 10:20:55.730" level="INFO">${different_layoutchildfolder_lctr} = xpath://div[text()='AD100-2019-AB-ADC']/parent::td</msg>
+<status status="PASS" starttime="20210719 10:20:55.726" endtime="20210719 10:20:55.730"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${different_layoutchildfolder_lctr}</arg>
+<arg>timeout=30s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20210719 10:20:55.731" endtime="20210719 10:20:56.634"/>
+</kw>
+<kw name="Scroll Element Into View" library="SeleniumLibrary">
+<arg>${different_layoutchildfolder_lctr}</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" starttime="20210719 10:20:56.635" endtime="20210719 10:20:56.982"/>
+</kw>
+<kw name="Mouse Down" library="SeleniumLibrary">
+<arg>${different_layoutchildfolder_lctr}</arg>
+<doc>Simulates pressing the left mouse button on the element ``locator``.</doc>
+<msg timestamp="20210719 10:20:56.984" level="INFO">Simulating Mouse Down on element 'xpath://div[text()='AD100-2019-AB-ADC']/parent::td'.</msg>
+<status status="PASS" starttime="20210719 10:20:56.983" endtime="20210719 10:20:57.283"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20210719 10:20:59.284" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20210719 10:20:57.284" endtime="20210719 10:20:59.285"/>
+</kw>
+<kw name="Double Click Element" library="SeleniumLibrary">
+<arg>${different_layoutchildfolder_lctr}</arg>
+<doc>Double clicks the element identified by ``locator``.</doc>
+<msg timestamp="20210719 10:20:59.287" level="INFO">Double clicking element 'xpath://div[text()='AD100-2019-AB-ADC']/parent::td'.</msg>
+<status status="PASS" starttime="20210719 10:20:59.286" endtime="20210719 10:20:59.656"/>
+</kw>
+<status status="PASS" starttime="20210719 10:20:55.726" endtime="20210719 10:20:59.657"/>
+</kw>
+<status status="PASS" starttime="20210719 10:20:55.725" endtime="20210719 10:20:59.657"/>
+</kw>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<arg>3x</arg>
+<arg>4s</arg>
+<arg>Go to assetfolder</arg>
+<arg>${marketlist}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<kw name="Go to assetfolder" library="Publicassetnavigationkeywords">
+<arg>${marketlist}</arg>
+<kw name="Set Variable" library="BuiltIn">
+<var>${different_assetsfolder_lctr}</var>
+<arg>xpath://div[text()='${markettestinput[8]}']/parent::td</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20210719 10:20:59.663" level="INFO">${different_assetsfolder_lctr} = xpath://div[text()='Assets']/parent::td</msg>
+<status status="PASS" starttime="20210719 10:20:59.659" endtime="20210719 10:20:59.663"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${different_assetsfolder_lctr}</arg>
+<arg>timeout=30s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20210719 10:20:59.664" endtime="20210719 10:21:00.869"/>
+</kw>
+<kw name="Scroll Element Into View" library="SeleniumLibrary">
+<arg>${different_assetsfolder_lctr}</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" starttime="20210719 10:21:00.870" endtime="20210719 10:21:01.146"/>
+</kw>
+<kw name="Mouse Down" library="SeleniumLibrary">
+<arg>${different_assetsfolder_lctr}</arg>
+<doc>Simulates pressing the left mouse button on the element ``locator``.</doc>
+<msg timestamp="20210719 10:21:01.148" level="INFO">Simulating Mouse Down on element 'xpath://div[text()='Assets']/parent::td'.</msg>
+<status status="PASS" starttime="20210719 10:21:01.147" endtime="20210719 10:21:01.459"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20210719 10:21:03.461" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20210719 10:21:01.460" endtime="20210719 10:21:03.461"/>
+</kw>
+<kw name="Double Click Element" library="SeleniumLibrary">
+<arg>${different_assetsfolder_lctr}</arg>
+<doc>Double clicks the element identified by ``locator``.</doc>
+<msg timestamp="20210719 10:21:03.463" level="INFO">Double clicking element 'xpath://div[text()='Assets']/parent::td'.</msg>
+<status status="PASS" starttime="20210719 10:21:03.462" endtime="20210719 10:21:03.840"/>
+</kw>
+<status status="PASS" starttime="20210719 10:20:59.658" endtime="20210719 10:21:03.841"/>
+</kw>
+<status status="PASS" starttime="20210719 10:20:59.658" endtime="20210719 10:21:03.842"/>
+</kw>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<arg>3x</arg>
+<arg>4s</arg>
+<arg>Go to publishertypefolder</arg>
+<arg>${marketlist}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<kw name="Go to publishertypefolder" library="Publicassetnavigationkeywords">
+<arg>${marketlist}</arg>
+<kw name="Set Variable" library="BuiltIn">
+<var>${different_unknownfolder_lctr}</var>
+<arg>xpath://div[text()='${markettestinput[9]}']/parent::td</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20210719 10:21:03.847" level="INFO">${different_unknownfolder_lctr} = xpath://div[text()='unknown']/parent::td</msg>
+<status status="PASS" starttime="20210719 10:21:03.843" endtime="20210719 10:21:03.847"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${different_unknownfolder_lctr}</arg>
+<arg>timeout=30s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20210719 10:21:03.848" endtime="20210719 10:21:04.728"/>
+</kw>
+<kw name="Scroll Element Into View" library="SeleniumLibrary">
+<arg>${different_unknownfolder_lctr}</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" starttime="20210719 10:21:04.728" endtime="20210719 10:21:05.098"/>
+</kw>
+<kw name="Mouse Down" library="SeleniumLibrary">
+<arg>${different_unknownfolder_lctr}</arg>
+<doc>Simulates pressing the left mouse button on the element ``locator``.</doc>
+<msg timestamp="20210719 10:21:05.099" level="INFO">Simulating Mouse Down on element 'xpath://div[text()='unknown']/parent::td'.</msg>
+<status status="PASS" starttime="20210719 10:21:05.098" endtime="20210719 10:21:05.398"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20210719 10:21:07.400" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20210719 10:21:05.399" endtime="20210719 10:21:07.400"/>
+</kw>
+<kw name="Double Click Element" library="SeleniumLibrary">
+<arg>${different_unknownfolder_lctr}</arg>
+<doc>Double clicks the element identified by ``locator``.</doc>
+<msg timestamp="20210719 10:21:07.402" level="INFO">Double clicking element 'xpath://div[text()='unknown']/parent::td'.</msg>
+<status status="PASS" starttime="20210719 10:21:07.401" endtime="20210719 10:21:07.845"/>
+</kw>
+<status status="PASS" starttime="20210719 10:21:03.843" endtime="20210719 10:21:07.847"/>
+</kw>
+<status status="PASS" starttime="20210719 10:21:03.842" endtime="20210719 10:21:07.849"/>
+</kw>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<arg>3x</arg>
+<arg>4s</arg>
+<arg>Go to ingestedfolder</arg>
+<arg>${marketlist}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<kw name="Go to ingestedfolder" library="Publicassetnavigationkeywords">
+<arg>${marketlist}</arg>
+<kw name="Set Variable" library="BuiltIn">
+<var>${different_ingestedfolder_lctr}</var>
+<arg>xpath://div[text()='${markettestinput[10]}']/parent::td</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20210719 10:21:07.855" level="INFO">${different_ingestedfolder_lctr} = xpath://div[text()='ingested']/parent::td</msg>
+<status status="PASS" starttime="20210719 10:21:07.850" endtime="20210719 10:21:07.855"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${different_ingestedfolder_lctr}</arg>
+<arg>timeout=30s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20210719 10:21:07.856" endtime="20210719 10:21:09.095"/>
+</kw>
+<kw name="Scroll Element Into View" library="SeleniumLibrary">
+<arg>${different_ingestedfolder_lctr}</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" starttime="20210719 10:21:09.096" endtime="20210719 10:21:09.441"/>
+</kw>
+<kw name="Mouse Down" library="SeleniumLibrary">
+<arg>${different_ingestedfolder_lctr}</arg>
+<doc>Simulates pressing the left mouse button on the element ``locator``.</doc>
+<msg timestamp="20210719 10:21:09.443" level="INFO">Simulating Mouse Down on element 'xpath://div[text()='ingested']/parent::td'.</msg>
+<status status="PASS" starttime="20210719 10:21:09.442" endtime="20210719 10:21:09.758"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20210719 10:21:11.794" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20210719 10:21:09.792" endtime="20210719 10:21:11.794"/>
+</kw>
+<kw name="Double Click Element" library="SeleniumLibrary">
+<arg>${different_ingestedfolder_lctr}</arg>
+<doc>Double clicks the element identified by ``locator``.</doc>
+<msg timestamp="20210719 10:21:11.796" level="INFO">Double clicking element 'xpath://div[text()='ingested']/parent::td'.</msg>
+<status status="PASS" starttime="20210719 10:21:11.795" endtime="20210719 10:21:12.193"/>
+</kw>
+<status status="PASS" starttime="20210719 10:21:07.850" endtime="20210719 10:21:12.194"/>
+</kw>
+<status status="PASS" starttime="20210719 10:21:07.849" endtime="20210719 10:21:12.194"/>
+</kw>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<arg>3x</arg>
+<arg>4s</arg>
+<arg>Go to asset</arg>
+<arg>${marketlist}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<kw name="Go to asset" library="Publicassetnavigationkeywords">
+<arg>${marketlist}</arg>
+<kw name="Set Variable" library="BuiltIn">
+<var>${different_asset_lctr}</var>
+<arg>xpath://div[text()='${markettestinput[11]}']</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20210719 10:21:12.200" level="INFO">${different_asset_lctr} = xpath://div[text()='AD100_2019_AB_ADC_001']</msg>
+<status status="PASS" starttime="20210719 10:21:12.196" endtime="20210719 10:21:12.200"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${different_asset_lctr}</arg>
+<arg>timeout=30s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20210719 10:21:12.201" endtime="20210719 10:21:13.526"/>
+</kw>
+<kw name="Scroll Element Into View" library="SeleniumLibrary">
+<arg>${different_asset_lctr}</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" starttime="20210719 10:21:13.527" endtime="20210719 10:21:13.803"/>
+</kw>
+<kw name="Mouse Down" library="SeleniumLibrary">
+<arg>${different_asset_lctr}</arg>
+<doc>Simulates pressing the left mouse button on the element ``locator``.</doc>
+<msg timestamp="20210719 10:21:13.804" level="INFO">Simulating Mouse Down on element 'xpath://div[text()='AD100_2019_AB_ADC_001']'.</msg>
+<status status="PASS" starttime="20210719 10:21:13.804" endtime="20210719 10:21:14.125"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20210719 10:21:16.128" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20210719 10:21:14.127" endtime="20210719 10:21:16.129"/>
+</kw>
+<kw name="Double Click Element" library="SeleniumLibrary">
+<arg>${different_asset_lctr}</arg>
+<doc>Double clicks the element identified by ``locator``.</doc>
+<msg timestamp="20210719 10:21:16.156" level="INFO">Double clicking element 'xpath://div[text()='AD100_2019_AB_ADC_001']'.</msg>
+<status status="PASS" starttime="20210719 10:21:16.156" endtime="20210719 10:21:18.525"/>
+</kw>
+<status status="PASS" starttime="20210719 10:21:12.195" endtime="20210719 10:21:18.526"/>
+</kw>
+<status status="PASS" starttime="20210719 10:21:12.194" endtime="20210719 10:21:18.527"/>
+</kw>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<arg>3x</arg>
+<arg>4s</arg>
+<arg>Check asset thumbnail</arg>
+<arg>${marketlist}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<kw name="Check asset thumbnail" library="Publicassetnavigationkeywords">
+<arg>${marketlist}</arg>
+<kw name="Set Variable" library="BuiltIn">
+<var>${different_assetthumbnail_lctr}</var>
+<arg>xpath://img[contains(@src,'${markettestinput[11]}')and contains(@src,'thumb.319.319')]</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20210719 10:21:18.533" level="INFO">${different_assetthumbnail_lctr} = xpath://img[contains(@src,'AD100_2019_AB_ADC_001')and contains(@src,'thumb.319.319')]</msg>
+<status status="PASS" starttime="20210719 10:21:18.528" endtime="20210719 10:21:18.533"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${different_assetthumbnail_lctr}</arg>
+<arg>timeout=30s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20210719 10:21:18.534" endtime="20210719 10:21:18.958"/>
+</kw>
+<kw name="Get Element Size" library="SeleniumLibrary">
+<var>${trunkimagesize}</var>
+<arg>${different_assetthumbnail_lctr}</arg>
+<doc>Returns width and height of the element identified by ``locator``.</doc>
+<msg timestamp="20210719 10:21:18.991" level="INFO">${trunkimagesize} = (319, 207)</msg>
+<status status="PASS" starttime="20210719 10:21:18.958" endtime="20210719 10:21:18.991"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>${trunkimagesize}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20210719 10:21:18.992" level="INFO">(319, 207)</msg>
+<status status="PASS" starttime="20210719 10:21:18.992" endtime="20210719 10:21:18.992"/>
+</kw>
+<status status="PASS" starttime="20210719 10:21:18.528" endtime="20210719 10:21:18.993"/>
+</kw>
+<status status="PASS" starttime="20210719 10:21:18.527" endtime="20210719 10:21:18.993"/>
+</kw>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<arg>3x</arg>
+<arg>4s</arg>
+<arg>Check productiondigitallink is not present on trunk</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<kw name="Check productiondigitallink is not present on trunk" library="Publicassetnavigationkeywords">
+<kw name="Page Should Not Contain Link" library="SeleniumLibrary">
+<arg>${own_productiondigitallink_lctr}</arg>
+<doc>Verifies link identified by ``locator`` is not found from current page.</doc>
+<msg timestamp="20210719 10:21:19.019" level="INFO">Current page does not contain link 'xpath://a[@title='Download production digital']'.</msg>
+<status status="PASS" starttime="20210719 10:21:18.995" endtime="20210719 10:21:19.019"/>
+</kw>
+<kw name="Page Should Not Contain" library="SeleniumLibrary">
+<arg>Download</arg>
+<doc>Verifies the current page does not contain ``text``.</doc>
+<msg timestamp="20210719 10:21:19.088" level="INFO">Current page does not contain text 'Download'.</msg>
+<status status="PASS" starttime="20210719 10:21:19.020" endtime="20210719 10:21:19.088"/>
+</kw>
+<kw name="Page Should Not Contain" library="SeleniumLibrary">
+<arg>Download productiondigital</arg>
+<doc>Verifies the current page does not contain ``text``.</doc>
+<msg timestamp="20210719 10:21:19.137" level="INFO">Current page does not contain text 'Download productiondigital'.</msg>
+<status status="PASS" starttime="20210719 10:21:19.089" endtime="20210719 10:21:19.137"/>
+</kw>
+<status status="PASS" starttime="20210719 10:21:18.994" endtime="20210719 10:21:19.138"/>
+</kw>
+<status status="PASS" starttime="20210719 10:21:18.994" endtime="20210719 10:21:19.139"/>
+</kw>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<arg>3x</arg>
+<arg>4s</arg>
+<arg>Check downloadoriginalrenditionlink is not present on trunk</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<kw name="Check downloadoriginalrenditionlink is not present on trunk" library="Publicassetnavigationkeywords">
+<kw name="Page Should Not Contain Link" library="SeleniumLibrary">
+<arg>${own_downloadtrunk_lctr}</arg>
+<doc>Verifies link identified by ``locator`` is not found from current page.</doc>
+<msg timestamp="20210719 10:21:19.151" level="INFO">Current page does not contain link 'xpath://a[@title='Download']'.</msg>
+<status status="PASS" starttime="20210719 10:21:19.140" endtime="20210719 10:21:19.151"/>
+</kw>
+<status status="PASS" starttime="20210719 10:21:19.139" endtime="20210719 10:21:19.151"/>
+</kw>
+<status status="PASS" starttime="20210719 10:21:19.139" endtime="20210719 10:21:19.152"/>
+</kw>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<arg>3x</arg>
+<arg>4s</arg>
+<arg>Expand branch</arg>
+<arg>${marketlist}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<kw name="Expand branch" library="Publicassetnavigationkeywords">
+<arg>${marketlist}</arg>
+<kw name="Set Variable" library="BuiltIn">
+<var>${different_branchexpandbutton_lctr}</var>
+<arg>xpath:(//div[@class='x-layout-collapsed x-layout-collapsed-east x-layout-cmini-east' and contains(@id,'${markettestinput[11]}')])</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20210719 10:21:19.156" level="INFO">${different_branchexpandbutton_lctr} = xpath:(//div[@class='x-layout-collapsed x-layout-collapsed-east x-layout-cmini-east' and contains(@id,'AD100_2019_AB_ADC_001')])</msg>
+<status status="PASS" starttime="20210719 10:21:19.153" endtime="20210719 10:21:19.156"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${different_branchexpandbutton_lctr}</arg>
+<arg>timeout=30s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20210719 10:21:19.157" endtime="20210719 10:21:19.179"/>
+</kw>
+<kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
+<arg>${different_branchexpandbutton_lctr}</arg>
+<arg>timeout=30s</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="PASS" starttime="20210719 10:21:19.180" endtime="20210719 10:21:19.203"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${different_branchexpandbutton_lctr}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20210719 10:21:19.204" level="INFO">Clicking element 'xpath:(//div[@class='x-layout-collapsed x-layout-collapsed-east x-layout-cmini-east' and contains(@id,'AD100_2019_AB_ADC_001')])'.</msg>
+<status status="PASS" starttime="20210719 10:21:19.203" endtime="20210719 10:21:19.299"/>
+</kw>
+<status status="PASS" starttime="20210719 10:21:19.152" endtime="20210719 10:21:19.300"/>
+</kw>
+<status status="PASS" starttime="20210719 10:21:19.152" endtime="20210719 10:21:19.301"/>
+</kw>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<arg>3x</arg>
+<arg>4s</arg>
+<arg>Check branch thumbnail</arg>
+<arg>${marketlist}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<kw name="Check branch thumbnail" library="Publicassetnavigationkeywords">
+<arg>${marketlist}</arg>
+<kw name="Set Variable" library="BuiltIn">
+<var>${different_branchthumbnail_lctr}</var>
+<arg>xpath://img[contains(@src,'${markettestinput[11]}')and contains(@src,'_jcr_content/renditions/thumbnail_branch')]</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20210719 10:21:19.308" level="INFO">${different_branchthumbnail_lctr} = xpath://img[contains(@src,'AD100_2019_AB_ADC_001')and contains(@src,'_jcr_content/renditions/thumbnail_branch')]</msg>
+<status status="PASS" starttime="20210719 10:21:19.303" endtime="20210719 10:21:19.308"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${different_branchthumbnail_lctr}</arg>
+<arg>timeout=30s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20210719 10:21:19.309" endtime="20210719 10:21:19.391"/>
+</kw>
+<kw name="Get Element Size" library="SeleniumLibrary">
+<var>${branchimagesize}</var>
+<arg>${different_branchthumbnail_lctr}</arg>
+<doc>Returns width and height of the element identified by ``locator``.</doc>
+<msg timestamp="20210719 10:21:19.552" level="INFO">${branchimagesize} = (319, 207)</msg>
+<status status="PASS" starttime="20210719 10:21:19.391" endtime="20210719 10:21:19.552"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>${branchimagesize}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20210719 10:21:19.555" level="INFO">(319, 207)</msg>
+<status status="PASS" starttime="20210719 10:21:19.554" endtime="20210719 10:21:19.556"/>
+</kw>
+<status status="PASS" starttime="20210719 10:21:19.303" endtime="20210719 10:21:19.558"/>
+</kw>
+<status status="PASS" starttime="20210719 10:21:19.302" endtime="20210719 10:21:19.559"/>
+</kw>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<arg>3x</arg>
+<arg>4s</arg>
+<arg>Check downloadproductionlink is not present on branch</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<kw name="Check downloadproductionlink is not present on branch" library="Publicassetnavigationkeywords">
+<kw name="Page Should Not Contain Link" library="SeleniumLibrary">
+<arg>${own_downloadproduction_branch_lctr}</arg>
+<doc>Verifies link identified by ``locator`` is not found from current page.</doc>
+<msg timestamp="20210719 10:21:19.760" level="INFO">Current page does not contain link 'xpath://a[text()='Download production']'.</msg>
+<status status="PASS" starttime="20210719 10:21:19.562" endtime="20210719 10:21:19.761"/>
+</kw>
+<status status="PASS" starttime="20210719 10:21:19.561" endtime="20210719 10:21:19.762"/>
+</kw>
+<status status="PASS" starttime="20210719 10:21:19.560" endtime="20210719 10:21:19.763"/>
+</kw>
+<status status="PASS" starttime="20210719 10:20:26.766" endtime="20210719 10:21:19.763"/>
+</iter>
+<status status="PASS" starttime="20210719 10:19:43.530" endtime="20210719 10:21:19.764"/>
+</for>
+<status status="PASS" starttime="20210719 10:19:43.530" endtime="20210719 10:21:19.764"/>
+</kw>
+<status status="PASS" starttime="20210719 10:19:20.431" endtime="20210719 10:21:19.765"/>
+</kw>
+<kw name="Finish TestCase" library="CommonFunctionality" type="TEARDOWN">
+<kw name="Close All Browsers" library="SeleniumLibrary">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" starttime="20210719 10:21:19.766" endtime="20210719 10:21:20.002"/>
+</kw>
+<status status="PASS" starttime="20210719 10:21:19.766" endtime="20210719 10:21:20.002"/>
+</kw>
+<status status="PASS" starttime="20210719 10:19:13.379" endtime="20210719 10:21:20.003"/>
+</test>
+<test id="s1-s1-s1-t2" name="DifferentmarketPublicassetnavigationtest using uk-glamour-pictureeditor@condenast.com and Monday12!">
+<kw name="Start TestCase" library="CommonFunctionality" type="SETUP">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>https://google.com</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20210719 10:21:20.009" level="INFO">Opening browser 'chrome' to base url 'https://google.com'.</msg>
+<status status="PASS" starttime="20210719 10:21:20.009" endtime="20210719 10:21:24.854"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20210719 10:21:24.856" endtime="20210719 10:21:24.991"/>
+</kw>
+<status status="PASS" starttime="20210719 10:21:20.008" endtime="20210719 10:21:24.991"/>
+</kw>
+<kw name="DifferentmarketPublicassetnavigationtest">
+<arg>https://emea-staging.cnidam.com</arg>
+<arg>uk-glamour-pictureeditor@condenast.com</arg>
+<arg>Monday12!</arg>
+<arg>piced</arg>
+<tag>Smoke</tag>
+<kw name="Get CSV Data" library="Datamanager">
+<var>${marketfolders}</var>
+<arg>${marketinputcsv}</arg>
+<kw name="Read Csv File" library="Csv">
+<var>${Data}</var>
+<arg>${FilePath}</arg>
+<msg timestamp="20210719 10:21:24.994" level="INFO">${Data} = [['UK', 'Wired', 'public', '2021', '2020 Wired World 2021', 'Print', 'Editorial', '11-20-WiredWorld-Business', 'Assets', 'unknown', 'ingested', '1120WiredWorldBusiness01', ''], ['China', 'AD', 'public...</msg>
+<status status="PASS" starttime="20210719 10:21:24.993" endtime="20210719 10:21:24.994"/>
+</kw>
+<msg timestamp="20210719 10:21:24.995" level="INFO">${marketfolders} = [['UK', 'Wired', 'public', '2021', '2020 Wired World 2021', 'Print', 'Editorial', '11-20-WiredWorld-Business', 'Assets', 'unknown', 'ingested', '1120WiredWorldBusiness01', ''], ['China', 'AD', 'public...</msg>
+<status status="PASS" starttime="20210719 10:21:24.992" endtime="20210719 10:21:24.995"/>
+</kw>
+<kw name="Open my url" library="LoginKeywords">
+<arg>${SiteUrl}</arg>
+<kw name="Go To" library="SeleniumLibrary">
+<arg>${SiteUrl}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20210719 10:21:24.997" level="INFO">Opening url 'https://emea-staging.cnidam.com'</msg>
+<status status="PASS" starttime="20210719 10:21:24.997" endtime="20210719 10:21:29.407"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20210719 10:21:29.408" endtime="20210719 10:21:29.728"/>
+</kw>
+<status status="PASS" starttime="20210719 10:21:24.996" endtime="20210719 10:21:29.728"/>
+</kw>
+<kw name="Enter UserName" library="LoginKeywords">
+<arg>${username}</arg>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>${txt_loginUserName_lctr}</arg>
+<arg>timeout=30s</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20210719 10:21:29.729" endtime="20210719 10:21:29.742"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${txt_loginUserName_lctr}</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20210719 10:21:29.744" level="INFO">Typing text 'uk-glamour-pictureeditor@condenast.com' into text field 'id:idp-discovery-username'.</msg>
+<status status="PASS" starttime="20210719 10:21:29.743" endtime="20210719 10:21:29.861"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>${submitbutton_lctr}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20210719 10:21:29.863" level="INFO">Clicking button 'id:idp-discovery-submit'.</msg>
+<status status="PASS" starttime="20210719 10:21:29.862" endtime="20210719 10:21:29.917"/>
+</kw>
+<status status="PASS" starttime="20210719 10:21:29.729" endtime="20210719 10:21:29.918"/>
+</kw>
+<kw name="Enter Password" library="LoginKeywords">
+<arg>${password}</arg>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>${txt_loginps_lctr}</arg>
+<arg>timeout=30s</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20210719 10:21:29.919" endtime="20210719 10:21:32.074"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${txt_loginps_lctr}</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20210719 10:21:32.075" level="INFO">Typing text 'Monday12!' into text field 'class:password-with-toggle'.</msg>
+<status status="PASS" starttime="20210719 10:21:32.074" endtime="20210719 10:21:32.149"/>
+</kw>
+<status status="PASS" starttime="20210719 10:21:29.918" endtime="20210719 10:21:32.150"/>
+</kw>
+<kw name="Click Verify" library="LoginKeywords">
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>${txt_verify_lctr}</arg>
+<arg>timeout=30s</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20210719 10:21:32.152" endtime="20210719 10:21:32.160"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>${txt_verify_lctr}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20210719 10:21:32.161" level="INFO">Clicking button 'css:input[class='button button-primary']'.</msg>
+<status status="PASS" starttime="20210719 10:21:32.161" endtime="20210719 10:21:32.207"/>
+</kw>
+<status status="PASS" starttime="20210719 10:21:32.151" endtime="20210719 10:21:32.208"/>
+</kw>
+<kw name="Check welcomemessage" library="LoginKeywords">
+<arg>${username}</arg>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>${welcomemessage_lctr}</arg>
+<arg>timeout=30s</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20210719 10:21:32.209" endtime="20210719 10:21:35.724"/>
+</kw>
+<kw name="Element Should Contain" library="SeleniumLibrary">
+<arg>${welcomemessage_lctr}</arg>
+<arg>${usernameinput}</arg>
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<msg timestamp="20210719 10:21:35.742" level="INFO">Element 'xpath://div[@id='welcome-message']' contains text 'uk-glamour-pictureeditor@condenast.com'.</msg>
+<status status="PASS" starttime="20210719 10:21:35.725" endtime="20210719 10:21:35.743"/>
+</kw>
+<status status="PASS" starttime="20210719 10:21:32.209" endtime="20210719 10:21:35.744"/>
+</kw>
+<kw name="Get Title" library="SeleniumLibrary">
+<var>${act_title}</var>
+<doc>Returns the title of the current page.</doc>
+<msg timestamp="20210719 10:21:35.750" level="INFO">${act_title} = Staging EMEA | Welcome to AEM</msg>
+<status status="PASS" starttime="20210719 10:21:35.745" endtime="20210719 10:21:35.750"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>'${act_title}' == '${expectedpagetitle_emea}' and '${SiteUrl}' == '${expectedsiteurl_emea}' or '${act_title}' == '${expectedpagetitle_apac}' and '${SiteUrl}' == '${expectedsiteurl_apac}'</arg>
+<arg>Verify successful login</arg>
+<arg>ELSE</arg>
+<arg>Verify unsuccessful login</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<kw name="Verify successful login" library="LoginKeywords">
+<kw name="Log" library="BuiltIn">
+<arg>**********Login test is passed**********</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20210719 10:21:35.753" level="INFO">**********Login test is passed**********</msg>
+<status status="PASS" starttime="20210719 10:21:35.752" endtime="20210719 10:21:35.753"/>
+</kw>
+<kw name="Log Title" library="SeleniumLibrary">
+<doc>Logs and returns the title of the current page.</doc>
+<msg timestamp="20210719 10:21:35.757" level="INFO">Staging EMEA | Welcome to AEM</msg>
+<status status="PASS" starttime="20210719 10:21:35.753" endtime="20210719 10:21:35.757"/>
+</kw>
+<status status="PASS" starttime="20210719 10:21:35.752" endtime="20210719 10:21:35.758"/>
+</kw>
+<status status="PASS" starttime="20210719 10:21:35.751" endtime="20210719 10:21:35.758"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>'${userrole}' == 'piced' or '${userrole}' == 'ebt'</arg>
+<arg>Welcomepagetabscheck_ebtorpiced</arg>
+<arg>ELSE</arg>
+<arg>Welcomepagetabscheck_globaladmin</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<kw name="Welcomepagetabscheck_ebtorpiced" library="LoginKeywords">
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>${tabcontent_lctr}</arg>
+<arg>timeout=30s</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20210719 10:21:35.761" endtime="20210719 10:21:35.771"/>
+</kw>
+<kw name="Get Element Count" library="SeleniumLibrary">
+<var>${AllTabsCount}</var>
+<arg>${tabcontent_lctr}</arg>
+<doc>Returns the number of elements matching ``locator``.</doc>
+<msg timestamp="20210719 10:21:35.777" level="INFO">${AllTabsCount} = 8</msg>
+<status status="PASS" starttime="20210719 10:21:35.771" endtime="20210719 10:21:35.778"/>
+</kw>
+<kw name="Get WebElements" library="SeleniumLibrary">
+<var>@{TabItems}</var>
+<arg>${tabcontent_lctr}</arg>
+<doc>Returns a list of WebElement objects matching the ``locator``.</doc>
+<msg timestamp="20210719 10:21:35.785" level="INFO">@{TabItems} = [ &lt;selenium.webdriver.remote.webelement.WebElement (session="5ebb7aa7cbf20571866d7b012c74c4cd", element="44186e9f-0c90-4957-b6f5-2d3d7f5b917d")&gt; | &lt;selenium.webdriver.remote.webelement.WebElement (ses...</msg>
+<status status="PASS" starttime="20210719 10:21:35.779" endtime="20210719 10:21:35.785"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>${AllTabsCount}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20210719 10:21:35.787" level="INFO">8</msg>
+<status status="PASS" starttime="20210719 10:21:35.786" endtime="20210719 10:21:35.787"/>
+</kw>
+<for flavor="IN RANGE">
+<var>${i}</var>
+<value>0</value>
+<value>${${AllTabsCount}}</value>
+<iter>
+<var name="${i}">0</var>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${TabText}</var>
+<arg>${TabItems}[${i}]</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20210719 10:21:35.801" level="INFO">${TabText} = Images</msg>
+<status status="PASS" starttime="20210719 10:21:35.791" endtime="20210719 10:21:35.801"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>${TabText}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20210719 10:21:35.802" level="INFO">Images</msg>
+<status status="PASS" starttime="20210719 10:21:35.802" endtime="20210719 10:21:35.803"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>${welcomepagetabs}[${i}]</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20210719 10:21:35.804" level="INFO">Images</msg>
+<status status="PASS" starttime="20210719 10:21:35.803" endtime="20210719 10:21:35.804"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>'${welcomepagetabs}[${i}]' == '${TabText}'</arg>
+<arg>Log</arg>
+<arg>pass</arg>
+<arg>ELSE</arg>
+<arg>FAIL</arg>
+<arg>***Title mismatch***</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<kw name="Log" library="BuiltIn">
+<arg>pass</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20210719 10:21:35.805" level="INFO">pass</msg>
+<status status="PASS" starttime="20210719 10:21:35.805" endtime="20210719 10:21:35.805"/>
+</kw>
+<status status="PASS" starttime="20210719 10:21:35.804" endtime="20210719 10:21:35.806"/>
+</kw>
+<status status="PASS" starttime="20210719 10:21:35.790" endtime="20210719 10:21:35.806"/>
+</iter>
+<iter>
+<var name="${i}">1</var>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${TabText}</var>
+<arg>${TabItems}[${i}]</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20210719 10:21:35.817" level="INFO">${TabText} = Images - Touch UI</msg>
+<status status="PASS" starttime="20210719 10:21:35.807" endtime="20210719 10:21:35.817"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>${TabText}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20210719 10:21:35.819" level="INFO">Images - Touch UI</msg>
+<status status="PASS" starttime="20210719 10:21:35.818" endtime="20210719 10:21:35.819"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>${welcomepagetabs}[${i}]</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20210719 10:21:35.820" level="INFO">Images - Touch UI</msg>
+<status status="PASS" starttime="20210719 10:21:35.819" endtime="20210719 10:21:35.820"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>'${welcomepagetabs}[${i}]' == '${TabText}'</arg>
+<arg>Log</arg>
+<arg>pass</arg>
+<arg>ELSE</arg>
+<arg>FAIL</arg>
+<arg>***Title mismatch***</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<kw name="Log" library="BuiltIn">
+<arg>pass</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20210719 10:21:35.821" level="INFO">pass</msg>
+<status status="PASS" starttime="20210719 10:21:35.821" endtime="20210719 10:21:35.822"/>
+</kw>
+<status status="PASS" starttime="20210719 10:21:35.821" endtime="20210719 10:21:35.822"/>
+</kw>
+<status status="PASS" starttime="20210719 10:21:35.807" endtime="20210719 10:21:35.823"/>
+</iter>
+<iter>
+<var name="${i}">2</var>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${TabText}</var>
+<arg>${TabItems}[${i}]</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20210719 10:21:35.835" level="INFO">${TabText} = Publications</msg>
+<status status="PASS" starttime="20210719 10:21:35.823" endtime="20210719 10:21:35.835"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>${TabText}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20210719 10:21:35.837" level="INFO">Publications</msg>
+<status status="PASS" starttime="20210719 10:21:35.837" endtime="20210719 10:21:35.837"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>${welcomepagetabs}[${i}]</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20210719 10:21:35.839" level="INFO">Publications</msg>
+<status status="PASS" starttime="20210719 10:21:35.838" endtime="20210719 10:21:35.839"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>'${welcomepagetabs}[${i}]' == '${TabText}'</arg>
+<arg>Log</arg>
+<arg>pass</arg>
+<arg>ELSE</arg>
+<arg>FAIL</arg>
+<arg>***Title mismatch***</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<kw name="Log" library="BuiltIn">
+<arg>pass</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20210719 10:21:35.841" level="INFO">pass</msg>
+<status status="PASS" starttime="20210719 10:21:35.840" endtime="20210719 10:21:35.841"/>
+</kw>
+<status status="PASS" starttime="20210719 10:21:35.840" endtime="20210719 10:21:35.842"/>
+</kw>
+<status status="PASS" starttime="20210719 10:21:35.823" endtime="20210719 10:21:35.842"/>
+</iter>
+<iter>
+<var name="${i}">3</var>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${TabText}</var>
+<arg>${TabItems}[${i}]</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20210719 10:21:35.855" level="INFO">${TabText} = Content creators contracts</msg>
+<status status="PASS" starttime="20210719 10:21:35.844" endtime="20210719 10:21:35.855"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>${TabText}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20210719 10:21:35.857" level="INFO">Content creators contracts</msg>
+<status status="PASS" starttime="20210719 10:21:35.857" endtime="20210719 10:21:35.858"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>${welcomepagetabs}[${i}]</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20210719 10:21:35.860" level="INFO">Content creators contracts</msg>
+<status status="PASS" starttime="20210719 10:21:35.859" endtime="20210719 10:21:35.860"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>'${welcomepagetabs}[${i}]' == '${TabText}'</arg>
+<arg>Log</arg>
+<arg>pass</arg>
+<arg>ELSE</arg>
+<arg>FAIL</arg>
+<arg>***Title mismatch***</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<kw name="Log" library="BuiltIn">
+<arg>pass</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20210719 10:21:35.864" level="INFO">pass</msg>
+<status status="PASS" starttime="20210719 10:21:35.863" endtime="20210719 10:21:35.864"/>
+</kw>
+<status status="PASS" starttime="20210719 10:21:35.861" endtime="20210719 10:21:35.866"/>
+</kw>
+<status status="PASS" starttime="20210719 10:21:35.843" endtime="20210719 10:21:35.867"/>
+</iter>
+<iter>
+<var name="${i}">4</var>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${TabText}</var>
+<arg>${TabItems}[${i}]</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20210719 10:21:35.885" level="INFO">${TabText} = Videos</msg>
+<status status="PASS" starttime="20210719 10:21:35.869" endtime="20210719 10:21:35.885"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>${TabText}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20210719 10:21:35.887" level="INFO">Videos</msg>
+<status status="PASS" starttime="20210719 10:21:35.887" endtime="20210719 10:21:35.888"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>${welcomepagetabs}[${i}]</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20210719 10:21:35.890" level="INFO">Videos</msg>
+<status status="PASS" starttime="20210719 10:21:35.889" endtime="20210719 10:21:35.890"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>'${welcomepagetabs}[${i}]' == '${TabText}'</arg>
+<arg>Log</arg>
+<arg>pass</arg>
+<arg>ELSE</arg>
+<arg>FAIL</arg>
+<arg>***Title mismatch***</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<kw name="Log" library="BuiltIn">
+<arg>pass</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20210719 10:21:35.894" level="INFO">pass</msg>
+<status status="PASS" starttime="20210719 10:21:35.893" endtime="20210719 10:21:35.894"/>
+</kw>
+<status status="PASS" starttime="20210719 10:21:35.891" endtime="20210719 10:21:35.895"/>
+</kw>
+<status status="PASS" starttime="20210719 10:21:35.868" endtime="20210719 10:21:35.896"/>
+</iter>
+<iter>
+<var name="${i}">5</var>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${TabText}</var>
+<arg>${TabItems}[${i}]</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20210719 10:21:35.914" level="INFO">${TabText} = Syndication after publication</msg>
+<status status="PASS" starttime="20210719 10:21:35.898" endtime="20210719 10:21:35.914"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>${TabText}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20210719 10:21:35.917" level="INFO">Syndication after publication</msg>
+<status status="PASS" starttime="20210719 10:21:35.916" endtime="20210719 10:21:35.917"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>${welcomepagetabs}[${i}]</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20210719 10:21:35.919" level="INFO">Syndication after publication</msg>
+<status status="PASS" starttime="20210719 10:21:35.918" endtime="20210719 10:21:35.919"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>'${welcomepagetabs}[${i}]' == '${TabText}'</arg>
+<arg>Log</arg>
+<arg>pass</arg>
+<arg>ELSE</arg>
+<arg>FAIL</arg>
+<arg>***Title mismatch***</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<kw name="Log" library="BuiltIn">
+<arg>pass</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20210719 10:21:35.922" level="INFO">pass</msg>
+<status status="PASS" starttime="20210719 10:21:35.922" endtime="20210719 10:21:35.923"/>
+</kw>
+<status status="PASS" starttime="20210719 10:21:35.921" endtime="20210719 10:21:35.924"/>
+</kw>
+<status status="PASS" starttime="20210719 10:21:35.897" endtime="20210719 10:21:35.924"/>
+</iter>
+<iter>
+<var name="${i}">6</var>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${TabText}</var>
+<arg>${TabItems}[${i}]</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20210719 10:21:35.940" level="INFO">${TabText} = Syndication before publication</msg>
+<status status="PASS" starttime="20210719 10:21:35.926" endtime="20210719 10:21:35.940"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>${TabText}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20210719 10:21:35.943" level="INFO">Syndication before publication</msg>
+<status status="PASS" starttime="20210719 10:21:35.942" endtime="20210719 10:21:35.943"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>${welcomepagetabs}[${i}]</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20210719 10:21:35.946" level="INFO">Syndication before publication</msg>
+<status status="PASS" starttime="20210719 10:21:35.945" endtime="20210719 10:21:35.946"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>'${welcomepagetabs}[${i}]' == '${TabText}'</arg>
+<arg>Log</arg>
+<arg>pass</arg>
+<arg>ELSE</arg>
+<arg>FAIL</arg>
+<arg>***Title mismatch***</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<kw name="Log" library="BuiltIn">
+<arg>pass</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20210719 10:21:35.949" level="INFO">pass</msg>
+<status status="PASS" starttime="20210719 10:21:35.949" endtime="20210719 10:21:35.949"/>
+</kw>
+<status status="PASS" starttime="20210719 10:21:35.947" endtime="20210719 10:21:35.951"/>
+</kw>
+<status status="PASS" starttime="20210719 10:21:35.925" endtime="20210719 10:21:35.951"/>
+</iter>
+<iter>
+<var name="${i}">7</var>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${TabText}</var>
+<arg>${TabItems}[${i}]</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20210719 10:21:35.971" level="INFO">${TabText} = Inbox</msg>
+<status status="PASS" starttime="20210719 10:21:35.952" endtime="20210719 10:21:35.972"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>${TabText}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20210719 10:21:35.974" level="INFO">Inbox</msg>
+<status status="PASS" starttime="20210719 10:21:35.973" endtime="20210719 10:21:35.974"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>${welcomepagetabs}[${i}]</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20210719 10:21:35.977" level="INFO">Inbox</msg>
+<status status="PASS" starttime="20210719 10:21:35.976" endtime="20210719 10:21:35.977"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>'${welcomepagetabs}[${i}]' == '${TabText}'</arg>
+<arg>Log</arg>
+<arg>pass</arg>
+<arg>ELSE</arg>
+<arg>FAIL</arg>
+<arg>***Title mismatch***</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<kw name="Log" library="BuiltIn">
+<arg>pass</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20210719 10:21:35.981" level="INFO">pass</msg>
+<status status="PASS" starttime="20210719 10:21:35.981" endtime="20210719 10:21:35.982"/>
+</kw>
+<status status="PASS" starttime="20210719 10:21:35.979" endtime="20210719 10:21:35.983"/>
+</kw>
+<status status="PASS" starttime="20210719 10:21:35.952" endtime="20210719 10:21:35.984"/>
+</iter>
+<status status="PASS" starttime="20210719 10:21:35.787" endtime="20210719 10:21:35.985"/>
+</for>
+<status status="PASS" starttime="20210719 10:21:35.760" endtime="20210719 10:21:35.986"/>
+</kw>
+<status status="PASS" starttime="20210719 10:21:35.759" endtime="20210719 10:21:35.986"/>
+</kw>
+<kw name="Go to images page" library="Publicassetnavigationkeywords">
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>${Imagestabicon_lctr}</arg>
+<arg>timeout=30s</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20210719 10:21:35.988" endtime="20210719 10:21:36.001"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${Imagestabicon_lctr}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20210719 10:21:36.003" level="INFO">Clicking element 'xpath://div[@class='icon damadmin']'.</msg>
+<status status="PASS" starttime="20210719 10:21:36.002" endtime="20210719 10:21:43.514"/>
+</kw>
+<status status="PASS" starttime="20210719 10:21:35.987" endtime="20210719 10:21:43.514"/>
+</kw>
+<kw name="Differentmarketpublicassetnavigation using the csvfile" library="differentmarketpublicassetnavigationkeywords">
+<arg>${marketfolders}</arg>
+<for flavor="IN">
+<var>${marketlist}</var>
+<value>@{marketfolders}</value>
+<iter>
+<var name="${marketlist}">['UK', 'Wired', 'public', '2021', '2020 Wired World 2021', 'Print', 'Editorial', '11-20-WiredWorld-Business', 'Assets', 'unknown', 'ingested', '1120WiredWorldBusiness01', '']</var>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20210719 10:21:45.517" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20210719 10:21:43.516" endtime="20210719 10:21:45.517"/>
+</kw>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<arg>3x</arg>
+<arg>4s</arg>
+<arg>Go to Imagestab</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<kw name="Go to Imagestab" library="Publicassetnavigationkeywords">
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>${Imagestab_lctr}</arg>
+<arg>timeout=30s</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20210719 10:21:45.519" endtime="20210719 10:21:45.528"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${Imagestab_lctr}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20210719 10:21:45.529" level="INFO">Clicking element 'xpath://span[@class='x-tab-strip-inner']/span[text()='Images']'.</msg>
+<status status="PASS" starttime="20210719 10:21:45.529" endtime="20210719 10:21:45.566"/>
+</kw>
+<status status="PASS" starttime="20210719 10:21:45.519" endtime="20210719 10:21:45.567"/>
+</kw>
+<status status="PASS" starttime="20210719 10:21:45.518" endtime="20210719 10:21:45.567"/>
+</kw>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<arg>3x</arg>
+<arg>4s</arg>
+<arg>Go to CNIfolder</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<kw name="Go to CNIfolder" library="Publicassetnavigationkeywords">
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>${diffmarket_CNIfolder_lctr}</arg>
+<arg>timeout=30s</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20210719 10:21:45.568" endtime="20210719 10:21:45.580"/>
+</kw>
+<kw name="Double Click Element" library="SeleniumLibrary">
+<arg>${diffmarket_CNIfolder_lctr}</arg>
+<doc>Double clicks the element identified by ``locator``.</doc>
+<msg timestamp="20210719 10:21:45.581" level="INFO">Double clicking element 'xpath://span[text()='CNI']'.</msg>
+<status status="PASS" starttime="20210719 10:21:45.580" endtime="20210719 10:21:45.898"/>
+</kw>
+<status status="PASS" starttime="20210719 10:21:45.568" endtime="20210719 10:21:45.899"/>
+</kw>
+<status status="PASS" starttime="20210719 10:21:45.567" endtime="20210719 10:21:45.900"/>
+</kw>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<arg>3x</arg>
+<arg>4s</arg>
+<arg>Go to Marketfolder</arg>
+<arg>${marketlist}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<kw name="Go to Marketfolder" library="Publicassetnavigationkeywords">
+<arg>${marketlist}</arg>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${display_all_lctr}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20210719 10:21:45.904" level="INFO">Clicking element 'xpath:(//button[text()='Display All'])[1]'.</msg>
+<status status="PASS" starttime="20210719 10:21:45.903" endtime="20210719 10:21:46.916"/>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<var>${diffmarket_Marketfolder_lctr}</var>
+<arg>xpath://div[text()='${markettestinput[0]}']/parent::td</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20210719 10:21:46.922" level="INFO">${diffmarket_Marketfolder_lctr} = xpath://div[text()='UK']/parent::td</msg>
+<status status="PASS" starttime="20210719 10:21:46.917" endtime="20210719 10:21:46.922"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>${diffmarket_Marketfolder_lctr}</arg>
+<arg>timeout=30s</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20210719 10:21:46.923" endtime="20210719 10:21:47.841"/>
+</kw>
+<kw name="Scroll Element Into View" library="SeleniumLibrary">
+<arg>${diffmarket_Marketfolder_lctr}</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" starttime="20210719 10:21:47.841" endtime="20210719 10:21:48.108"/>
+</kw>
+<kw name="Mouse Down" library="SeleniumLibrary">
+<arg>${diffmarket_Marketfolder_lctr}</arg>
+<doc>Simulates pressing the left mouse button on the element ``locator``.</doc>
+<msg timestamp="20210719 10:21:48.110" level="INFO">Simulating Mouse Down on element 'xpath://div[text()='UK']/parent::td'.</msg>
+<status status="PASS" starttime="20210719 10:21:48.109" endtime="20210719 10:21:48.386"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20210719 10:21:50.389" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20210719 10:21:48.387" endtime="20210719 10:21:50.390"/>
+</kw>
+<kw name="Double Click Element" library="SeleniumLibrary">
+<arg>${diffmarket_Marketfolder_lctr}</arg>
+<doc>Double clicks the element identified by ``locator``.</doc>
+<msg timestamp="20210719 10:21:50.392" level="INFO">Double clicking element 'xpath://div[text()='UK']/parent::td'.</msg>
+<status status="PASS" starttime="20210719 10:21:50.391" endtime="20210719 10:21:50.706"/>
+</kw>
+<status status="PASS" starttime="20210719 10:21:45.902" endtime="20210719 10:21:50.707"/>
+</kw>
+<status status="PASS" starttime="20210719 10:21:45.901" endtime="20210719 10:21:50.708"/>
+</kw>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<arg>3x</arg>
+<arg>4s</arg>
+<arg>Go to Titlefolder</arg>
+<arg>${marketlist}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<kw name="Go to Titlefolder" library="Publicassetnavigationkeywords">
+<arg>${marketlist}</arg>
+<kw name="Set Variable" library="BuiltIn">
+<var>${diffmarket_Titlefolder_lctr}</var>
+<arg>xpath://div[text()='${markettestinput[1]}']/parent::td</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20210719 10:21:50.714" level="INFO">${diffmarket_Titlefolder_lctr} = xpath://div[text()='Wired']/parent::td</msg>
+<status status="PASS" starttime="20210719 10:21:50.710" endtime="20210719 10:21:50.714"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>${diffmarket_Titlefolder_lctr}</arg>
+<arg>timeout=30s</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20210719 10:21:50.715" endtime="20210719 10:21:51.614"/>
+</kw>
+<kw name="Scroll Element Into View" library="SeleniumLibrary">
+<arg>${diffmarket_Titlefolder_lctr}</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" starttime="20210719 10:21:51.615" endtime="20210719 10:21:51.890"/>
+</kw>
+<kw name="Mouse Down" library="SeleniumLibrary">
+<arg>${diffmarket_Titlefolder_lctr}</arg>
+<doc>Simulates pressing the left mouse button on the element ``locator``.</doc>
+<msg timestamp="20210719 10:21:51.891" level="INFO">Simulating Mouse Down on element 'xpath://div[text()='Wired']/parent::td'.</msg>
+<status status="PASS" starttime="20210719 10:21:51.891" endtime="20210719 10:21:52.183"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20210719 10:21:54.185" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20210719 10:21:52.185" endtime="20210719 10:21:54.186"/>
+</kw>
+<kw name="Double Click Element" library="SeleniumLibrary">
+<arg>${diffmarket_Titlefolder_lctr}</arg>
+<doc>Double clicks the element identified by ``locator``.</doc>
+<msg timestamp="20210719 10:21:54.187" level="INFO">Double clicking element 'xpath://div[text()='Wired']/parent::td'.</msg>
+<status status="PASS" starttime="20210719 10:21:54.186" endtime="20210719 10:21:54.481"/>
+</kw>
+<status status="PASS" starttime="20210719 10:21:50.709" endtime="20210719 10:21:54.482"/>
+</kw>
+<status status="PASS" starttime="20210719 10:21:50.709" endtime="20210719 10:21:54.482"/>
+</kw>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<arg>3x</arg>
+<arg>4s</arg>
+<arg>Check whether Commissioned, Non-Commissioned, Studio folders not acessible</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<kw name="Check whether Commissioned, Non-Commissioned, Studio folders not acessible" library="Publicassetnavigationkeywords">
+<kw name="Element Should Not Contain" library="SeleniumLibrary">
+<arg>${uploadfolderlist_lctr}</arg>
+<arg>commissioned</arg>
+<doc>Verifies that element ``locator`` does not contain text ``expected``.</doc>
+<msg timestamp="20210719 10:21:54.732" level="INFO">Element 'xpath:(//div[@class='x-grid3-scroller'])[1]' does not contain text 'commissioned'.</msg>
+<status status="PASS" starttime="20210719 10:21:54.484" endtime="20210719 10:21:54.732"/>
+</kw>
+<kw name="Element Should Not Contain" library="SeleniumLibrary">
+<arg>${uploadfolderlist_lctr}</arg>
+<arg>non-commissioned</arg>
+<doc>Verifies that element ``locator`` does not contain text ``expected``.</doc>
+<msg timestamp="20210719 10:21:54.791" level="INFO">Element 'xpath:(//div[@class='x-grid3-scroller'])[1]' does not contain text 'non-commissioned'.</msg>
+<status status="PASS" starttime="20210719 10:21:54.736" endtime="20210719 10:21:54.791"/>
+</kw>
+<kw name="Element Should Not Contain" library="SeleniumLibrary">
+<arg>${uploadfolderlist_lctr}</arg>
+<arg>studio</arg>
+<doc>Verifies that element ``locator`` does not contain text ``expected``.</doc>
+<msg timestamp="20210719 10:21:54.841" level="INFO">Element 'xpath:(//div[@class='x-grid3-scroller'])[1]' does not contain text 'studio'.</msg>
+<status status="PASS" starttime="20210719 10:21:54.793" endtime="20210719 10:21:54.841"/>
+</kw>
+<status status="PASS" starttime="20210719 10:21:54.483" endtime="20210719 10:21:54.842"/>
+</kw>
+<status status="PASS" starttime="20210719 10:21:54.483" endtime="20210719 10:21:54.842"/>
+</kw>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<arg>3x</arg>
+<arg>4s</arg>
+<arg>Go to diff_Public folder</arg>
+<arg>${marketlist}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<kw name="Go to diff_Public folder" library="Publicassetnavigationkeywords">
+<arg>${marketlist}</arg>
+<kw name="Set Variable" library="BuiltIn">
+<var>${different_publicfolder_lctr}</var>
+<arg>xpath://div[text()='${markettestinput[2]}']/parent::td</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20210719 10:21:54.847" level="INFO">${different_publicfolder_lctr} = xpath://div[text()='public']/parent::td</msg>
+<status status="PASS" starttime="20210719 10:21:54.844" endtime="20210719 10:21:54.848"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>${different_publicfolder_lctr}</arg>
+<arg>timeout=30s</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20210719 10:21:54.848" endtime="20210719 10:21:54.861"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20210719 10:21:56.863" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20210719 10:21:54.862" endtime="20210719 10:21:56.863"/>
+</kw>
+<kw name="Double Click Element" library="SeleniumLibrary">
+<arg>${different_publicfolder_lctr}</arg>
+<doc>Double clicks the element identified by ``locator``.</doc>
+<msg timestamp="20210719 10:21:56.864" level="INFO">Double clicking element 'xpath://div[text()='public']/parent::td'.</msg>
+<status status="PASS" starttime="20210719 10:21:56.864" endtime="20210719 10:21:57.504"/>
+</kw>
+<status status="PASS" starttime="20210719 10:21:54.843" endtime="20210719 10:21:57.505"/>
+</kw>
+<status status="PASS" starttime="20210719 10:21:54.843" endtime="20210719 10:21:57.506"/>
+</kw>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<arg>3x</arg>
+<arg>4s</arg>
+<arg>Go to year folder</arg>
+<arg>${marketlist}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<kw name="Go to year folder" library="Publicassetnavigationkeywords">
+<arg>${marketlist}</arg>
+<kw name="Set Variable" library="BuiltIn">
+<var>${different_yearfolder_lctr}</var>
+<arg>xpath://div[text()='${markettestinput[3]}']/parent::td</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20210719 10:21:57.512" level="INFO">${different_yearfolder_lctr} = xpath://div[text()='2021']/parent::td</msg>
+<status status="PASS" starttime="20210719 10:21:57.508" endtime="20210719 10:21:57.512"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${different_yearfolder_lctr}</arg>
+<arg>timeout=30s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20210719 10:21:57.513" endtime="20210719 10:21:58.179"/>
+</kw>
+<kw name="Scroll Element Into View" library="SeleniumLibrary">
+<arg>${different_yearfolder_lctr}</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20210719 10:21:59.359" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-1.png"&gt;&lt;img src="selenium-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20210719 10:21:58.291" endtime="20210719 10:21:59.359"/>
+</kw>
+<msg timestamp="20210719 10:21:59.366" level="FAIL">StaleElementReferenceException: Message: stale element reference: element is not attached to the page document
+  (Session info: chrome=91.0.4472.114)
+</msg>
+<status status="FAIL" starttime="20210719 10:21:58.179" endtime="20210719 10:21:59.366"/>
+</kw>
+<kw name="Mouse Down" library="SeleniumLibrary">
+<arg>${different_yearfolder_lctr}</arg>
+<doc>Simulates pressing the left mouse button on the element ``locator``.</doc>
+<status status="NOT RUN" starttime="20210719 10:21:59.367" endtime="20210719 10:21:59.367"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" starttime="20210719 10:21:59.367" endtime="20210719 10:21:59.367"/>
+</kw>
+<kw name="Double Click Element" library="SeleniumLibrary">
+<arg>${different_yearfolder_lctr}</arg>
+<doc>Double clicks the element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20210719 10:21:59.368" endtime="20210719 10:21:59.368"/>
+</kw>
+<status status="FAIL" starttime="20210719 10:21:57.507" endtime="20210719 10:21:59.368"/>
+</kw>
+<kw name="Go to year folder" library="Publicassetnavigationkeywords">
+<arg>${marketlist}</arg>
+<kw name="Set Variable" library="BuiltIn">
+<var>${different_yearfolder_lctr}</var>
+<arg>xpath://div[text()='${markettestinput[3]}']/parent::td</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20210719 10:22:03.375" level="INFO">${different_yearfolder_lctr} = xpath://div[text()='2021']/parent::td</msg>
+<status status="PASS" starttime="20210719 10:22:03.370" endtime="20210719 10:22:03.375"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${different_yearfolder_lctr}</arg>
+<arg>timeout=30s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20210719 10:22:03.376" endtime="20210719 10:22:03.394"/>
+</kw>
+<kw name="Scroll Element Into View" library="SeleniumLibrary">
+<arg>${different_yearfolder_lctr}</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" starttime="20210719 10:22:03.395" endtime="20210719 10:22:03.670"/>
+</kw>
+<kw name="Mouse Down" library="SeleniumLibrary">
+<arg>${different_yearfolder_lctr}</arg>
+<doc>Simulates pressing the left mouse button on the element ``locator``.</doc>
+<msg timestamp="20210719 10:22:03.671" level="INFO">Simulating Mouse Down on element 'xpath://div[text()='2021']/parent::td'.</msg>
+<status status="PASS" starttime="20210719 10:22:03.671" endtime="20210719 10:22:03.944"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20210719 10:22:05.946" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20210719 10:22:03.945" endtime="20210719 10:22:05.946"/>
+</kw>
+<kw name="Double Click Element" library="SeleniumLibrary">
+<arg>${different_yearfolder_lctr}</arg>
+<doc>Double clicks the element identified by ``locator``.</doc>
+<msg timestamp="20210719 10:22:05.948" level="INFO">Double clicking element 'xpath://div[text()='2021']/parent::td'.</msg>
+<status status="PASS" starttime="20210719 10:22:05.947" endtime="20210719 10:22:06.250"/>
+</kw>
+<status status="PASS" starttime="20210719 10:22:03.369" endtime="20210719 10:22:06.251"/>
+</kw>
+<status status="PASS" starttime="20210719 10:21:57.506" endtime="20210719 10:22:06.252"/>
+</kw>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<arg>3x</arg>
+<arg>4s</arg>
+<arg>Go to issue folder</arg>
+<arg>${marketlist}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<kw name="Go to issue folder" library="Publicassetnavigationkeywords">
+<arg>${marketlist}</arg>
+<kw name="Set Variable" library="BuiltIn">
+<var>${different_sectionfolder_lctr}</var>
+<arg>xpath://div[text()='${markettestinput[4]}']/parent::td</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20210719 10:22:06.257" level="INFO">${different_sectionfolder_lctr} = xpath://div[text()='2020 Wired World 2021']/parent::td</msg>
+<status status="PASS" starttime="20210719 10:22:06.253" endtime="20210719 10:22:06.257"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${different_sectionfolder_lctr}</arg>
+<arg>timeout=30s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20210719 10:22:06.258" endtime="20210719 10:22:06.773"/>
+</kw>
+<kw name="Scroll Element Into View" library="SeleniumLibrary">
+<arg>${different_sectionfolder_lctr}</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" starttime="20210719 10:22:06.774" endtime="20210719 10:22:07.079"/>
+</kw>
+<kw name="Mouse Down" library="SeleniumLibrary">
+<arg>${different_sectionfolder_lctr}</arg>
+<doc>Simulates pressing the left mouse button on the element ``locator``.</doc>
+<msg timestamp="20210719 10:22:07.081" level="INFO">Simulating Mouse Down on element 'xpath://div[text()='2020 Wired World 2021']/parent::td'.</msg>
+<status status="PASS" starttime="20210719 10:22:07.080" endtime="20210719 10:22:07.350"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20210719 10:22:09.352" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20210719 10:22:07.351" endtime="20210719 10:22:09.352"/>
+</kw>
+<kw name="Double Click Element" library="SeleniumLibrary">
+<arg>${different_sectionfolder_lctr}</arg>
+<doc>Double clicks the element identified by ``locator``.</doc>
+<msg timestamp="20210719 10:22:09.353" level="INFO">Double clicking element 'xpath://div[text()='2020 Wired World 2021']/parent::td'.</msg>
+<status status="PASS" starttime="20210719 10:22:09.353" endtime="20210719 10:22:09.717"/>
+</kw>
+<status status="PASS" starttime="20210719 10:22:06.253" endtime="20210719 10:22:09.730"/>
+</kw>
+<status status="PASS" starttime="20210719 10:22:06.252" endtime="20210719 10:22:09.730"/>
+</kw>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<arg>3x</arg>
+<arg>4s</arg>
+<arg>Go to print folder</arg>
+<arg>${marketlist}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<kw name="Go to print folder" library="Publicassetnavigationkeywords">
+<arg>${marketlist}</arg>
+<kw name="Set Variable" library="BuiltIn">
+<var>${different_printfolder_lctr}</var>
+<arg>xpath://div[text()='${markettestinput[5]}']/parent::td</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20210719 10:22:09.737" level="INFO">${different_printfolder_lctr} = xpath://div[text()='Print']/parent::td</msg>
+<status status="PASS" starttime="20210719 10:22:09.732" endtime="20210719 10:22:09.737"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${different_printfolder_lctr}</arg>
+<arg>timeout=30s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20210719 10:22:09.748" endtime="20210719 10:22:10.039"/>
+</kw>
+<kw name="Mouse Down" library="SeleniumLibrary">
+<arg>${different_printfolder_lctr}</arg>
+<doc>Simulates pressing the left mouse button on the element ``locator``.</doc>
+<msg timestamp="20210719 10:22:10.040" level="INFO">Simulating Mouse Down on element 'xpath://div[text()='Print']/parent::td'.</msg>
+<status status="PASS" starttime="20210719 10:22:10.040" endtime="20210719 10:22:10.412"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20210719 10:22:12.415" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20210719 10:22:10.414" endtime="20210719 10:22:12.415"/>
+</kw>
+<kw name="Double Click Element" library="SeleniumLibrary">
+<arg>${different_printfolder_lctr}</arg>
+<doc>Double clicks the element identified by ``locator``.</doc>
+<msg timestamp="20210719 10:22:12.416" level="INFO">Double clicking element 'xpath://div[text()='Print']/parent::td'.</msg>
+<status status="PASS" starttime="20210719 10:22:12.416" endtime="20210719 10:22:12.726"/>
+</kw>
+<status status="PASS" starttime="20210719 10:22:09.731" endtime="20210719 10:22:12.727"/>
+</kw>
+<status status="PASS" starttime="20210719 10:22:09.731" endtime="20210719 10:22:12.728"/>
+</kw>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<arg>3x</arg>
+<arg>4s</arg>
+<arg>Go to section folder</arg>
+<arg>${marketlist}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<kw name="Go to section folder" library="Publicassetnavigationkeywords">
+<arg>${marketlist}</arg>
+<kw name="Set Variable" library="BuiltIn">
+<var>${different_layoutparentfolder_lctr}</var>
+<arg>xpath://div[text()='${markettestinput[6]}']/parent::td</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20210719 10:22:12.733" level="INFO">${different_layoutparentfolder_lctr} = xpath://div[text()='Editorial']/parent::td</msg>
+<status status="PASS" starttime="20210719 10:22:12.729" endtime="20210719 10:22:12.733"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${different_layoutparentfolder_lctr}</arg>
+<arg>timeout=30s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20210719 10:22:12.734" endtime="20210719 10:22:14.242"/>
+</kw>
+<kw name="Scroll Element Into View" library="SeleniumLibrary">
+<arg>${different_layoutparentfolder_lctr}</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" starttime="20210719 10:22:14.243" endtime="20210719 10:22:14.510"/>
+</kw>
+<kw name="Mouse Down" library="SeleniumLibrary">
+<arg>${different_layoutparentfolder_lctr}</arg>
+<doc>Simulates pressing the left mouse button on the element ``locator``.</doc>
+<msg timestamp="20210719 10:22:14.511" level="INFO">Simulating Mouse Down on element 'xpath://div[text()='Editorial']/parent::td'.</msg>
+<status status="PASS" starttime="20210719 10:22:14.510" endtime="20210719 10:22:14.781"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20210719 10:22:16.783" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20210719 10:22:14.782" endtime="20210719 10:22:16.783"/>
+</kw>
+<kw name="Double Click Element" library="SeleniumLibrary">
+<arg>${different_layoutparentfolder_lctr}</arg>
+<doc>Double clicks the element identified by ``locator``.</doc>
+<msg timestamp="20210719 10:22:16.784" level="INFO">Double clicking element 'xpath://div[text()='Editorial']/parent::td'.</msg>
+<status status="PASS" starttime="20210719 10:22:16.784" endtime="20210719 10:22:17.098"/>
+</kw>
+<status status="PASS" starttime="20210719 10:22:12.729" endtime="20210719 10:22:17.099"/>
+</kw>
+<status status="PASS" starttime="20210719 10:22:12.728" endtime="20210719 10:22:17.099"/>
+</kw>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<arg>3x</arg>
+<arg>4s</arg>
+<arg>Go to layout folder</arg>
+<arg>${marketlist}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<kw name="Go to layout folder" library="Publicassetnavigationkeywords">
+<arg>${marketlist}</arg>
+<kw name="Set Variable" library="BuiltIn">
+<var>${different_layoutchildfolder_lctr}</var>
+<arg>xpath://div[text()='${markettestinput[7]}']/parent::td</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20210719 10:22:17.105" level="INFO">${different_layoutchildfolder_lctr} = xpath://div[text()='11-20-WiredWorld-Business']/parent::td</msg>
+<status status="PASS" starttime="20210719 10:22:17.101" endtime="20210719 10:22:17.105"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${different_layoutchildfolder_lctr}</arg>
+<arg>timeout=30s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20210719 10:22:17.105" endtime="20210719 10:22:21.365"/>
+</kw>
+<kw name="Scroll Element Into View" library="SeleniumLibrary">
+<arg>${different_layoutchildfolder_lctr}</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" starttime="20210719 10:22:21.366" endtime="20210719 10:22:21.648"/>
+</kw>
+<kw name="Mouse Down" library="SeleniumLibrary">
+<arg>${different_layoutchildfolder_lctr}</arg>
+<doc>Simulates pressing the left mouse button on the element ``locator``.</doc>
+<msg timestamp="20210719 10:22:21.650" level="INFO">Simulating Mouse Down on element 'xpath://div[text()='11-20-WiredWorld-Business']/parent::td'.</msg>
+<status status="PASS" starttime="20210719 10:22:21.649" endtime="20210719 10:22:21.956"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20210719 10:22:23.971" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20210719 10:22:21.971" endtime="20210719 10:22:23.972"/>
+</kw>
+<kw name="Double Click Element" library="SeleniumLibrary">
+<arg>${different_layoutchildfolder_lctr}</arg>
+<doc>Double clicks the element identified by ``locator``.</doc>
+<msg timestamp="20210719 10:22:23.974" level="INFO">Double clicking element 'xpath://div[text()='11-20-WiredWorld-Business']/parent::td'.</msg>
+<status status="PASS" starttime="20210719 10:22:23.973" endtime="20210719 10:22:24.288"/>
+</kw>
+<status status="PASS" starttime="20210719 10:22:17.100" endtime="20210719 10:22:24.289"/>
+</kw>
+<status status="PASS" starttime="20210719 10:22:17.100" endtime="20210719 10:22:24.289"/>
+</kw>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<arg>3x</arg>
+<arg>4s</arg>
+<arg>Go to assetfolder</arg>
+<arg>${marketlist}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<kw name="Go to assetfolder" library="Publicassetnavigationkeywords">
+<arg>${marketlist}</arg>
+<kw name="Set Variable" library="BuiltIn">
+<var>${different_assetsfolder_lctr}</var>
+<arg>xpath://div[text()='${markettestinput[8]}']/parent::td</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20210719 10:22:24.295" level="INFO">${different_assetsfolder_lctr} = xpath://div[text()='Assets']/parent::td</msg>
+<status status="PASS" starttime="20210719 10:22:24.291" endtime="20210719 10:22:24.295"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${different_assetsfolder_lctr}</arg>
+<arg>timeout=30s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20210719 10:22:24.297" endtime="20210719 10:22:26.456"/>
+</kw>
+<kw name="Scroll Element Into View" library="SeleniumLibrary">
+<arg>${different_assetsfolder_lctr}</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" starttime="20210719 10:22:26.457" endtime="20210719 10:22:26.761"/>
+</kw>
+<kw name="Mouse Down" library="SeleniumLibrary">
+<arg>${different_assetsfolder_lctr}</arg>
+<doc>Simulates pressing the left mouse button on the element ``locator``.</doc>
+<msg timestamp="20210719 10:22:26.762" level="INFO">Simulating Mouse Down on element 'xpath://div[text()='Assets']/parent::td'.</msg>
+<status status="PASS" starttime="20210719 10:22:26.762" endtime="20210719 10:22:27.044"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20210719 10:22:29.048" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20210719 10:22:27.046" endtime="20210719 10:22:29.049"/>
+</kw>
+<kw name="Double Click Element" library="SeleniumLibrary">
+<arg>${different_assetsfolder_lctr}</arg>
+<doc>Double clicks the element identified by ``locator``.</doc>
+<msg timestamp="20210719 10:22:29.051" level="INFO">Double clicking element 'xpath://div[text()='Assets']/parent::td'.</msg>
+<status status="PASS" starttime="20210719 10:22:29.050" endtime="20210719 10:22:29.404"/>
+</kw>
+<status status="PASS" starttime="20210719 10:22:24.290" endtime="20210719 10:22:29.405"/>
+</kw>
+<status status="PASS" starttime="20210719 10:22:24.290" endtime="20210719 10:22:29.406"/>
+</kw>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<arg>3x</arg>
+<arg>4s</arg>
+<arg>Go to publishertypefolder</arg>
+<arg>${marketlist}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<kw name="Go to publishertypefolder" library="Publicassetnavigationkeywords">
+<arg>${marketlist}</arg>
+<kw name="Set Variable" library="BuiltIn">
+<var>${different_unknownfolder_lctr}</var>
+<arg>xpath://div[text()='${markettestinput[9]}']/parent::td</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20210719 10:22:29.412" level="INFO">${different_unknownfolder_lctr} = xpath://div[text()='unknown']/parent::td</msg>
+<status status="PASS" starttime="20210719 10:22:29.408" endtime="20210719 10:22:29.412"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${different_unknownfolder_lctr}</arg>
+<arg>timeout=30s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20210719 10:23:00.047" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-2.png"&gt;&lt;img src="selenium-screenshot-2.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20210719 10:22:59.440" endtime="20210719 10:23:00.047"/>
+</kw>
+<msg timestamp="20210719 10:23:00.062" level="FAIL">Element 'xpath://div[text()='unknown']/parent::td' not visible after 30 seconds.</msg>
+<status status="FAIL" starttime="20210719 10:22:29.412" endtime="20210719 10:23:00.062"/>
+</kw>
+<kw name="Scroll Element Into View" library="SeleniumLibrary">
+<arg>${different_unknownfolder_lctr}</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="NOT RUN" starttime="20210719 10:23:00.063" endtime="20210719 10:23:00.064"/>
+</kw>
+<kw name="Mouse Down" library="SeleniumLibrary">
+<arg>${different_unknownfolder_lctr}</arg>
+<doc>Simulates pressing the left mouse button on the element ``locator``.</doc>
+<status status="NOT RUN" starttime="20210719 10:23:00.064" endtime="20210719 10:23:00.065"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" starttime="20210719 10:23:00.065" endtime="20210719 10:23:00.065"/>
+</kw>
+<kw name="Double Click Element" library="SeleniumLibrary">
+<arg>${different_unknownfolder_lctr}</arg>
+<doc>Double clicks the element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20210719 10:23:00.066" endtime="20210719 10:23:00.066"/>
+</kw>
+<status status="FAIL" starttime="20210719 10:22:29.407" endtime="20210719 10:23:00.066"/>
+</kw>
+<kw name="Go to publishertypefolder" library="Publicassetnavigationkeywords">
+<arg>${marketlist}</arg>
+<kw name="Set Variable" library="BuiltIn">
+<var>${different_unknownfolder_lctr}</var>
+<arg>xpath://div[text()='${markettestinput[9]}']/parent::td</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20210719 10:23:04.074" level="INFO">${different_unknownfolder_lctr} = xpath://div[text()='unknown']/parent::td</msg>
+<status status="PASS" starttime="20210719 10:23:04.070" endtime="20210719 10:23:04.074"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${different_unknownfolder_lctr}</arg>
+<arg>timeout=30s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20210719 10:23:34.771" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-3.png"&gt;&lt;img src="selenium-screenshot-3.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20210719 10:23:34.222" endtime="20210719 10:23:34.771"/>
+</kw>
+<msg timestamp="20210719 10:23:34.772" level="FAIL">Element 'xpath://div[text()='unknown']/parent::td' not visible after 30 seconds.</msg>
+<status status="FAIL" starttime="20210719 10:23:04.075" endtime="20210719 10:23:34.772"/>
+</kw>
+<kw name="Scroll Element Into View" library="SeleniumLibrary">
+<arg>${different_unknownfolder_lctr}</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="NOT RUN" starttime="20210719 10:23:34.773" endtime="20210719 10:23:34.773"/>
+</kw>
+<kw name="Mouse Down" library="SeleniumLibrary">
+<arg>${different_unknownfolder_lctr}</arg>
+<doc>Simulates pressing the left mouse button on the element ``locator``.</doc>
+<status status="NOT RUN" starttime="20210719 10:23:34.773" endtime="20210719 10:23:34.773"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" starttime="20210719 10:23:34.774" endtime="20210719 10:23:34.774"/>
+</kw>
+<kw name="Double Click Element" library="SeleniumLibrary">
+<arg>${different_unknownfolder_lctr}</arg>
+<doc>Double clicks the element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20210719 10:23:34.774" endtime="20210719 10:23:34.774"/>
+</kw>
+<status status="FAIL" starttime="20210719 10:23:04.069" endtime="20210719 10:23:34.775"/>
+</kw>
+<kw name="Go to publishertypefolder" library="Publicassetnavigationkeywords">
+<arg>${marketlist}</arg>
+<kw name="Set Variable" library="BuiltIn">
+<var>${different_unknownfolder_lctr}</var>
+<arg>xpath://div[text()='${markettestinput[9]}']/parent::td</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20210719 10:23:38.782" level="INFO">${different_unknownfolder_lctr} = xpath://div[text()='unknown']/parent::td</msg>
+<status status="PASS" starttime="20210719 10:23:38.777" endtime="20210719 10:23:38.782"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${different_unknownfolder_lctr}</arg>
+<arg>timeout=30s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20210719 10:24:09.460" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-4.png"&gt;&lt;img src="selenium-screenshot-4.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20210719 10:24:08.967" endtime="20210719 10:24:09.460"/>
+</kw>
+<msg timestamp="20210719 10:24:09.462" level="FAIL">Element 'xpath://div[text()='unknown']/parent::td' not visible after 30 seconds.</msg>
+<status status="FAIL" starttime="20210719 10:23:38.783" endtime="20210719 10:24:09.462"/>
+</kw>
+<kw name="Scroll Element Into View" library="SeleniumLibrary">
+<arg>${different_unknownfolder_lctr}</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="NOT RUN" starttime="20210719 10:24:09.463" endtime="20210719 10:24:09.463"/>
+</kw>
+<kw name="Mouse Down" library="SeleniumLibrary">
+<arg>${different_unknownfolder_lctr}</arg>
+<doc>Simulates pressing the left mouse button on the element ``locator``.</doc>
+<status status="NOT RUN" starttime="20210719 10:24:09.463" endtime="20210719 10:24:09.463"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" starttime="20210719 10:24:09.464" endtime="20210719 10:24:09.464"/>
+</kw>
+<kw name="Double Click Element" library="SeleniumLibrary">
+<arg>${different_unknownfolder_lctr}</arg>
+<doc>Double clicks the element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20210719 10:24:09.464" endtime="20210719 10:24:09.464"/>
+</kw>
+<status status="FAIL" starttime="20210719 10:23:38.776" endtime="20210719 10:24:09.465"/>
+</kw>
+<msg timestamp="20210719 10:24:09.465" level="FAIL">Keyword 'Go to publishertypefolder' failed after retrying 3 times. The last error was: Element 'xpath://div[text()='unknown']/parent::td' not visible after 30 seconds.</msg>
+<status status="FAIL" starttime="20210719 10:22:29.407" endtime="20210719 10:24:09.466"/>
+</kw>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<arg>3x</arg>
+<arg>4s</arg>
+<arg>Go to ingestedfolder</arg>
+<arg>${marketlist}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<status status="NOT RUN" starttime="20210719 10:24:09.467" endtime="20210719 10:24:09.467"/>
+</kw>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<arg>3x</arg>
+<arg>4s</arg>
+<arg>Go to asset</arg>
+<arg>${marketlist}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<status status="NOT RUN" starttime="20210719 10:24:09.467" endtime="20210719 10:24:09.467"/>
+</kw>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<arg>3x</arg>
+<arg>4s</arg>
+<arg>Check asset thumbnail</arg>
+<arg>${marketlist}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<status status="NOT RUN" starttime="20210719 10:24:09.467" endtime="20210719 10:24:09.468"/>
+</kw>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<arg>3x</arg>
+<arg>4s</arg>
+<arg>Check productiondigitallink is not present on trunk</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<status status="NOT RUN" starttime="20210719 10:24:09.468" endtime="20210719 10:24:09.468"/>
+</kw>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<arg>3x</arg>
+<arg>4s</arg>
+<arg>Check downloadoriginalrenditionlink is not present on trunk</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<status status="NOT RUN" starttime="20210719 10:24:09.468" endtime="20210719 10:24:09.468"/>
+</kw>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<arg>3x</arg>
+<arg>4s</arg>
+<arg>Expand branch</arg>
+<arg>${marketlist}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<status status="NOT RUN" starttime="20210719 10:24:09.469" endtime="20210719 10:24:09.469"/>
+</kw>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<arg>3x</arg>
+<arg>4s</arg>
+<arg>Check branch thumbnail</arg>
+<arg>${marketlist}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<status status="NOT RUN" starttime="20210719 10:24:09.469" endtime="20210719 10:24:09.469"/>
+</kw>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<arg>3x</arg>
+<arg>4s</arg>
+<arg>Check downloadproductionlink is not present on branch</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<status status="NOT RUN" starttime="20210719 10:24:09.470" endtime="20210719 10:24:09.470"/>
+</kw>
+<status status="FAIL" starttime="20210719 10:21:43.516" endtime="20210719 10:24:09.470"/>
+</iter>
+<status status="FAIL" starttime="20210719 10:21:43.515" endtime="20210719 10:24:09.471"/>
+</for>
+<status status="FAIL" starttime="20210719 10:21:43.515" endtime="20210719 10:24:09.471"/>
+</kw>
+<status status="FAIL" starttime="20210719 10:21:24.992" endtime="20210719 10:24:09.472"/>
+</kw>
+<kw name="Finish TestCase" library="CommonFunctionality" type="TEARDOWN">
+<kw name="Close All Browsers" library="SeleniumLibrary">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" starttime="20210719 10:24:09.473" endtime="20210719 10:24:09.660"/>
+</kw>
+<status status="PASS" starttime="20210719 10:24:09.472" endtime="20210719 10:24:09.660"/>
+</kw>
+<status status="FAIL" starttime="20210719 10:21:20.006" endtime="20210719 10:24:09.661">Keyword 'Go to publishertypefolder' failed after retrying 3 times. The last error was: Element 'xpath://div[text()='unknown']/parent::td' not visible after 30 seconds.</status>
+</test>
+<status status="FAIL" starttime="20210719 10:19:13.119" endtime="20210719 10:24:09.674"/>
+</suite>
+<status status="FAIL" starttime="20210719 10:19:13.118" endtime="20210719 10:24:09.718"/>
+</suite>
+<status status="FAIL" starttime="20210719 10:19:13.098" endtime="20210719 10:24:09.719"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="1" skip="0" id="s1" name="TestCases">TestCases</stat>
+<stat pass="1" fail="1" skip="0" id="s1-s1" name="Assetnavigationtests">TestCases.Assetnavigationtests</stat>
+<stat pass="1" fail="1" skip="0" id="s1-s1-s1" name="Differentmarketpublicassetnavigationtest">TestCases.Assetnavigationtests.Differentmarketpublicassetnavigationtest</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

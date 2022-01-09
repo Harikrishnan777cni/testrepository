@@ -1,0 +1,19 @@
+==============================================================================
+TestCases                                                                     
+==============================================================================
+TestCases.Assetnavigationtests                                                
+==============================================================================
+TestCases.Assetnavigationtests.Ownmarketsharedwipassetnavigation              
+==============================================================================
+Own market sharedwip asset navigation using csv file                  | PASS |
+------------------------------------------------------------------------------
+TestCases.Assetnavigationtests.Ownmarketsharedwipassetnavigation      | PASS |
+1 test, 1 passed, 0 failed
+==============================================================================
+TestCases.Assetnavigationtests                                        | PASS |
+1 test, 1 passed, 0 failed
+==============================================================================
+TestCases                                                             | PASS |
+1 test, 1 passed, 0 failed
+==============================================================================
+Output:  /Users/hsreekum/PycharmProjects/DAMrobotAutomationframeworktwo/pabot_results/2/output.xml

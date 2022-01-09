@@ -1,0 +1,20 @@
+==============================================================================
+TestCases                                                                     
+==============================================================================
+TestCases.Syndicationconsoletests                                             
+==============================================================================
+TestCases.Syndicationconsoletests.SyndicationBeforePublicationreqbymetest     
+==============================================================================
+SyndicationBeforepublication                                          | FAIL |
+Execution terminated by signal
+------------------------------------------------------------------------------
+TestCases.Syndicationconsoletests.SyndicationBeforePublicationreqb... | FAIL |
+1 test, 0 passed, 1 failed
+==============================================================================
+TestCases.Syndicationconsoletests                                     | FAIL |
+1 test, 0 passed, 1 failed
+==============================================================================
+TestCases                                                             | FAIL |
+1 test, 0 passed, 1 failed
+==============================================================================
+Output:  /Users/hsreekum/PycharmProjects/DAMrobotAutomationframeworktwo/pabot_results/19/output.xml

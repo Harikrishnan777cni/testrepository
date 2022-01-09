@@ -1,0 +1,24 @@
+==============================================================================
+TestCases                                                                     
+==============================================================================
+TestCases.Lightboxcreationtests                                               
+==============================================================================
+TestCases.Lightboxcreationtests.Syndicationlightbox                           
+==============================================================================
+Lightboxcreationtestwithcsv using uk-glamour-pictureeditor@condena... | FAIL |
+MoveTargetOutOfBoundsException: Message: move target out of bounds
+  (Session info: chrome=91.0.4472.114)
+------------------------------------------------------------------------------
+Lightboxcreationtestwithcsv using uk-wired-piced@condenast.com and... | FAIL |
+***Title mismatch***
+------------------------------------------------------------------------------
+TestCases.Lightboxcreationtests.Syndicationlightbox                   | FAIL |
+2 tests, 0 passed, 2 failed
+==============================================================================
+TestCases.Lightboxcreationtests                                       | FAIL |
+2 tests, 0 passed, 2 failed
+==============================================================================
+TestCases                                                             | FAIL |
+2 tests, 0 passed, 2 failed
+==============================================================================
+Output:  /Users/hsreekum/PycharmProjects/DAMrobotAutomationframeworktwo/pabot_results/8/output.xml

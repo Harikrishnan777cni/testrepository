@@ -1,0 +1,19 @@
+==============================================================================
+TestCases                                                                     
+==============================================================================
+TestCases.Searchtests                                                         
+==============================================================================
+TestCases.Searchtests.Publicationsearch                                       
+==============================================================================
+Publicationsearchwithcsv using harikrishnan.sreekumaran@condenast.... | PASS |
+------------------------------------------------------------------------------
+TestCases.Searchtests.Publicationsearch                               | PASS |
+1 test, 1 passed, 0 failed
+==============================================================================
+TestCases.Searchtests                                                 | PASS |
+1 test, 1 passed, 0 failed
+==============================================================================
+TestCases                                                             | PASS |
+1 test, 1 passed, 0 failed
+==============================================================================
+Output:  /Users/hsreekum/PycharmProjects/DAMrobotAutomationframeworktwo/pabot_results/15/output.xml

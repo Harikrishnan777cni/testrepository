@@ -1,0 +1,205 @@
+==============================================================================
+TestCases                                                                     
+==============================================================================
+TestCases.Syndicationconsoletests                                             
+==============================================================================
+TestCases.Syndicationconsoletests.SyndicationAfterPublicationreqbymetest      
+==============================================================================
+SyndicationAfterpublication                                           45
+Taiwan
+Taiwan
+Taiwan
+Taiwan
+Taiwan
+United Kingdom
+United Kingdom
+United Kingdom
+United Kingdom
+United Kingdom
+United Kingdom
+Singapore
+Greece
+Singapore
+Greece
+Taiwan
+Taiwan
+United Kingdom
+United Kingdom
+Japan
+Japan
+United Kingdom
+United Kingdom
+United Kingdom
+Taiwan
+Taiwan
+United Kingdom
+Japan
+Japan
+Spain
+Spain
+Taiwan
+Taiwan
+Taiwan
+United Kingdom
+United Kingdom
+Italy
+Japan
+Japan
+Spain
+Spain
+Taiwan
+Taiwan
+United Kingdom
+United Kingdom
+45
+GQ
+GQ
+GQ
+GQ
+GQ
+Glamour
+Glamour
+Glamour
+Glamour
+Glamour
+Glamour
+Vogue
+Vogue
+Vogue
+Vogue
+GQ
+GQ
+Glamour
+Glamour
+Vogue
+Vogue
+Glamour
+Glamour
+Glamour
+GQ
+GQ
+Glamour
+Vogue
+Vogue
+Vogue
+Vogue
+GQ
+GQ
+GQ
+Glamour
+Glamour
+Vogue
+Vogue Wedding
+Vogue Wedding
+Vogue
+Vogue
+GQ
+GQ
+Glamour
+Glamour
+45
+Australia
+Czech Republic and Slovakia
+Australia
+Australia
+Czech Republic and Slovakia
+Australia
+Australia
+Czech Republic and Slovakia
+Australia
+Australia
+Czech Republic and Slovakia
+United Kingdom
+United Kingdom
+Taiwan
+Taiwan
+Singapore
+Greece
+Singapore
+Greece
+Greece
+Singapore
+Singapore
+Greece
+Singapore
+Greece
+Singapore
+Greece
+Singapore
+Singapore
+Singapore
+Singapore
+Singapore
+Singapore
+Singapore
+Singapore
+Singapore
+Greece
+Greece
+Greece
+Greece
+Greece
+Greece
+Greece
+Greece
+Greece
+45
+Vogue Living
+Vogue
+Vogue Living
+Vogue
+Vogue
+Vogue
+Vogue Living
+Vogue
+Vogue Living
+Vogue
+Vogue
+Glamour
+Glamour
+GQ
+GQ
+Vogue
+Vogue
+Vogue
+Vogue
+Vogue
+Vogue
+Vogue
+Vogue
+Vogue
+Vogue
+Vogue
+Vogue
+Vogue
+Vogue
+Vogue
+Vogue
+Vogue
+Vogue
+Vogue
+Vogue
+Vogue
+Vogue
+Vogue
+Vogue
+Vogue
+Vogue
+Vogue
+Vogue
+Vogue
+Vogue
+37
+| FAIL |
+AssertionError
+------------------------------------------------------------------------------
+TestCases.Syndicationconsoletests.SyndicationAfterPublicationreqby... | FAIL |
+1 test, 0 passed, 1 failed
+==============================================================================
+TestCases.Syndicationconsoletests                                     | FAIL |
+1 test, 0 passed, 1 failed
+==============================================================================
+TestCases                                                             | FAIL |
+1 test, 0 passed, 1 failed
+==============================================================================
+Output:  /Users/hsreekum/PycharmProjects/DAMrobotAutomationframeworktwo/pabot_results/17/output.xml

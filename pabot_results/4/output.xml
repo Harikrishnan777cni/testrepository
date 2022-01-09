@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 4.0.3 (Python 3.9.5 on darwin)" generated="20210719 10:19:35.569" rpa="false" schemaversion="2">
+<suite id="s1" name="TestCases" source="/Users/hsreekum/PycharmProjects/DAMrobotAutomationframeworktwo/TestCases">
+<suite id="s1-s1" name="Assetnavigationtests" source="/Users/hsreekum/PycharmProjects/DAMrobotAutomationframeworktwo/TestCases/Assetnavigationtests">
+<suite id="s1-s1-s1" name="Publicationnavigation" source="/Users/hsreekum/PycharmProjects/DAMrobotAutomationframeworktwo/TestCases/Assetnavigationtests/Publicationnavigation.robot">
+<test id="s1-s1-s1-t1" name="Should select correct publication folders with set of data using tw-gq-ebt2@condenast.com.tw and -c44QRUTng_y2y-">
+<kw name="Start TestCase" library="CommonFunctionality" type="SETUP">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>https://google.com</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20210719 10:19:35.901" level="INFO">Opening browser 'chrome' to base url 'https://google.com'.</msg>
+<status status="PASS" starttime="20210719 10:19:35.901" endtime="20210719 10:19:39.823"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20210719 10:19:39.825" endtime="20210719 10:19:39.963"/>
+</kw>
+<status status="PASS" starttime="20210719 10:19:35.900" endtime="20210719 10:19:39.963"/>
+</kw>
+<kw name="Should select correct publication folders with set of data">
+<arg>https://apac-staging.cnidam.com</arg>
+<arg>tw-gq-ebt2@condenast.com.tw</arg>
+<arg>-c44QRUTng_y2y-</arg>
+<arg>ebt</arg>
+<tag>Smoke</tag>
+<kw name="Get CSV Data" library="Datamanager">
+<var>${publicationfolders}</var>
+<arg>${publicationinputcsv}</arg>
+<kw name="Read Csv File" library="Csv">
+<var>${Data}</var>
+<arg>${FilePath}</arg>
+<msg timestamp="20210719 10:19:39.967" level="INFO">${Data} = [['UK', 'Wired', '2021', '2020 Wired World 2021', '2020 Wired World 2021 ...', '11_20_WWCoverTHIS', '11_20_WWCoverTHIS.indd'], ['Taiwan', 'GQ', '2020', 'GQ279', 'GQ279 - Print (375)', 'GQ27900', 'GQ27...</msg>
+<status status="PASS" starttime="20210719 10:19:39.966" endtime="20210719 10:19:39.967"/>
+</kw>
+<msg timestamp="20210719 10:19:39.968" level="INFO">${publicationfolders} = [['UK', 'Wired', '2021', '2020 Wired World 2021', '2020 Wired World 2021 ...', '11_20_WWCoverTHIS', '11_20_WWCoverTHIS.indd'], ['Taiwan', 'GQ', '2020', 'GQ279', 'GQ279 - Print (375)', 'GQ27900', 'GQ27...</msg>
+<status status="PASS" starttime="20210719 10:19:39.965" endtime="20210719 10:19:39.968"/>
+</kw>
+<kw name="Open my url" library="LoginKeywords">
+<arg>${SiteUrl}</arg>
+<kw name="Go To" library="SeleniumLibrary">
+<arg>${SiteUrl}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20210719 10:19:39.971" level="INFO">Opening url 'https://apac-staging.cnidam.com'</msg>
+<status status="PASS" starttime="20210719 10:19:39.970" endtime="20210719 10:19:44.022"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20210719 10:19:44.023" endtime="20210719 10:19:44.187"/>
+</kw>
+<status status="PASS" starttime="20210719 10:19:39.969" endtime="20210719 10:19:44.187"/>
+</kw>
+<kw name="Enter UserName" library="LoginKeywords">
+<arg>${user}</arg>
+<msg timestamp="20210719 10:19:44.193" level="FAIL">Variable '${user}' not found. Did you mean:
+    ${userrole}
+    ${username}</msg>
+<status status="FAIL" starttime="20210719 10:19:44.188" endtime="20210719 10:19:44.193"/>
+</kw>
+<kw name="Enter Password" library="LoginKeywords">
+<arg>${pwd}</arg>
+<status status="NOT RUN" starttime="20210719 10:19:44.194" endtime="20210719 10:19:44.194"/>
+</kw>
+<kw name="Click Verify" library="LoginKeywords">
+<status status="NOT RUN" starttime="20210719 10:19:44.194" endtime="20210719 10:19:44.194"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>7s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" starttime="20210719 10:19:44.195" endtime="20210719 10:19:44.195"/>
+</kw>
+<kw name="Get Title" library="SeleniumLibrary">
+<var>${act_title}</var>
+<doc>Returns the title of the current page.</doc>
+<status status="NOT RUN" starttime="20210719 10:19:44.195" endtime="20210719 10:19:44.195"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>'${act_title}' == 'Staging EMEA | Welcome to AEM'</arg>
+<arg>Verify successful login</arg>
+<arg>ELSE</arg>
+<arg>Verify unsuccessful login</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="NOT RUN" starttime="20210719 10:19:44.196" endtime="20210719 10:19:44.196"/>
+</kw>
+<kw name="Go to Publications tab" library="Publicationsnavigationkeywords">
+<status status="NOT RUN" starttime="20210719 10:19:44.196" endtime="20210719 10:19:44.197"/>
+</kw>
+<kw name="Select publications from the csvfile" library="Publicationsnavigationkeywords">
+<arg>${publicationfolders}</arg>
+<status status="NOT RUN" starttime="20210719 10:19:44.197" endtime="20210719 10:19:44.198"/>
+</kw>
+<status status="FAIL" starttime="20210719 10:19:39.964" endtime="20210719 10:19:44.198"/>
+</kw>
+<kw name="Finish TestCase" library="CommonFunctionality" type="TEARDOWN">
+<kw name="Close All Browsers" library="SeleniumLibrary">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" starttime="20210719 10:19:44.201" endtime="20210719 10:19:44.283"/>
+</kw>
+<status status="PASS" starttime="20210719 10:19:44.199" endtime="20210719 10:19:44.284"/>
+</kw>
+<status status="FAIL" starttime="20210719 10:19:35.899" endtime="20210719 10:19:44.284">Variable '${user}' not found. Did you mean:
+    ${userrole}
+    ${username}</status>
+</test>
+<test id="s1-s1-s1-t2" name="Should select correct publication folders with set of data using uk-glamour-pictureeditor@condenast.com and Monday12!">
+<kw name="Start TestCase" library="CommonFunctionality" type="SETUP">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>https://google.com</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20210719 10:19:44.289" level="INFO">Opening browser 'chrome' to base url 'https://google.com'.</msg>
+<status status="PASS" starttime="20210719 10:19:44.289" endtime="20210719 10:19:47.760"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20210719 10:19:47.762" endtime="20210719 10:19:47.890"/>
+</kw>
+<status status="PASS" starttime="20210719 10:19:44.288" endtime="20210719 10:19:47.891"/>
+</kw>
+<kw name="Should select correct publication folders with set of data">
+<arg>https://emea-staging.cnidam.com</arg>
+<arg>uk-glamour-pictureeditor@condenast.com</arg>
+<arg>Monday12!</arg>
+<arg>piced</arg>
+<tag>Smoke</tag>
+<kw name="Get CSV Data" library="Datamanager">
+<var>${publicationfolders}</var>
+<arg>${publicationinputcsv}</arg>
+<kw name="Read Csv File" library="Csv">
+<var>${Data}</var>
+<arg>${FilePath}</arg>
+<msg timestamp="20210719 10:19:47.893" level="INFO">${Data} = [['UK', 'Wired', '2021', '2020 Wired World 2021', '2020 Wired World 2021 ...', '11_20_WWCoverTHIS', '11_20_WWCoverTHIS.indd'], ['Taiwan', 'GQ', '2020', 'GQ279', 'GQ279 - Print (375)', 'GQ27900', 'GQ27...</msg>
+<status status="PASS" starttime="20210719 10:19:47.893" endtime="20210719 10:19:47.893"/>
+</kw>
+<msg timestamp="20210719 10:19:47.894" level="INFO">${publicationfolders} = [['UK', 'Wired', '2021', '2020 Wired World 2021', '2020 Wired World 2021 ...', '11_20_WWCoverTHIS', '11_20_WWCoverTHIS.indd'], ['Taiwan', 'GQ', '2020', 'GQ279', 'GQ279 - Print (375)', 'GQ27900', 'GQ27...</msg>
+<status status="PASS" starttime="20210719 10:19:47.892" endtime="20210719 10:19:47.894"/>
+</kw>
+<kw name="Open my url" library="LoginKeywords">
+<arg>${SiteUrl}</arg>
+<kw name="Go To" library="SeleniumLibrary">
+<arg>${SiteUrl}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20210719 10:19:47.896" level="INFO">Opening url 'https://emea-staging.cnidam.com'</msg>
+<status status="PASS" starttime="20210719 10:19:47.896" endtime="20210719 10:19:50.413"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20210719 10:19:50.415" endtime="20210719 10:19:50.560"/>
+</kw>
+<status status="PASS" starttime="20210719 10:19:47.895" endtime="20210719 10:19:50.561"/>
+</kw>
+<kw name="Enter UserName" library="LoginKeywords">
+<arg>${user}</arg>
+<msg timestamp="20210719 10:19:50.567" level="FAIL">Variable '${user}' not found. Did you mean:
+    ${userrole}
+    ${username}</msg>
+<status status="FAIL" starttime="20210719 10:19:50.561" endtime="20210719 10:19:50.567"/>
+</kw>
+<kw name="Enter Password" library="LoginKeywords">
+<arg>${pwd}</arg>
+<status status="NOT RUN" starttime="20210719 10:19:50.568" endtime="20210719 10:19:50.568"/>
+</kw>
+<kw name="Click Verify" library="LoginKeywords">
+<status status="NOT RUN" starttime="20210719 10:19:50.568" endtime="20210719 10:19:50.568"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>7s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" starttime="20210719 10:19:50.569" endtime="20210719 10:19:50.569"/>
+</kw>
+<kw name="Get Title" library="SeleniumLibrary">
+<var>${act_title}</var>
+<doc>Returns the title of the current page.</doc>
+<status status="NOT RUN" starttime="20210719 10:19:50.570" endtime="20210719 10:19:50.570"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>'${act_title}' == 'Staging EMEA | Welcome to AEM'</arg>
+<arg>Verify successful login</arg>
+<arg>ELSE</arg>
+<arg>Verify unsuccessful login</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="NOT RUN" starttime="20210719 10:19:50.570" endtime="20210719 10:19:50.571"/>
+</kw>
+<kw name="Go to Publications tab" library="Publicationsnavigationkeywords">
+<status status="NOT RUN" starttime="20210719 10:19:50.571" endtime="20210719 10:19:50.571"/>
+</kw>
+<kw name="Select publications from the csvfile" library="Publicationsnavigationkeywords">
+<arg>${publicationfolders}</arg>
+<status status="NOT RUN" starttime="20210719 10:19:50.572" endtime="20210719 10:19:50.572"/>
+</kw>
+<status status="FAIL" starttime="20210719 10:19:47.891" endtime="20210719 10:19:50.572"/>
+</kw>
+<kw name="Finish TestCase" library="CommonFunctionality" type="TEARDOWN">
+<kw name="Close All Browsers" library="SeleniumLibrary">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" starttime="20210719 10:19:50.575" endtime="20210719 10:19:50.666"/>
+</kw>
+<status status="PASS" starttime="20210719 10:19:50.573" endtime="20210719 10:19:50.666"/>
+</kw>
+<status status="FAIL" starttime="20210719 10:19:44.287" endtime="20210719 10:19:50.667">Variable '${user}' not found. Did you mean:
+    ${userrole}
+    ${username}</status>
+</test>
+<status status="FAIL" starttime="20210719 10:19:35.659" endtime="20210719 10:19:50.670"/>
+</suite>
+<status status="FAIL" starttime="20210719 10:19:35.657" endtime="20210719 10:19:50.676"/>
+</suite>
+<status status="FAIL" starttime="20210719 10:19:35.635" endtime="20210719 10:19:50.678"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="2" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="0" fail="2" skip="0" id="s1" name="TestCases">TestCases</stat>
+<stat pass="0" fail="2" skip="0" id="s1-s1" name="Assetnavigationtests">TestCases.Assetnavigationtests</stat>
+<stat pass="0" fail="2" skip="0" id="s1-s1-s1" name="Publicationnavigation">TestCases.Assetnavigationtests.Publicationnavigation</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

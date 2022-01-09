@@ -1,0 +1,49 @@
+==============================================================================
+TestCases                                                                     
+==============================================================================
+TestCases.Syndicationconsoletests                                             
+==============================================================================
+TestCases.Syndicationconsoletests.SyndicationBeforePublicationreqofmetest     
+==============================================================================
+SyndicationBeforepublication                                          6
+Spain
+USA
+Australia
+Czech Republic and Slovakia
+United Kingdom
+Taiwan
+6
+AD
+AD
+Vogue Living
+Vogue
+Glamour
+GQ
+6
+United Kingdom
+United Kingdom
+United Kingdom, Taiwan
+United Kingdom, Taiwan
+Australia
+Australia
+6
+GQ
+World Of Interiors
+Glamour, GQ
+Glamour, GQ
+Vogue Living
+Vogue, Vogue Living
+37
+| FAIL |
+AssertionError
+------------------------------------------------------------------------------
+TestCases.Syndicationconsoletests.SyndicationBeforePublicationreqo... | FAIL |
+1 test, 0 passed, 1 failed
+==============================================================================
+TestCases.Syndicationconsoletests                                     | FAIL |
+1 test, 0 passed, 1 failed
+==============================================================================
+TestCases                                                             | FAIL |
+1 test, 0 passed, 1 failed
+==============================================================================
+Output:  /Users/hsreekum/PycharmProjects/DAMrobotAutomationframeworktwo/pabot_results/20/output.xml

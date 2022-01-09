@@ -1,0 +1,1389 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 4.0.3 (Python 3.9.5 on darwin)" generated="20210719 10:19:12.961" rpa="false" schemaversion="2">
+<suite id="s1" name="TestCases" source="/Users/hsreekum/PycharmProjects/DAMrobotAutomationframeworktwo/TestCases">
+<suite id="s1-s1" name="Assetnavigationtests" source="/Users/hsreekum/PycharmProjects/DAMrobotAutomationframeworktwo/TestCases/Assetnavigationtests">
+<suite id="s1-s1-s1" name="Ownmarketsharedwipassetnavigation" source="/Users/hsreekum/PycharmProjects/DAMrobotAutomationframeworktwo/TestCases/Assetnavigationtests/ownmarketsharedwipassetnavigation.robot">
+<test id="s1-s1-s1-t1" name="Own market sharedwip asset navigation using csv file">
+<kw name="Start TestCase" library="CommonFunctionality" type="SETUP">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>https://google.com</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20210719 10:19:13.388" level="INFO">Opening browser 'chrome' to base url 'https://google.com'.</msg>
+<status status="PASS" starttime="20210719 10:19:13.388" endtime="20210719 10:19:19.436"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20210719 10:19:19.439" endtime="20210719 10:19:19.578"/>
+</kw>
+<status status="PASS" starttime="20210719 10:19:13.388" endtime="20210719 10:19:19.579"/>
+</kw>
+<kw name="Own market sharedwip asset navigation using csv file">
+<arg>https://emea-staging.cnidam.com</arg>
+<arg>uk-glamour-pictureeditor@condenast.com</arg>
+<arg>Monday12!</arg>
+<arg>piced</arg>
+<tag>Smoke</tag>
+<kw name="Get CSV Data" library="Datamanager">
+<var>${marketfolders}</var>
+<arg>${sharedwipinputcsv}</arg>
+<kw name="Read Csv File" library="Csv">
+<var>${Data}</var>
+<arg>${FilePath}</arg>
+<msg timestamp="20210719 10:19:19.583" level="INFO">${Data} = [['UK', 'Glamour', 'shared-wip', 'HIGH-RES', '2018 AW', '09-18-BEAUTY-Footprint', 'Assets', 'Published', 'Beauty Footprint Aromatherapy Oil'], ['UK', 'Glamour', 'shared-wip', 'HIGH-RES', '2020 Spring ...</msg>
+<status status="PASS" starttime="20210719 10:19:19.581" endtime="20210719 10:19:19.583"/>
+</kw>
+<msg timestamp="20210719 10:19:19.585" level="INFO">${marketfolders} = [['UK', 'Glamour', 'shared-wip', 'HIGH-RES', '2018 AW', '09-18-BEAUTY-Footprint', 'Assets', 'Published', 'Beauty Footprint Aromatherapy Oil'], ['UK', 'Glamour', 'shared-wip', 'HIGH-RES', '2020 Spring ...</msg>
+<status status="PASS" starttime="20210719 10:19:19.580" endtime="20210719 10:19:19.585"/>
+</kw>
+<kw name="Open my url" library="LoginKeywords">
+<arg>${SiteUrl}</arg>
+<kw name="Go To" library="SeleniumLibrary">
+<arg>${SiteUrl}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20210719 10:19:19.588" level="INFO">Opening url 'https://emea-staging.cnidam.com'</msg>
+<status status="PASS" starttime="20210719 10:19:19.588" endtime="20210719 10:19:24.700"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20210719 10:19:24.701" endtime="20210719 10:19:24.848"/>
+</kw>
+<status status="PASS" starttime="20210719 10:19:19.586" endtime="20210719 10:19:24.849"/>
+</kw>
+<kw name="Enter UserName" library="LoginKeywords">
+<arg>${username}</arg>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>${txt_loginUserName_lctr}</arg>
+<arg>timeout=30s</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20210719 10:19:24.851" endtime="20210719 10:19:24.864"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${txt_loginUserName_lctr}</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20210719 10:19:24.866" level="INFO">Typing text 'uk-glamour-pictureeditor@condenast.com' into text field 'id:idp-discovery-username'.</msg>
+<status status="PASS" starttime="20210719 10:19:24.865" endtime="20210719 10:19:25.088"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>${submitbutton_lctr}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20210719 10:19:25.090" level="INFO">Clicking button 'id:idp-discovery-submit'.</msg>
+<status status="PASS" starttime="20210719 10:19:25.089" endtime="20210719 10:19:25.212"/>
+</kw>
+<status status="PASS" starttime="20210719 10:19:24.849" endtime="20210719 10:19:25.213"/>
+</kw>
+<kw name="Enter Password" library="LoginKeywords">
+<arg>${password}</arg>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>${txt_loginps_lctr}</arg>
+<arg>timeout=30s</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20210719 10:19:25.216" endtime="20210719 10:19:26.964"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${txt_loginps_lctr}</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20210719 10:19:26.966" level="INFO">Typing text 'Monday12!' into text field 'class:password-with-toggle'.</msg>
+<status status="PASS" starttime="20210719 10:19:26.965" endtime="20210719 10:19:27.028"/>
+</kw>
+<status status="PASS" starttime="20210719 10:19:25.214" endtime="20210719 10:19:27.029"/>
+</kw>
+<kw name="Click Verify" library="LoginKeywords">
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>${txt_verify_lctr}</arg>
+<arg>timeout=30s</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20210719 10:19:27.030" endtime="20210719 10:19:27.040"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>${txt_verify_lctr}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20210719 10:19:27.042" level="INFO">Clicking button 'css:input[class='button button-primary']'.</msg>
+<status status="PASS" starttime="20210719 10:19:27.041" endtime="20210719 10:19:27.095"/>
+</kw>
+<status status="PASS" starttime="20210719 10:19:27.029" endtime="20210719 10:19:27.096"/>
+</kw>
+<kw name="Check welcomemessage" library="LoginKeywords">
+<arg>${username}</arg>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>${welcomemessage_lctr}</arg>
+<arg>timeout=30s</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20210719 10:19:27.097" endtime="20210719 10:19:30.568"/>
+</kw>
+<kw name="Element Should Contain" library="SeleniumLibrary">
+<arg>${welcomemessage_lctr}</arg>
+<arg>${usernameinput}</arg>
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<msg timestamp="20210719 10:19:30.585" level="INFO">Element 'xpath://div[@id='welcome-message']' contains text 'uk-glamour-pictureeditor@condenast.com'.</msg>
+<status status="PASS" starttime="20210719 10:19:30.568" endtime="20210719 10:19:30.585"/>
+</kw>
+<status status="PASS" starttime="20210719 10:19:27.096" endtime="20210719 10:19:30.586"/>
+</kw>
+<kw name="Get Title" library="SeleniumLibrary">
+<var>${act_title}</var>
+<doc>Returns the title of the current page.</doc>
+<msg timestamp="20210719 10:19:30.590" level="INFO">${act_title} = Staging EMEA | Welcome to AEM</msg>
+<status status="PASS" starttime="20210719 10:19:30.587" endtime="20210719 10:19:30.590"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>'${act_title}' == '${expectedpagetitle_emea}' and '${SiteUrl}' == '${expectedsiteurl_emea}' or '${act_title}' == '${expectedpagetitle_apac}' and '${SiteUrl}' == '${expectedsiteurl_apac}'</arg>
+<arg>Verify successful login</arg>
+<arg>ELSE</arg>
+<arg>Verify unsuccessful login</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<kw name="Verify successful login" library="LoginKeywords">
+<kw name="Log" library="BuiltIn">
+<arg>**********Login test is passed**********</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20210719 10:19:30.593" level="INFO">**********Login test is passed**********</msg>
+<status status="PASS" starttime="20210719 10:19:30.593" endtime="20210719 10:19:30.593"/>
+</kw>
+<kw name="Log Title" library="SeleniumLibrary">
+<doc>Logs and returns the title of the current page.</doc>
+<msg timestamp="20210719 10:19:30.597" level="INFO">Staging EMEA | Welcome to AEM</msg>
+<status status="PASS" starttime="20210719 10:19:30.594" endtime="20210719 10:19:30.597"/>
+</kw>
+<status status="PASS" starttime="20210719 10:19:30.592" endtime="20210719 10:19:30.598"/>
+</kw>
+<status status="PASS" starttime="20210719 10:19:30.591" endtime="20210719 10:19:30.598"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>'${userrole}' == 'piced' or '${userrole}' == 'ebt'</arg>
+<arg>Welcomepagetabscheck_ebtorpiced</arg>
+<arg>ELSE</arg>
+<arg>Welcomepagetabscheck_globaladmin</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<kw name="Welcomepagetabscheck_ebtorpiced" library="LoginKeywords">
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>${tabcontent_lctr}</arg>
+<arg>timeout=30s</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20210719 10:19:30.600" endtime="20210719 10:19:30.613"/>
+</kw>
+<kw name="Get Element Count" library="SeleniumLibrary">
+<var>${AllTabsCount}</var>
+<arg>${tabcontent_lctr}</arg>
+<doc>Returns the number of elements matching ``locator``.</doc>
+<msg timestamp="20210719 10:19:30.624" level="INFO">${AllTabsCount} = 8</msg>
+<status status="PASS" starttime="20210719 10:19:30.614" endtime="20210719 10:19:30.624"/>
+</kw>
+<kw name="Get WebElements" library="SeleniumLibrary">
+<var>@{TabItems}</var>
+<arg>${tabcontent_lctr}</arg>
+<doc>Returns a list of WebElement objects matching the ``locator``.</doc>
+<msg timestamp="20210719 10:19:30.638" level="INFO">@{TabItems} = [ &lt;selenium.webdriver.remote.webelement.WebElement (session="b3e0e6d03476aa8a6b83e3dc9c72ca45", element="b74b4102-38a6-4d44-be88-c5194b770a68")&gt; | &lt;selenium.webdriver.remote.webelement.WebElement (ses...</msg>
+<status status="PASS" starttime="20210719 10:19:30.626" endtime="20210719 10:19:30.638"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>${AllTabsCount}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20210719 10:19:30.640" level="INFO">8</msg>
+<status status="PASS" starttime="20210719 10:19:30.639" endtime="20210719 10:19:30.640"/>
+</kw>
+<for flavor="IN RANGE">
+<var>${i}</var>
+<value>0</value>
+<value>${${AllTabsCount}}</value>
+<iter>
+<var name="${i}">0</var>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${TabText}</var>
+<arg>${TabItems}[${i}]</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20210719 10:19:30.663" level="INFO">${TabText} = Images</msg>
+<status status="PASS" starttime="20210719 10:19:30.647" endtime="20210719 10:19:30.663"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>${TabText}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20210719 10:19:30.665" level="INFO">Images</msg>
+<status status="PASS" starttime="20210719 10:19:30.664" endtime="20210719 10:19:30.665"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>${welcomepagetabs}[${i}]</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20210719 10:19:30.667" level="INFO">Images</msg>
+<status status="PASS" starttime="20210719 10:19:30.666" endtime="20210719 10:19:30.667"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>'${welcomepagetabs}[${i}]' == '${TabText}'</arg>
+<arg>Log</arg>
+<arg>pass</arg>
+<arg>ELSE</arg>
+<arg>FAIL</arg>
+<arg>***Title mismatch***</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<kw name="Log" library="BuiltIn">
+<arg>pass</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20210719 10:19:30.670" level="INFO">pass</msg>
+<status status="PASS" starttime="20210719 10:19:30.669" endtime="20210719 10:19:30.670"/>
+</kw>
+<status status="PASS" starttime="20210719 10:19:30.668" endtime="20210719 10:19:30.671"/>
+</kw>
+<status status="PASS" starttime="20210719 10:19:30.647" endtime="20210719 10:19:30.672"/>
+</iter>
+<iter>
+<var name="${i}">1</var>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${TabText}</var>
+<arg>${TabItems}[${i}]</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20210719 10:19:30.687" level="INFO">${TabText} = Images - Touch UI</msg>
+<status status="PASS" starttime="20210719 10:19:30.673" endtime="20210719 10:19:30.687"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>${TabText}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20210719 10:19:30.689" level="INFO">Images - Touch UI</msg>
+<status status="PASS" starttime="20210719 10:19:30.688" endtime="20210719 10:19:30.689"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>${welcomepagetabs}[${i}]</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20210719 10:19:30.691" level="INFO">Images - Touch UI</msg>
+<status status="PASS" starttime="20210719 10:19:30.690" endtime="20210719 10:19:30.691"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>'${welcomepagetabs}[${i}]' == '${TabText}'</arg>
+<arg>Log</arg>
+<arg>pass</arg>
+<arg>ELSE</arg>
+<arg>FAIL</arg>
+<arg>***Title mismatch***</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<kw name="Log" library="BuiltIn">
+<arg>pass</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20210719 10:19:30.694" level="INFO">pass</msg>
+<status status="PASS" starttime="20210719 10:19:30.693" endtime="20210719 10:19:30.694"/>
+</kw>
+<status status="PASS" starttime="20210719 10:19:30.692" endtime="20210719 10:19:30.695"/>
+</kw>
+<status status="PASS" starttime="20210719 10:19:30.673" endtime="20210719 10:19:30.696"/>
+</iter>
+<iter>
+<var name="${i}">2</var>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${TabText}</var>
+<arg>${TabItems}[${i}]</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20210719 10:19:30.712" level="INFO">${TabText} = Publications</msg>
+<status status="PASS" starttime="20210719 10:19:30.697" endtime="20210719 10:19:30.712"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>${TabText}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20210719 10:19:30.714" level="INFO">Publications</msg>
+<status status="PASS" starttime="20210719 10:19:30.714" endtime="20210719 10:19:30.715"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>${welcomepagetabs}[${i}]</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20210719 10:19:30.718" level="INFO">Publications</msg>
+<status status="PASS" starttime="20210719 10:19:30.717" endtime="20210719 10:19:30.718"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>'${welcomepagetabs}[${i}]' == '${TabText}'</arg>
+<arg>Log</arg>
+<arg>pass</arg>
+<arg>ELSE</arg>
+<arg>FAIL</arg>
+<arg>***Title mismatch***</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<kw name="Log" library="BuiltIn">
+<arg>pass</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20210719 10:19:30.721" level="INFO">pass</msg>
+<status status="PASS" starttime="20210719 10:19:30.721" endtime="20210719 10:19:30.721"/>
+</kw>
+<status status="PASS" starttime="20210719 10:19:30.720" endtime="20210719 10:19:30.723"/>
+</kw>
+<status status="PASS" starttime="20210719 10:19:30.697" endtime="20210719 10:19:30.723"/>
+</iter>
+<iter>
+<var name="${i}">3</var>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${TabText}</var>
+<arg>${TabItems}[${i}]</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20210719 10:19:30.740" level="INFO">${TabText} = Content creators contracts</msg>
+<status status="PASS" starttime="20210719 10:19:30.725" endtime="20210719 10:19:30.740"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>${TabText}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20210719 10:19:30.743" level="INFO">Content creators contracts</msg>
+<status status="PASS" starttime="20210719 10:19:30.742" endtime="20210719 10:19:30.743"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>${welcomepagetabs}[${i}]</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20210719 10:19:30.746" level="INFO">Content creators contracts</msg>
+<status status="PASS" starttime="20210719 10:19:30.745" endtime="20210719 10:19:30.746"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>'${welcomepagetabs}[${i}]' == '${TabText}'</arg>
+<arg>Log</arg>
+<arg>pass</arg>
+<arg>ELSE</arg>
+<arg>FAIL</arg>
+<arg>***Title mismatch***</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<kw name="Log" library="BuiltIn">
+<arg>pass</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20210719 10:19:30.748" level="INFO">pass</msg>
+<status status="PASS" starttime="20210719 10:19:30.748" endtime="20210719 10:19:30.748"/>
+</kw>
+<status status="PASS" starttime="20210719 10:19:30.747" endtime="20210719 10:19:30.750"/>
+</kw>
+<status status="PASS" starttime="20210719 10:19:30.724" endtime="20210719 10:19:30.750"/>
+</iter>
+<iter>
+<var name="${i}">4</var>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${TabText}</var>
+<arg>${TabItems}[${i}]</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20210719 10:19:30.773" level="INFO">${TabText} = Videos</msg>
+<status status="PASS" starttime="20210719 10:19:30.752" endtime="20210719 10:19:30.773"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>${TabText}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20210719 10:19:30.777" level="INFO">Videos</msg>
+<status status="PASS" starttime="20210719 10:19:30.775" endtime="20210719 10:19:30.777"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>${welcomepagetabs}[${i}]</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20210719 10:19:30.780" level="INFO">Videos</msg>
+<status status="PASS" starttime="20210719 10:19:30.779" endtime="20210719 10:19:30.780"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>'${welcomepagetabs}[${i}]' == '${TabText}'</arg>
+<arg>Log</arg>
+<arg>pass</arg>
+<arg>ELSE</arg>
+<arg>FAIL</arg>
+<arg>***Title mismatch***</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<kw name="Log" library="BuiltIn">
+<arg>pass</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20210719 10:19:30.785" level="INFO">pass</msg>
+<status status="PASS" starttime="20210719 10:19:30.784" endtime="20210719 10:19:30.785"/>
+</kw>
+<status status="PASS" starttime="20210719 10:19:30.782" endtime="20210719 10:19:30.786"/>
+</kw>
+<status status="PASS" starttime="20210719 10:19:30.751" endtime="20210719 10:19:30.787"/>
+</iter>
+<iter>
+<var name="${i}">5</var>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${TabText}</var>
+<arg>${TabItems}[${i}]</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20210719 10:19:30.807" level="INFO">${TabText} = Syndication after publication</msg>
+<status status="PASS" starttime="20210719 10:19:30.789" endtime="20210719 10:19:30.807"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>${TabText}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20210719 10:19:30.810" level="INFO">Syndication after publication</msg>
+<status status="PASS" starttime="20210719 10:19:30.809" endtime="20210719 10:19:30.810"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>${welcomepagetabs}[${i}]</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20210719 10:19:30.812" level="INFO">Syndication after publication</msg>
+<status status="PASS" starttime="20210719 10:19:30.811" endtime="20210719 10:19:30.812"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>'${welcomepagetabs}[${i}]' == '${TabText}'</arg>
+<arg>Log</arg>
+<arg>pass</arg>
+<arg>ELSE</arg>
+<arg>FAIL</arg>
+<arg>***Title mismatch***</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<kw name="Log" library="BuiltIn">
+<arg>pass</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20210719 10:19:30.815" level="INFO">pass</msg>
+<status status="PASS" starttime="20210719 10:19:30.815" endtime="20210719 10:19:30.815"/>
+</kw>
+<status status="PASS" starttime="20210719 10:19:30.813" endtime="20210719 10:19:30.816"/>
+</kw>
+<status status="PASS" starttime="20210719 10:19:30.788" endtime="20210719 10:19:30.817"/>
+</iter>
+<iter>
+<var name="${i}">6</var>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${TabText}</var>
+<arg>${TabItems}[${i}]</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20210719 10:19:30.829" level="INFO">${TabText} = Syndication before publication</msg>
+<status status="PASS" starttime="20210719 10:19:30.818" endtime="20210719 10:19:30.829"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>${TabText}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20210719 10:19:30.831" level="INFO">Syndication before publication</msg>
+<status status="PASS" starttime="20210719 10:19:30.830" endtime="20210719 10:19:30.831"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>${welcomepagetabs}[${i}]</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20210719 10:19:30.832" level="INFO">Syndication before publication</msg>
+<status status="PASS" starttime="20210719 10:19:30.831" endtime="20210719 10:19:30.832"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>'${welcomepagetabs}[${i}]' == '${TabText}'</arg>
+<arg>Log</arg>
+<arg>pass</arg>
+<arg>ELSE</arg>
+<arg>FAIL</arg>
+<arg>***Title mismatch***</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<kw name="Log" library="BuiltIn">
+<arg>pass</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20210719 10:19:30.835" level="INFO">pass</msg>
+<status status="PASS" starttime="20210719 10:19:30.834" endtime="20210719 10:19:30.835"/>
+</kw>
+<status status="PASS" starttime="20210719 10:19:30.833" endtime="20210719 10:19:30.836"/>
+</kw>
+<status status="PASS" starttime="20210719 10:19:30.817" endtime="20210719 10:19:30.837"/>
+</iter>
+<iter>
+<var name="${i}">7</var>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${TabText}</var>
+<arg>${TabItems}[${i}]</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20210719 10:19:30.848" level="INFO">${TabText} = Inbox</msg>
+<status status="PASS" starttime="20210719 10:19:30.838" endtime="20210719 10:19:30.848"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>${TabText}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20210719 10:19:30.851" level="INFO">Inbox</msg>
+<status status="PASS" starttime="20210719 10:19:30.850" endtime="20210719 10:19:30.851"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>${welcomepagetabs}[${i}]</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20210719 10:19:30.854" level="INFO">Inbox</msg>
+<status status="PASS" starttime="20210719 10:19:30.853" endtime="20210719 10:19:30.855"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>'${welcomepagetabs}[${i}]' == '${TabText}'</arg>
+<arg>Log</arg>
+<arg>pass</arg>
+<arg>ELSE</arg>
+<arg>FAIL</arg>
+<arg>***Title mismatch***</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<kw name="Log" library="BuiltIn">
+<arg>pass</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20210719 10:19:30.857" level="INFO">pass</msg>
+<status status="PASS" starttime="20210719 10:19:30.857" endtime="20210719 10:19:30.857"/>
+</kw>
+<status status="PASS" starttime="20210719 10:19:30.856" endtime="20210719 10:19:30.858"/>
+</kw>
+<status status="PASS" starttime="20210719 10:19:30.838" endtime="20210719 10:19:30.859"/>
+</iter>
+<status status="PASS" starttime="20210719 10:19:30.641" endtime="20210719 10:19:30.859"/>
+</for>
+<status status="PASS" starttime="20210719 10:19:30.599" endtime="20210719 10:19:30.860"/>
+</kw>
+<status status="PASS" starttime="20210719 10:19:30.598" endtime="20210719 10:19:30.860"/>
+</kw>
+<kw name="Go to images page" library="Sharedwipnavigationkeywords">
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>${Imagestabicon_lctr}</arg>
+<arg>timeout=30s</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20210719 10:19:30.862" endtime="20210719 10:19:30.873"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${Imagestabicon_lctr}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20210719 10:19:30.874" level="INFO">Clicking element 'xpath://div[@class='icon damadmin']'.</msg>
+<status status="PASS" starttime="20210719 10:19:30.873" endtime="20210719 10:19:42.477"/>
+</kw>
+<status status="PASS" starttime="20210719 10:19:30.861" endtime="20210719 10:19:42.478"/>
+</kw>
+<kw name="Own market sharedwipassetnavigation using the csvfile" library="ownmarketSharedwipnavigationkeywords">
+<arg>${marketfolders}</arg>
+<for flavor="IN">
+<var>${marketlist}</var>
+<value>@{marketfolders}</value>
+<iter>
+<var name="${marketlist}">['UK', 'Glamour', 'shared-wip', 'HIGH-RES', '2018 AW', '09-18-BEAUTY-Footprint', 'Assets', 'Published', 'Beauty Footprint Aromatherapy Oil']</var>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20210719 10:19:44.480" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20210719 10:19:42.479" endtime="20210719 10:19:44.481"/>
+</kw>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<arg>3x</arg>
+<arg>4s</arg>
+<arg>Sharedwipnavigationkeywords.Go to Imagestab</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<kw name="Go to Imagestab" library="Sharedwipnavigationkeywords">
+<kw name="Sleep" library="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20210719 10:19:47.484" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20210719 10:19:44.484" endtime="20210719 10:19:47.484"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>${Imagestab_lctr}</arg>
+<arg>timeout=30s</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20210719 10:19:47.485" endtime="20210719 10:19:47.496"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${Imagestab_lctr}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20210719 10:19:47.497" level="INFO">Clicking element 'xpath://span[@class='x-tab-strip-inner']/span[text()='Images']'.</msg>
+<status status="PASS" starttime="20210719 10:19:47.497" endtime="20210719 10:19:47.544"/>
+</kw>
+<status status="PASS" starttime="20210719 10:19:44.483" endtime="20210719 10:19:47.545"/>
+</kw>
+<status status="PASS" starttime="20210719 10:19:44.482" endtime="20210719 10:19:47.546"/>
+</kw>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<arg>3x</arg>
+<arg>4s</arg>
+<arg>Go to my folder tab</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<kw name="Go to my folder tab" library="Publicassetnavigationkeywords">
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>${myfoldertab_lctr}</arg>
+<arg>timeout=30s</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20210719 10:19:47.547" endtime="20210719 10:19:47.566"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${myfoldertab_lctr}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20210719 10:19:47.567" level="INFO">Clicking element 'xpath://span[contains(@class,'x-tab-strip-text ') and contains(text(),'My Folders')]'.</msg>
+<status status="PASS" starttime="20210719 10:19:47.567" endtime="20210719 10:19:47.606"/>
+</kw>
+<status status="PASS" starttime="20210719 10:19:47.547" endtime="20210719 10:19:47.607"/>
+</kw>
+<status status="PASS" starttime="20210719 10:19:47.546" endtime="20210719 10:19:47.608"/>
+</kw>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<arg>3x</arg>
+<arg>4s</arg>
+<arg>Go to sharedwip folder</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<kw name="Go to sharedwip folder" library="Sharedwipnavigationkeywords">
+<kw name="Sleep" library="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20210719 10:19:50.611" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20210719 10:19:47.610" endtime="20210719 10:19:50.612"/>
+</kw>
+<kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
+<arg>${own_sharedwipfolder_lctr}</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="PASS" starttime="20210719 10:19:50.613" endtime="20210719 10:19:50.640"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${own_sharedwipfolder_lctr}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20210719 10:19:50.641" level="INFO">Clicking element 'xpath://span[text()='shared-wip']'.</msg>
+<status status="PASS" starttime="20210719 10:19:50.641" endtime="20210719 10:19:50.693"/>
+</kw>
+<status status="PASS" starttime="20210719 10:19:47.609" endtime="20210719 10:19:50.695"/>
+</kw>
+<status status="PASS" starttime="20210719 10:19:47.609" endtime="20210719 10:19:50.695"/>
+</kw>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<arg>3x</arg>
+<arg>4s</arg>
+<arg>Go to highresolution folder</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<kw name="Go to highresolution folder" library="Sharedwipnavigationkeywords">
+<kw name="Sleep" library="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20210719 10:19:53.698" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20210719 10:19:50.697" endtime="20210719 10:19:53.698"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${own_highresfolder_lctr}</arg>
+<arg>timeout=30s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20210719 10:19:53.699" endtime="20210719 10:19:53.718"/>
+</kw>
+<kw name="Double Click Element" library="SeleniumLibrary">
+<arg>${own_highresfolder_lctr}</arg>
+<doc>Double clicks the element identified by ``locator``.</doc>
+<msg timestamp="20210719 10:19:53.719" level="INFO">Double clicking element 'xpath://div[text()='HIGH-RES']'.</msg>
+<status status="PASS" starttime="20210719 10:19:53.718" endtime="20210719 10:19:53.993"/>
+</kw>
+<status status="PASS" starttime="20210719 10:19:50.696" endtime="20210719 10:19:53.997"/>
+</kw>
+<status status="PASS" starttime="20210719 10:19:50.696" endtime="20210719 10:19:53.998"/>
+</kw>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<arg>3x</arg>
+<arg>4s</arg>
+<arg>Go to sharedwipsection folder</arg>
+<arg>${marketlist}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<kw name="Go to sharedwipsection folder" library="Sharedwipnavigationkeywords">
+<arg>${marketlist}</arg>
+<kw name="Sleep" library="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20210719 10:19:57.001" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20210719 10:19:54.001" endtime="20210719 10:19:57.002"/>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<var>${own_sharedwipsectionfolder_lctr}</var>
+<arg>xpath://div[text()='${markettestinput[4]}']</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20210719 10:19:57.009" level="INFO">${own_sharedwipsectionfolder_lctr} = xpath://div[text()='2018 AW']</msg>
+<status status="PASS" starttime="20210719 10:19:57.004" endtime="20210719 10:19:57.009"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>${own_sharedwipsectionfolder_lctr}</arg>
+<arg>timeout=30s</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20210719 10:19:57.010" endtime="20210719 10:19:57.021"/>
+</kw>
+<kw name="Double Click Element" library="SeleniumLibrary">
+<arg>${own_sharedwipsectionfolder_lctr}</arg>
+<doc>Double clicks the element identified by ``locator``.</doc>
+<msg timestamp="20210719 10:19:57.022" level="INFO">Double clicking element 'xpath://div[text()='2018 AW']'.</msg>
+<status status="PASS" starttime="20210719 10:19:57.021" endtime="20210719 10:19:57.647"/>
+</kw>
+<status status="PASS" starttime="20210719 10:19:54.000" endtime="20210719 10:19:57.648"/>
+</kw>
+<status status="PASS" starttime="20210719 10:19:53.999" endtime="20210719 10:19:57.648"/>
+</kw>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<arg>3x</arg>
+<arg>4s</arg>
+<arg>Go to feature folder</arg>
+<arg>${marketlist}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<kw name="Go to feature folder" library="Sharedwipnavigationkeywords">
+<arg>${marketlist}</arg>
+<kw name="Sleep" library="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20210719 10:20:00.651" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20210719 10:19:57.650" endtime="20210719 10:20:00.651"/>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<var>${own_featurefolder_lctr}</var>
+<arg>xpath://div[text()='${markettestinput[5]}']</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20210719 10:20:00.656" level="INFO">${own_featurefolder_lctr} = xpath://div[text()='09-18-BEAUTY-Footprint']</msg>
+<status status="PASS" starttime="20210719 10:20:00.652" endtime="20210719 10:20:00.656"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>${own_featurefolder_lctr}</arg>
+<arg>timeout=30s</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20210719 10:20:00.657" endtime="20210719 10:20:00.668"/>
+</kw>
+<kw name="Double Click Element" library="SeleniumLibrary">
+<arg>${own_featurefolder_lctr}</arg>
+<doc>Double clicks the element identified by ``locator``.</doc>
+<msg timestamp="20210719 10:20:00.669" level="INFO">Double clicking element 'xpath://div[text()='09-18-BEAUTY-Footprint']'.</msg>
+<status status="PASS" starttime="20210719 10:20:00.668" endtime="20210719 10:20:01.452"/>
+</kw>
+<status status="PASS" starttime="20210719 10:19:57.649" endtime="20210719 10:20:01.453"/>
+</kw>
+<status status="PASS" starttime="20210719 10:19:57.649" endtime="20210719 10:20:01.454"/>
+</kw>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<arg>3x</arg>
+<arg>4s</arg>
+<arg>Go to sharedassets folder</arg>
+<arg>${marketlist}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<kw name="Go to sharedassets folder" library="Sharedwipnavigationkeywords">
+<arg>${marketlist}</arg>
+<kw name="Sleep" library="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20210719 10:20:04.456" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20210719 10:20:01.455" endtime="20210719 10:20:04.457"/>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<var>${own_sharedassetsfolder_lctr}</var>
+<arg>xpath://div[text()='${markettestinput[6]}']</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20210719 10:20:04.462" level="INFO">${own_sharedassetsfolder_lctr} = xpath://div[text()='Assets']</msg>
+<status status="PASS" starttime="20210719 10:20:04.458" endtime="20210719 10:20:04.462"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>${own_sharedassetsfolder_lctr}</arg>
+<arg>timeout=30s</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20210719 10:20:04.463" endtime="20210719 10:20:04.474"/>
+</kw>
+<kw name="Double Click Element" library="SeleniumLibrary">
+<arg>${own_sharedassetsfolder_lctr}</arg>
+<doc>Double clicks the element identified by ``locator``.</doc>
+<msg timestamp="20210719 10:20:04.475" level="INFO">Double clicking element 'xpath://div[text()='Assets']'.</msg>
+<status status="PASS" starttime="20210719 10:20:04.474" endtime="20210719 10:20:05.015"/>
+</kw>
+<status status="PASS" starttime="20210719 10:20:01.455" endtime="20210719 10:20:05.016"/>
+</kw>
+<status status="PASS" starttime="20210719 10:20:01.454" endtime="20210719 10:20:05.016"/>
+</kw>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<arg>3x</arg>
+<arg>4s</arg>
+<arg>Go to published folder</arg>
+<arg>${marketlist}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<kw name="Go to published folder" library="Sharedwipnavigationkeywords">
+<arg>${marketlist}</arg>
+<kw name="Sleep" library="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20210719 10:20:08.018" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20210719 10:20:05.018" endtime="20210719 10:20:08.018"/>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<var>${own_publishedfolder_lctr}</var>
+<arg>xpath://div[text()='${markettestinput[7]}']</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20210719 10:20:08.023" level="INFO">${own_publishedfolder_lctr} = xpath://div[text()='Published']</msg>
+<status status="PASS" starttime="20210719 10:20:08.019" endtime="20210719 10:20:08.024"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>${own_publishedfolder_lctr}</arg>
+<arg>timeout=30s</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20210719 10:20:08.024" endtime="20210719 10:20:08.035"/>
+</kw>
+<kw name="Double Click Element" library="SeleniumLibrary">
+<arg>${own_publishedfolder_lctr}</arg>
+<doc>Double clicks the element identified by ``locator``.</doc>
+<msg timestamp="20210719 10:20:08.036" level="INFO">Double clicking element 'xpath://div[text()='Published']'.</msg>
+<status status="PASS" starttime="20210719 10:20:08.036" endtime="20210719 10:20:08.541"/>
+</kw>
+<status status="PASS" starttime="20210719 10:20:05.017" endtime="20210719 10:20:08.542"/>
+</kw>
+<status status="PASS" starttime="20210719 10:20:05.017" endtime="20210719 10:20:08.542"/>
+</kw>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<arg>3x</arg>
+<arg>4s</arg>
+<arg>Go to sharedwipasset</arg>
+<arg>${marketlist}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<kw name="Go to sharedwipasset" library="Sharedwipnavigationkeywords">
+<arg>${marketlist}</arg>
+<kw name="Sleep" library="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20210719 10:20:11.545" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20210719 10:20:08.544" endtime="20210719 10:20:11.546"/>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<var>${own_sharedwip_asset_lctr}</var>
+<arg>xpath://div[text()='${markettestinput[8]}']</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20210719 10:20:11.551" level="INFO">${own_sharedwip_asset_lctr} = xpath://div[text()='Beauty Footprint Aromatherapy Oil']</msg>
+<status status="PASS" starttime="20210719 10:20:11.547" endtime="20210719 10:20:11.551"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>${own_sharedwip_asset_lctr}</arg>
+<arg>timeout=30s</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20210719 10:20:11.552" endtime="20210719 10:20:11.563"/>
+</kw>
+<kw name="Double Click Element" library="SeleniumLibrary">
+<arg>${own_sharedwip_asset_lctr}</arg>
+<doc>Double clicks the element identified by ``locator``.</doc>
+<msg timestamp="20210719 10:20:11.564" level="INFO">Double clicking element 'xpath://div[text()='Beauty Footprint Aromatherapy Oil']'.</msg>
+<status status="PASS" starttime="20210719 10:20:11.563" endtime="20210719 10:20:21.104"/>
+</kw>
+<status status="PASS" starttime="20210719 10:20:08.543" endtime="20210719 10:20:21.105"/>
+</kw>
+<status status="PASS" starttime="20210719 10:20:08.543" endtime="20210719 10:20:21.106"/>
+</kw>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<arg>3x</arg>
+<arg>4s</arg>
+<arg>Check sharedwipasset thumbnail</arg>
+<arg>${marketlist}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<kw name="Check sharedwipasset thumbnail" library="Sharedwipnavigationkeywords">
+<arg>${marketlist}</arg>
+<kw name="Sleep" library="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20210719 10:20:24.109" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20210719 10:20:21.108" endtime="20210719 10:20:24.109"/>
+</kw>
+<kw name="Convert To String" library="BuiltIn">
+<var>${assetname}</var>
+<arg>${markettestinput[8]}</arg>
+<doc>Converts the given item to a Unicode string.</doc>
+<msg timestamp="20210719 10:20:24.114" level="INFO">${assetname} = Beauty Footprint Aromatherapy Oil</msg>
+<status status="PASS" starttime="20210719 10:20:24.110" endtime="20210719 10:20:24.114"/>
+</kw>
+<kw name="Replacespaces" library="Csv">
+<var>${assetnamewithoutspaces}</var>
+<arg>${assetname}</arg>
+<msg timestamp="20210719 10:20:24.115" level="INFO">${assetnamewithoutspaces} = Beauty%20Footprint%20Aromatherapy%20Oil</msg>
+<status status="PASS" starttime="20210719 10:20:24.115" endtime="20210719 10:20:24.115"/>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<var>${own_sharedwip_assetthumbnail_lctr}</var>
+<arg>xpath://img[contains(@src,'${assetnamewithoutspaces}')]</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20210719 10:20:24.117" level="INFO">${own_sharedwip_assetthumbnail_lctr} = xpath://img[contains(@src,'Beauty%20Footprint%20Aromatherapy%20Oil')]</msg>
+<status status="PASS" starttime="20210719 10:20:24.116" endtime="20210719 10:20:24.117"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>${own_sharedwip_assetthumbnail_lctr}</arg>
+<arg>timeout=30s</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20210719 10:20:24.118" endtime="20210719 10:20:24.130"/>
+</kw>
+<kw name="Get Element Size" library="SeleniumLibrary">
+<var>${sharedwipassettrunkimagesize}</var>
+<arg>${own_sharedwip_assetthumbnail_lctr}</arg>
+<doc>Returns width and height of the element identified by ``locator``.</doc>
+<msg timestamp="20210719 10:20:24.150" level="INFO">${sharedwipassettrunkimagesize} = (0, 0)</msg>
+<status status="PASS" starttime="20210719 10:20:24.131" endtime="20210719 10:20:24.150"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>${sharedwipassettrunkimagesize}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20210719 10:20:24.151" level="INFO">(0, 0)</msg>
+<status status="PASS" starttime="20210719 10:20:24.151" endtime="20210719 10:20:24.151"/>
+</kw>
+<status status="PASS" starttime="20210719 10:20:21.107" endtime="20210719 10:20:24.152"/>
+</kw>
+<status status="PASS" starttime="20210719 10:20:21.107" endtime="20210719 10:20:24.153"/>
+</kw>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<arg>3x</arg>
+<arg>4s</arg>
+<arg>Check downloadoriginalrenditionlink is present on sharedwip trunk</arg>
+<arg>${marketlist}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<kw name="Check downloadoriginalrenditionlink is present on sharedwip trunk" library="Sharedwipnavigationkeywords">
+<arg>${marketlist}</arg>
+<kw name="Sleep" library="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20210719 10:20:27.154" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20210719 10:20:24.154" endtime="20210719 10:20:27.155"/>
+</kw>
+<kw name="Convert To String" library="BuiltIn">
+<var>${assetname}</var>
+<arg>${markettestinput[8]}</arg>
+<doc>Converts the given item to a Unicode string.</doc>
+<msg timestamp="20210719 10:20:27.158" level="INFO">${assetname} = Beauty Footprint Aromatherapy Oil</msg>
+<status status="PASS" starttime="20210719 10:20:27.155" endtime="20210719 10:20:27.158"/>
+</kw>
+<kw name="Replacespaces" library="Csv">
+<var>${assetnamewithoutspaces}</var>
+<arg>${assetname}</arg>
+<msg timestamp="20210719 10:20:27.159" level="INFO">${assetnamewithoutspaces} = Beauty%20Footprint%20Aromatherapy%20Oil</msg>
+<status status="PASS" starttime="20210719 10:20:27.159" endtime="20210719 10:20:27.159"/>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<var>${own_sharedwip_downloadtrunk_lctr}</var>
+<arg>xpath://a[@title='Download' and contains(@href,'${assetnamewithoutspaces}')]</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20210719 10:20:27.160" level="INFO">${own_sharedwip_downloadtrunk_lctr} = xpath://a[@title='Download' and contains(@href,'Beauty%20Footprint%20Aromatherapy%20Oil')]</msg>
+<status status="PASS" starttime="20210719 10:20:27.160" endtime="20210719 10:20:27.160"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>${own_sharedwip_downloadtrunk_lctr}</arg>
+<arg>timeout=30s</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20210719 10:20:27.161" endtime="20210719 10:20:27.170"/>
+</kw>
+<kw name="Page Should Contain Link" library="SeleniumLibrary">
+<arg>${own_sharedwip_downloadtrunk_lctr}</arg>
+<doc>Verifies link identified by ``locator`` is found from current page.</doc>
+<msg timestamp="20210719 10:20:27.179" level="INFO">Current page contains link 'xpath://a[@title='Download' and contains(@href,'Beauty%20Footprint%20Aromatherapy%20Oil')]'.</msg>
+<status status="PASS" starttime="20210719 10:20:27.171" endtime="20210719 10:20:27.179"/>
+</kw>
+<kw name="Capture Element Screenshot" library="SeleniumLibrary">
+<arg>${own_sharedwip_downloadtrunk_lctr}</arg>
+<doc>Captures a screenshot from the element identified by ``locator`` and embeds it into log file.</doc>
+<msg timestamp="20210719 10:20:27.338" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-element-screenshot-1.png"&gt;&lt;img src="selenium-element-screenshot-1.png" width="400px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20210719 10:20:27.180" endtime="20210719 10:20:27.338"/>
+</kw>
+<status status="PASS" starttime="20210719 10:20:24.153" endtime="20210719 10:20:27.339"/>
+</kw>
+<status status="PASS" starttime="20210719 10:20:24.153" endtime="20210719 10:20:27.339"/>
+</kw>
+<status status="PASS" starttime="20210719 10:19:42.479" endtime="20210719 10:20:27.340"/>
+</iter>
+<iter>
+<var name="${marketlist}">['UK', 'Glamour', 'shared-wip', 'HIGH-RES', '2020 Spring Summer', 'GSTD-17-New_12596', 'Assets', 'Published', 'IM-002.eps']</var>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20210719 10:20:29.342" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20210719 10:20:27.341" endtime="20210719 10:20:29.342"/>
+</kw>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<arg>3x</arg>
+<arg>4s</arg>
+<arg>Sharedwipnavigationkeywords.Go to Imagestab</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<kw name="Go to Imagestab" library="Sharedwipnavigationkeywords">
+<kw name="Sleep" library="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20210719 10:20:32.345" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20210719 10:20:29.344" endtime="20210719 10:20:32.345"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>${Imagestab_lctr}</arg>
+<arg>timeout=30s</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20210719 10:20:32.346" endtime="20210719 10:20:32.359"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${Imagestab_lctr}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20210719 10:20:32.359" level="INFO">Clicking element 'xpath://span[@class='x-tab-strip-inner']/span[text()='Images']'.</msg>
+<status status="PASS" starttime="20210719 10:20:32.359" endtime="20210719 10:20:32.466"/>
+</kw>
+<status status="PASS" starttime="20210719 10:20:29.344" endtime="20210719 10:20:32.466"/>
+</kw>
+<status status="PASS" starttime="20210719 10:20:29.343" endtime="20210719 10:20:32.467"/>
+</kw>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<arg>3x</arg>
+<arg>4s</arg>
+<arg>Go to my folder tab</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<kw name="Go to my folder tab" library="Publicassetnavigationkeywords">
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>${myfoldertab_lctr}</arg>
+<arg>timeout=30s</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20210719 10:20:32.468" endtime="20210719 10:20:32.480"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${myfoldertab_lctr}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20210719 10:20:32.481" level="INFO">Clicking element 'xpath://span[contains(@class,'x-tab-strip-text ') and contains(text(),'My Folders')]'.</msg>
+<status status="PASS" starttime="20210719 10:20:32.480" endtime="20210719 10:20:32.527"/>
+</kw>
+<status status="PASS" starttime="20210719 10:20:32.468" endtime="20210719 10:20:32.528"/>
+</kw>
+<status status="PASS" starttime="20210719 10:20:32.467" endtime="20210719 10:20:32.529"/>
+</kw>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<arg>3x</arg>
+<arg>4s</arg>
+<arg>Go to sharedwip folder</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<kw name="Go to sharedwip folder" library="Sharedwipnavigationkeywords">
+<kw name="Sleep" library="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20210719 10:20:35.531" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20210719 10:20:32.530" endtime="20210719 10:20:35.531"/>
+</kw>
+<kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
+<arg>${own_sharedwipfolder_lctr}</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="PASS" starttime="20210719 10:20:35.532" endtime="20210719 10:20:35.553"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${own_sharedwipfolder_lctr}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20210719 10:20:35.554" level="INFO">Clicking element 'xpath://span[text()='shared-wip']'.</msg>
+<status status="PASS" starttime="20210719 10:20:35.554" endtime="20210719 10:20:35.619"/>
+</kw>
+<status status="PASS" starttime="20210719 10:20:32.530" endtime="20210719 10:20:35.620"/>
+</kw>
+<status status="PASS" starttime="20210719 10:20:32.529" endtime="20210719 10:20:35.620"/>
+</kw>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<arg>3x</arg>
+<arg>4s</arg>
+<arg>Go to highresolution folder</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<kw name="Go to highresolution folder" library="Sharedwipnavigationkeywords">
+<kw name="Sleep" library="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20210719 10:20:38.623" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20210719 10:20:35.622" endtime="20210719 10:20:38.623"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${own_highresfolder_lctr}</arg>
+<arg>timeout=30s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20210719 10:20:38.624" endtime="20210719 10:20:38.649"/>
+</kw>
+<kw name="Double Click Element" library="SeleniumLibrary">
+<arg>${own_highresfolder_lctr}</arg>
+<doc>Double clicks the element identified by ``locator``.</doc>
+<msg timestamp="20210719 10:20:38.650" level="INFO">Double clicking element 'xpath://div[text()='HIGH-RES']'.</msg>
+<status status="PASS" starttime="20210719 10:20:38.649" endtime="20210719 10:20:38.959"/>
+</kw>
+<status status="PASS" starttime="20210719 10:20:35.621" endtime="20210719 10:20:38.960"/>
+</kw>
+<status status="PASS" starttime="20210719 10:20:35.621" endtime="20210719 10:20:38.961"/>
+</kw>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<arg>3x</arg>
+<arg>4s</arg>
+<arg>Go to sharedwipsection folder</arg>
+<arg>${marketlist}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<kw name="Go to sharedwipsection folder" library="Sharedwipnavigationkeywords">
+<arg>${marketlist}</arg>
+<kw name="Sleep" library="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20210719 10:20:41.963" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20210719 10:20:38.962" endtime="20210719 10:20:41.963"/>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<var>${own_sharedwipsectionfolder_lctr}</var>
+<arg>xpath://div[text()='${markettestinput[4]}']</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20210719 10:20:41.971" level="INFO">${own_sharedwipsectionfolder_lctr} = xpath://div[text()='2020 Spring Summer']</msg>
+<status status="PASS" starttime="20210719 10:20:41.965" endtime="20210719 10:20:41.971"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>${own_sharedwipsectionfolder_lctr}</arg>
+<arg>timeout=30s</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20210719 10:20:41.973" endtime="20210719 10:20:41.989"/>
+</kw>
+<kw name="Double Click Element" library="SeleniumLibrary">
+<arg>${own_sharedwipsectionfolder_lctr}</arg>
+<doc>Double clicks the element identified by ``locator``.</doc>
+<msg timestamp="20210719 10:20:41.990" level="INFO">Double clicking element 'xpath://div[text()='2020 Spring Summer']'.</msg>
+<status status="PASS" starttime="20210719 10:20:41.990" endtime="20210719 10:20:42.564"/>
+</kw>
+<status status="PASS" starttime="20210719 10:20:38.962" endtime="20210719 10:20:42.565"/>
+</kw>
+<status status="PASS" starttime="20210719 10:20:38.961" endtime="20210719 10:20:42.566"/>
+</kw>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<arg>3x</arg>
+<arg>4s</arg>
+<arg>Go to feature folder</arg>
+<arg>${marketlist}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<kw name="Go to feature folder" library="Sharedwipnavigationkeywords">
+<arg>${marketlist}</arg>
+<kw name="Sleep" library="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20210719 10:20:45.570" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20210719 10:20:42.568" endtime="20210719 10:20:45.570"/>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<var>${own_featurefolder_lctr}</var>
+<arg>xpath://div[text()='${markettestinput[5]}']</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20210719 10:20:45.576" level="INFO">${own_featurefolder_lctr} = xpath://div[text()='GSTD-17-New_12596']</msg>
+<status status="PASS" starttime="20210719 10:20:45.571" endtime="20210719 10:20:45.576"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>${own_featurefolder_lctr}</arg>
+<arg>timeout=30s</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20210719 10:20:45.576" endtime="20210719 10:20:45.589"/>
+</kw>
+<kw name="Double Click Element" library="SeleniumLibrary">
+<arg>${own_featurefolder_lctr}</arg>
+<doc>Double clicks the element identified by ``locator``.</doc>
+<msg timestamp="20210719 10:20:45.590" level="INFO">Double clicking element 'xpath://div[text()='GSTD-17-New_12596']'.</msg>
+<status status="PASS" starttime="20210719 10:20:45.590" endtime="20210719 10:20:46.353"/>
+</kw>
+<status status="PASS" starttime="20210719 10:20:42.568" endtime="20210719 10:20:46.354"/>
+</kw>
+<status status="PASS" starttime="20210719 10:20:42.567" endtime="20210719 10:20:46.355"/>
+</kw>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<arg>3x</arg>
+<arg>4s</arg>
+<arg>Go to sharedassets folder</arg>
+<arg>${marketlist}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<kw name="Go to sharedassets folder" library="Sharedwipnavigationkeywords">
+<arg>${marketlist}</arg>
+<kw name="Sleep" library="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20210719 10:20:49.357" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20210719 10:20:46.356" endtime="20210719 10:20:49.357"/>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<var>${own_sharedassetsfolder_lctr}</var>
+<arg>xpath://div[text()='${markettestinput[6]}']</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20210719 10:20:49.362" level="INFO">${own_sharedassetsfolder_lctr} = xpath://div[text()='Assets']</msg>
+<status status="PASS" starttime="20210719 10:20:49.358" endtime="20210719 10:20:49.362"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>${own_sharedassetsfolder_lctr}</arg>
+<arg>timeout=30s</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20210719 10:20:49.363" endtime="20210719 10:20:49.376"/>
+</kw>
+<kw name="Double Click Element" library="SeleniumLibrary">
+<arg>${own_sharedassetsfolder_lctr}</arg>
+<doc>Double clicks the element identified by ``locator``.</doc>
+<msg timestamp="20210719 10:20:49.377" level="INFO">Double clicking element 'xpath://div[text()='Assets']'.</msg>
+<status status="PASS" starttime="20210719 10:20:49.376" endtime="20210719 10:20:49.927"/>
+</kw>
+<status status="PASS" starttime="20210719 10:20:46.356" endtime="20210719 10:20:49.928"/>
+</kw>
+<status status="PASS" starttime="20210719 10:20:46.355" endtime="20210719 10:20:49.929"/>
+</kw>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<arg>3x</arg>
+<arg>4s</arg>
+<arg>Go to published folder</arg>
+<arg>${marketlist}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<kw name="Go to published folder" library="Sharedwipnavigationkeywords">
+<arg>${marketlist}</arg>
+<kw name="Sleep" library="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20210719 10:20:52.932" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20210719 10:20:49.931" endtime="20210719 10:20:52.932"/>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<var>${own_publishedfolder_lctr}</var>
+<arg>xpath://div[text()='${markettestinput[7]}']</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20210719 10:20:52.937" level="INFO">${own_publishedfolder_lctr} = xpath://div[text()='Published']</msg>
+<status status="PASS" starttime="20210719 10:20:52.933" endtime="20210719 10:20:52.937"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>${own_publishedfolder_lctr}</arg>
+<arg>timeout=30s</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20210719 10:20:52.938" endtime="20210719 10:20:52.950"/>
+</kw>
+<kw name="Double Click Element" library="SeleniumLibrary">
+<arg>${own_publishedfolder_lctr}</arg>
+<doc>Double clicks the element identified by ``locator``.</doc>
+<msg timestamp="20210719 10:20:52.951" level="INFO">Double clicking element 'xpath://div[text()='Published']'.</msg>
+<status status="PASS" starttime="20210719 10:20:52.951" endtime="20210719 10:20:53.470"/>
+</kw>
+<status status="PASS" starttime="20210719 10:20:49.930" endtime="20210719 10:20:53.471"/>
+</kw>
+<status status="PASS" starttime="20210719 10:20:49.930" endtime="20210719 10:20:53.472"/>
+</kw>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<arg>3x</arg>
+<arg>4s</arg>
+<arg>Go to sharedwipasset</arg>
+<arg>${marketlist}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<kw name="Go to sharedwipasset" library="Sharedwipnavigationkeywords">
+<arg>${marketlist}</arg>
+<kw name="Sleep" library="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20210719 10:20:56.476" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20210719 10:20:53.473" endtime="20210719 10:20:56.476"/>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<var>${own_sharedwip_asset_lctr}</var>
+<arg>xpath://div[text()='${markettestinput[8]}']</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20210719 10:20:56.482" level="INFO">${own_sharedwip_asset_lctr} = xpath://div[text()='IM-002.eps']</msg>
+<status status="PASS" starttime="20210719 10:20:56.477" endtime="20210719 10:20:56.482"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>${own_sharedwip_asset_lctr}</arg>
+<arg>timeout=30s</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20210719 10:20:56.483" endtime="20210719 10:20:56.497"/>
+</kw>
+<kw name="Double Click Element" library="SeleniumLibrary">
+<arg>${own_sharedwip_asset_lctr}</arg>
+<doc>Double clicks the element identified by ``locator``.</doc>
+<msg timestamp="20210719 10:20:56.498" level="INFO">Double clicking element 'xpath://div[text()='IM-002.eps']'.</msg>
+<status status="PASS" starttime="20210719 10:20:56.498" endtime="20210719 10:21:00.845"/>
+</kw>
+<status status="PASS" starttime="20210719 10:20:53.473" endtime="20210719 10:21:00.846"/>
+</kw>
+<status status="PASS" starttime="20210719 10:20:53.472" endtime="20210719 10:21:00.847"/>
+</kw>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<arg>3x</arg>
+<arg>4s</arg>
+<arg>Check sharedwipasset thumbnail</arg>
+<arg>${marketlist}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<kw name="Check sharedwipasset thumbnail" library="Sharedwipnavigationkeywords">
+<arg>${marketlist}</arg>
+<kw name="Sleep" library="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20210719 10:21:03.849" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20210719 10:21:00.848" endtime="20210719 10:21:03.849"/>
+</kw>
+<kw name="Convert To String" library="BuiltIn">
+<var>${assetname}</var>
+<arg>${markettestinput[8]}</arg>
+<doc>Converts the given item to a Unicode string.</doc>
+<msg timestamp="20210719 10:21:03.854" level="INFO">${assetname} = IM-002.eps</msg>
+<status status="PASS" starttime="20210719 10:21:03.850" endtime="20210719 10:21:03.854"/>
+</kw>
+<kw name="Replacespaces" library="Csv">
+<var>${assetnamewithoutspaces}</var>
+<arg>${assetname}</arg>
+<msg timestamp="20210719 10:21:03.856" level="INFO">${assetnamewithoutspaces} = IM-002.eps</msg>
+<status status="PASS" starttime="20210719 10:21:03.855" endtime="20210719 10:21:03.856"/>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<var>${own_sharedwip_assetthumbnail_lctr}</var>
+<arg>xpath://img[contains(@src,'${assetnamewithoutspaces}')]</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20210719 10:21:03.857" level="INFO">${own_sharedwip_assetthumbnail_lctr} = xpath://img[contains(@src,'IM-002.eps')]</msg>
+<status status="PASS" starttime="20210719 10:21:03.857" endtime="20210719 10:21:03.857"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>${own_sharedwip_assetthumbnail_lctr}</arg>
+<arg>timeout=30s</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20210719 10:21:03.858" endtime="20210719 10:21:03.871"/>
+</kw>
+<kw name="Get Element Size" library="SeleniumLibrary">
+<var>${sharedwipassettrunkimagesize}</var>
+<arg>${own_sharedwip_assetthumbnail_lctr}</arg>
+<doc>Returns width and height of the element identified by ``locator``.</doc>
+<msg timestamp="20210719 10:21:03.891" level="INFO">${sharedwipassettrunkimagesize} = (0, 0)</msg>
+<status status="PASS" starttime="20210719 10:21:03.872" endtime="20210719 10:21:03.892"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>${sharedwipassettrunkimagesize}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20210719 10:21:03.893" level="INFO">(0, 0)</msg>
+<status status="PASS" starttime="20210719 10:21:03.893" endtime="20210719 10:21:03.893"/>
+</kw>
+<status status="PASS" starttime="20210719 10:21:00.848" endtime="20210719 10:21:03.895"/>
+</kw>
+<status status="PASS" starttime="20210719 10:21:00.847" endtime="20210719 10:21:03.895"/>
+</kw>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<arg>3x</arg>
+<arg>4s</arg>
+<arg>Check downloadoriginalrenditionlink is present on sharedwip trunk</arg>
+<arg>${marketlist}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<kw name="Check downloadoriginalrenditionlink is present on sharedwip trunk" library="Sharedwipnavigationkeywords">
+<arg>${marketlist}</arg>
+<kw name="Sleep" library="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20210719 10:21:06.898" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20210719 10:21:03.897" endtime="20210719 10:21:06.898"/>
+</kw>
+<kw name="Convert To String" library="BuiltIn">
+<var>${assetname}</var>
+<arg>${markettestinput[8]}</arg>
+<doc>Converts the given item to a Unicode string.</doc>
+<msg timestamp="20210719 10:21:06.904" level="INFO">${assetname} = IM-002.eps</msg>
+<status status="PASS" starttime="20210719 10:21:06.900" endtime="20210719 10:21:06.905"/>
+</kw>
+<kw name="Replacespaces" library="Csv">
+<var>${assetnamewithoutspaces}</var>
+<arg>${assetname}</arg>
+<msg timestamp="20210719 10:21:06.906" level="INFO">${assetnamewithoutspaces} = IM-002.eps</msg>
+<status status="PASS" starttime="20210719 10:21:06.905" endtime="20210719 10:21:06.906"/>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<var>${own_sharedwip_downloadtrunk_lctr}</var>
+<arg>xpath://a[@title='Download' and contains(@href,'${assetnamewithoutspaces}')]</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20210719 10:21:06.907" level="INFO">${own_sharedwip_downloadtrunk_lctr} = xpath://a[@title='Download' and contains(@href,'IM-002.eps')]</msg>
+<status status="PASS" starttime="20210719 10:21:06.907" endtime="20210719 10:21:06.907"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>${own_sharedwip_downloadtrunk_lctr}</arg>
+<arg>timeout=30s</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20210719 10:21:06.908" endtime="20210719 10:21:06.920"/>
+</kw>
+<kw name="Page Should Contain Link" library="SeleniumLibrary">
+<arg>${own_sharedwip_downloadtrunk_lctr}</arg>
+<doc>Verifies link identified by ``locator`` is found from current page.</doc>
+<msg timestamp="20210719 10:21:06.933" level="INFO">Current page contains link 'xpath://a[@title='Download' and contains(@href,'IM-002.eps')]'.</msg>
+<status status="PASS" starttime="20210719 10:21:06.921" endtime="20210719 10:21:06.933"/>
+</kw>
+<kw name="Capture Element Screenshot" library="SeleniumLibrary">
+<arg>${own_sharedwip_downloadtrunk_lctr}</arg>
+<doc>Captures a screenshot from the element identified by ``locator`` and embeds it into log file.</doc>
+<msg timestamp="20210719 10:21:07.037" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-element-screenshot-2.png"&gt;&lt;img src="selenium-element-screenshot-2.png" width="400px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20210719 10:21:06.934" endtime="20210719 10:21:07.037"/>
+</kw>
+<status status="PASS" starttime="20210719 10:21:03.896" endtime="20210719 10:21:07.039"/>
+</kw>
+<status status="PASS" starttime="20210719 10:21:03.896" endtime="20210719 10:21:07.039"/>
+</kw>
+<status status="PASS" starttime="20210719 10:20:27.340" endtime="20210719 10:21:07.040"/>
+</iter>
+<status status="PASS" starttime="20210719 10:19:42.479" endtime="20210719 10:21:07.040"/>
+</for>
+<status status="PASS" starttime="20210719 10:19:42.478" endtime="20210719 10:21:07.041"/>
+</kw>
+<status status="PASS" starttime="20210719 10:19:19.579" endtime="20210719 10:21:07.041"/>
+</kw>
+<kw name="Finish TestCase" library="CommonFunctionality" type="TEARDOWN">
+<kw name="Close All Browsers" library="SeleniumLibrary">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" starttime="20210719 10:21:07.042" endtime="20210719 10:21:07.261"/>
+</kw>
+<status status="PASS" starttime="20210719 10:21:07.042" endtime="20210719 10:21:07.261"/>
+</kw>
+<status status="PASS" starttime="20210719 10:19:13.387" endtime="20210719 10:21:07.262"/>
+</test>
+<status status="PASS" starttime="20210719 10:19:13.119" endtime="20210719 10:21:07.265"/>
+</suite>
+<status status="PASS" starttime="20210719 10:19:13.118" endtime="20210719 10:21:07.287"/>
+</suite>
+<status status="PASS" starttime="20210719 10:19:13.098" endtime="20210719 10:21:07.290"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="TestCases">TestCases</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s1" name="Assetnavigationtests">TestCases.Assetnavigationtests</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s1-s1" name="Ownmarketsharedwipassetnavigation">TestCases.Assetnavigationtests.Ownmarketsharedwipassetnavigation</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

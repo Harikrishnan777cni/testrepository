@@ -1,0 +1,21 @@
+==============================================================================
+TestCases                                                                     
+==============================================================================
+TestCases.Login                                                               
+==============================================================================
+TestCases.Login.LoginDDT-CSV                                                  
+==============================================================================
+Logintestwithcsv using harikrishnan.sreekumaran@condenast.com and ... | PASS |
+------------------------------------------------------------------------------
+Logintestwithcsv using harikrishnan.sreekumaran@condenast.com and ... | PASS |
+------------------------------------------------------------------------------
+TestCases.Login.LoginDDT-CSV                                          | PASS |
+2 tests, 2 passed, 0 failed
+==============================================================================
+TestCases.Login                                                       | PASS |
+2 tests, 2 passed, 0 failed
+==============================================================================
+TestCases                                                             | PASS |
+2 tests, 2 passed, 0 failed
+==============================================================================
+Output:  /Users/hsreekum/PycharmProjects/DAMrobotAutomationframeworktwo/pabot_results/9/output.xml

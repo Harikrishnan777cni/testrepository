@@ -1,0 +1,27 @@
+==============================================================================
+TestCases                                                                     
+==============================================================================
+TestCases.Assetnavigationtests                                                
+==============================================================================
+TestCases.Assetnavigationtests.Publicationnavigation                          
+==============================================================================
+Should select correct publication folders with set of data using t... | FAIL |
+Variable '${user}' not found. Did you mean:
+    ${userrole}
+    ${username}
+------------------------------------------------------------------------------
+Should select correct publication folders with set of data using u... | FAIL |
+Variable '${user}' not found. Did you mean:
+    ${userrole}
+    ${username}
+------------------------------------------------------------------------------
+TestCases.Assetnavigationtests.Publicationnavigation                  | FAIL |
+2 tests, 0 passed, 2 failed
+==============================================================================
+TestCases.Assetnavigationtests                                        | FAIL |
+2 tests, 0 passed, 2 failed
+==============================================================================
+TestCases                                                             | FAIL |
+2 tests, 0 passed, 2 failed
+==============================================================================
+Output:  /Users/hsreekum/PycharmProjects/DAMrobotAutomationframeworktwo/pabot_results/4/output.xml

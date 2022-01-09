@@ -1,0 +1,20 @@
+==============================================================================
+TestCases                                                                     
+==============================================================================
+TestCases.Assetnavigationtests                                                
+==============================================================================
+TestCases.Assetnavigationtests.Publicassetnavigationtest                      
+==============================================================================
+Should select own market folders with set of data using uk-wired-p... | FAIL |
+***Title mismatch***
+------------------------------------------------------------------------------
+TestCases.Assetnavigationtests.Publicassetnavigationtest              | FAIL |
+1 test, 0 passed, 1 failed
+==============================================================================
+TestCases.Assetnavigationtests                                        | FAIL |
+1 test, 0 passed, 1 failed
+==============================================================================
+TestCases                                                             | FAIL |
+1 test, 0 passed, 1 failed
+==============================================================================
+Output:  /Users/hsreekum/PycharmProjects/DAMrobotAutomationframeworktwo/pabot_results/3/output.xml

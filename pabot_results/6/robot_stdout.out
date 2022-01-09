@@ -1,0 +1,22 @@
+==============================================================================
+TestCases                                                                     
+==============================================================================
+TestCases.Folderscreationtests                                                
+==============================================================================
+TestCases.Folderscreationtests.Featurefoldercreationtest                      
+==============================================================================
+Featurefoldertestwithcsv using uk-glamour-pictureeditor@condenast.... | PASS |
+------------------------------------------------------------------------------
+Featurefoldertestwithcsv using uk-wired-piced@condenast.com and Tu... | FAIL |
+***Title mismatch***
+------------------------------------------------------------------------------
+TestCases.Folderscreationtests.Featurefoldercreationtest              | FAIL |
+2 tests, 1 passed, 1 failed
+==============================================================================
+TestCases.Folderscreationtests                                        | FAIL |
+2 tests, 1 passed, 1 failed
+==============================================================================
+TestCases                                                             | FAIL |
+2 tests, 1 passed, 1 failed
+==============================================================================
+Output:  /Users/hsreekum/PycharmProjects/DAMrobotAutomationframeworktwo/pabot_results/6/output.xml

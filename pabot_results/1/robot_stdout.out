@@ -1,0 +1,22 @@
+==============================================================================
+TestCases                                                                     
+==============================================================================
+TestCases.Assetnavigationtests                                                
+==============================================================================
+TestCases.Assetnavigationtests.Diffmarketsharedwipassetnavigation             
+==============================================================================
+Should select correct sharedwip folders with set of data using tw-... | PASS |
+------------------------------------------------------------------------------
+Should select correct sharedwip folders with set of data using uk-... | FAIL |
+***Title mismatch***
+------------------------------------------------------------------------------
+TestCases.Assetnavigationtests.Diffmarketsharedwipassetnavigation     | FAIL |
+2 tests, 1 passed, 1 failed
+==============================================================================
+TestCases.Assetnavigationtests                                        | FAIL |
+2 tests, 1 passed, 1 failed
+==============================================================================
+TestCases                                                             | FAIL |
+2 tests, 1 passed, 1 failed
+==============================================================================
+Output:  /Users/hsreekum/PycharmProjects/DAMrobotAutomationframeworktwo/pabot_results/1/output.xml

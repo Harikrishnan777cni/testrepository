@@ -1,0 +1,117 @@
+==============================================================================
+TestCases                                                                     
+==============================================================================
+TestCases.Syndicationconsoletests                                             
+==============================================================================
+TestCases.Syndicationconsoletests.SyndicationAfterPublicationreqofmetest      
+==============================================================================
+SyndicationAfterpublication                                           23
+Taiwan
+United Kingdom
+Singapore
+Greece
+Japan
+United Kingdom
+United Kingdom
+Taiwan
+Japan
+Japan
+Spain
+Spain
+Taiwan
+Taiwan
+Taiwan
+United Kingdom
+United Kingdom
+Italy
+Japan
+Japan
+Spain
+Spain
+United Kingdom
+23
+GQ
+Glamour
+Vogue
+Vogue
+Vogue
+Glamour
+Glamour
+GQ
+Vogue
+Vogue
+Vogue
+Vogue
+GQ
+GQ
+GQ
+Glamour
+Glamour
+Vogue
+Vogue Wedding
+Vogue Wedding
+Vogue
+Vogue
+Glamour
+23
+Australia, Greece, Australia, Czech Republic and Slovakia, , ,
+Czech Republic and Slovakia, Greece, Australia, , , , ,
+Taiwan, United Kingdom
+Taiwan, United Kingdom
+Singapore, Greece
+Greece, Singapore
+Greece, Singapore
+Greece, Singapore
+Singapore
+Singapore
+Singapore
+Singapore
+Singapore
+Singapore, Greece
+Greece, Singapore
+Singapore, Greece
+Singapore
+Greece
+Greece
+Greece
+Greece
+Greece
+Greece
+23
+Vogue Living, Vogue
+Vogue, Vogue Living
+GQ, Glamour
+GQ, Glamour
+Vogue
+Vogue
+Vogue
+Vogue
+Vogue
+Vogue
+Vogue
+Vogue
+Vogue
+Vogue
+Vogue
+Vogue
+Vogue
+Vogue
+Vogue
+Vogue
+Vogue
+Vogue
+Vogue
+37
+| FAIL |
+AssertionError
+------------------------------------------------------------------------------
+TestCases.Syndicationconsoletests.SyndicationAfterPublicationreqof... | FAIL |
+1 test, 0 passed, 1 failed
+==============================================================================
+TestCases.Syndicationconsoletests                                     | FAIL |
+1 test, 0 passed, 1 failed
+==============================================================================
+TestCases                                                             | FAIL |
+1 test, 0 passed, 1 failed
+==============================================================================
+Output:  /Users/hsreekum/PycharmProjects/DAMrobotAutomationframeworktwo/pabot_results/18/output.xml

@@ -1,0 +1,25 @@
+==============================================================================
+TestCases                                                                     
+==============================================================================
+TestCases.Searchtests                                                         
+==============================================================================
+TestCases.Searchtests.TouchUIsearch                                           
+==============================================================================
+TouchUIsearchtest using harikrishnan.sreekumaran@condenast.com and... Page080_ni_lomb_1509_uomo boutonniere
+242 sy tagliatore circolo boutonniere_17744643.indd
+Fashionkywords:fashion/accessories/boutonniere
+Van cleef & arpels gold pendant from the boutonniere collection
+Relates to dresser, style shrink, protea flower buttonhole boutonniere
+| FAIL |
+Element 'xpath:(//coral-quickactions[contains(@id,'coral-id-')]//button[@title='Properties']//coral-icon[@aria-label='info circle'])[1]' not visible after 5 seconds.
+------------------------------------------------------------------------------
+TestCases.Searchtests.TouchUIsearch                                   | FAIL |
+1 test, 0 passed, 1 failed
+==============================================================================
+TestCases.Searchtests                                                 | FAIL |
+1 test, 0 passed, 1 failed
+==============================================================================
+TestCases                                                             | FAIL |
+1 test, 0 passed, 1 failed
+==============================================================================
+Output:  /Users/hsreekum/PycharmProjects/DAMrobotAutomationframeworktwo/pabot_results/16/output.xml

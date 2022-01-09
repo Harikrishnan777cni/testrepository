@@ -1,0 +1,121 @@
+#Sharedwipnavigation
+
+own_sharedwipfolder_lctr = "xpath://span[text()='shared-wip']"
+own_highresfolder_lctr = "xpath://div[text()='HIGH-RES']"
+zown_sharedwipsectionfolder_lctr = "xpath://div[text()='2018 AW']"
+zown_featurefolder_lctr = "xpath://div[text()='09-18-BEAUTY-Footprint']"
+zown_sharedassetsfolder_lctr = "xpath://div[text()='Assets']"
+zown_publishedfolder_lctr = "xpath://div[text()='Published']"
+zown_sharedwip_asset_lctr = "xpath://div[text()='Beauty Footprint Aromatherapy Oil']"
+zown_sharedwip_assetthumbnail_lctr = "xpath://img[@src='/content/dam/cni-dam/uk/glamour/shared-wip/HIGH-RES/2018%20Autumn/09-18-BEAUTY-Footprint/Assets/Published/Beauty%20Footprint%20Aromatherapy%20Oil.psd.thumb.319.319.1538995006000.jpg']"
+own_sharedwip_productiondigitallink_lctr = "xpath://a[@title='Download production digital']"
+own_sharedwip_downloadtrunk_lctr = "xpath://a[@title='Download']"
+
+#Publicationsnavigation
+Editionstab_lctr = "xpath://span[text()='Editions']"
+AllEditions_lctr ="xpath://span[text()='All Editions']"
+zPublicationsMarket_lctr = "xpath://span[text()='UK']"
+zPublicationsTitle_lctr = "xpath://span[text()='Wired']"
+zPublicationsyear_lctr = "xpath://span[text()='2021']"
+zPublicationsissuename_lctr = "xpath://span[text()='2020 Wired World 2021']"
+zPublicationslayoutname_lctr = "xpath://span[text()='2020 Wired World 2021 ...']"
+zPublicationspdfname_lctr = "xpath://span[text()='11_20_WWCoverTHIS']"
+zLayoutthumbnail_lctr = "xpath://img[contains(@src,'/content/dam/cni-dam/uk/wired/public/2021/2020 Wired World 2021/Print/Editorial/11-20-WWCoverTHIS/11_20_WWCoverTHIS.indd.thumb.319.319')]"
+zDownloadlayoutlink_lctr = "xpath://a[text()='Download layout']"
+Pagespane_lctr = "xpath://span[text()='Pages']"
+zAssetspane_lctr = "xpath://span[text()='Assets']"
+PublicationsMarketlist_lctr =  "xpath://div[contains(@class,'-details')]"
+zPublicationsTitlelist_lctr =  "xpath://div[@class='x-tree-node-el x-unselectable folder titleFolder x-tree-node-collapsed']"
+
+#Differentmarketnavigation
+Imagestab_lctr= "xpath://span[@class='x-tab-strip-inner']/span[text()='Images']"
+display_all_lctr = "xpath:(//button[text()='Display All'])[1]"
+diffmarket_CNIfolder_lctr = "xpath://span[text()='CNI']"
+zdiffmarket_Marketfolder_lctr = "xpath://div[text()='China']"
+diffmarket_Titlefolder_lctr = "xpath://div[text()='AD']"
+different_publicfolder_lctr = "xpath://div[text()='public']"
+different_yearfolder_lctr = "xpath://div[text()='2019']"
+different_sectionfolder_lctr = "xpath://div[text()='AD100 2019']"
+different_printfolder_lctr = "xpath://div[text()='Print']"
+different_layoutparentfolder_lctr = "xpath://div[text()='AD Feature']"
+different_layoutchildfolder_lctr = "xpath://div[text()='AD100-2019-AB-ADC']"
+different_assetsfolder_lctr = "xpath://div[text()='Assets']"
+different_unknownfolder_lctr = "xpath://div[text()='unknown']"
+different_ingestedfolder_lctr = "xpath://div[text()='ingested']"
+different_asset_lctr = "xpath://div[text()='AD100_2019_AB_ADC_001']"
+different_branchexpandbutton_lctr = "xpath://div[@class='x-layout-collapsed x-layout-collapsed-east x-layout-cmini-east']"
+different_assetthumbnail_lctr = "xpath://img[@src='/content/dam/cni-dam/cn/ad/public/2019/AD100%202019/Print/AD%20Feature/AD100-2019-AB-ADC/Assets/unknown/ingested/AD100_2019_AB_ADC_001.tif.thumb.319.319.1564683531000.jpg']"
+different_branchthumbnail_lctr = "xpath://img[contains(@src,'/content/dam/cni-dam/cn/ad/public/2019/AD100%202019/Print/AD%20Feature/AD100-2019-AB-ADC/Assets/unknown/ingested/AD100_2019_AB_ADC_001.tif/_jcr_content/renditions/thumbnail_branch_cn_ad_ad100-2019_print_ad-feature.jpg')]"
+
+
+#SyndicationAfterPublication
+
+#ReqByMetab
+
+SyndicationAfterPublicationtab_lctr = "xpath://div[text()='Syndication after publication']"
+Layoutmarketdropdownicon_lctr = "xpath:(//img[@src='/libs/cq/ui/resources/0.gif'])[9]"
+Layoutmarketlist_lctr = "xpath:(//div[@class=' x-column'])[1]/div[@tabindex='-1']"
+Layouttitledropdownicon_lctr = "xpath:(//img[@src='/libs/cq/ui/resources/0.gif'])[11]"
+Layouttitlelist_lctr = "xpath:(//div[@class=' x-column'])[1]/div[@tabindex='-1']"
+Requestingmarketdropdownicon_lctr = "xpath:(//img[@src='/libs/cq/ui/resources/0.gif'])[13]"
+Requestingmarketlist_lctr = "xpath:(//div[@class=' x-column'])[1]/div[@tabindex='-1']"
+Requestingtitledropdownicon_lctr = "xpath:(//img[@src='/libs/cq/ui/resources/0.gif'])[15]"
+Requestingtitlelist_lctr = "xpath:(//div[@class=' x-column'])[1]/div[@tabindex='-1']"
+currentlayoutmarketsdisplayed_lctr = "xpath://td[@class='x-grid3-col x-grid3-cell x-grid3-td-layoutMarket ']"
+currentlayouttitlesdisplayed_lctr =   "xpath://div[@class='x-grid3-cell-inner x-grid3-col-layoutTitle']"
+currentreqlayoutmarketsdisplayed_lctr = "xpath://div[@class='x-grid3-cell-inner x-grid3-col-RequestingMarket']"
+currentreqlayouttitlesdisplayed_lctr = "xpath://div[@class='x-grid3-cell-inner x-grid3-col-RequestingTitle']"
+reqbyme_clearfilterbutton_lctr = "xpath://table[@id='cq-reservationadmin-requestedby-actions-clear-filters']/tbody/tr/td/em/button[text()='Clear Filters']"
+
+
+#SyndicationBeforePublication
+wip_RequestedOfMetab_lctr = "xpath://span[text()='Requested Of Me']"
+wipRequestedByMetab_lctr = "xpath://span[text()='Requested By Me']"
+wip_Layoutmarketdropdownicon_lctr = "xpath:(//img[@src='/libs/cq/ui/resources/0.gif'])[6]"
+wip_Layoutmarketlist_lctr = "xpath://div[@class=' x-column']/div[@tabindex='-1']"
+wip_Layouttitledropdownicon_lctr = "xpath:(//img[@src='/libs/cq/ui/resources/0.gif'])[8]"
+wip_Layouttitlelist_lctr = "xpath://div[@class=' x-column']/div[@tabindex='-1']"
+wip_Requestingmarketdropdownicon_lctr = "xpath:(//img[@src='/libs/cq/ui/resources/0.gif'])[10]"
+wip_Requestingmarketlist_lctr = "xpath://div[@class=' x-column']/div[@tabindex='-1']"
+wip_Requestingtitledropdownicon_lctr = "xpath:(//img[@src='/libs/cq/ui/resources/0.gif'])[12]"
+wip_Requestingtitlelist_lctr = "xpath://div[@class=' x-column']/div[@tabindex='-1']"
+wip_currentlayoutmarketsdisplayed_lctr = "xpath://div[@class='x-grid3-cell-inner x-grid3-col-layoutMarketWip']"
+wip_currentlayouttitlesdisplayed_lctr =   "xpath://div[@class='x-grid3-cell-inner x-grid3-col-layoutTitleWip']"
+wip_currentreqmarketsdisplayed_lctr = "xpath://div[@class='x-grid3-cell-inner x-grid3-col-RequestingMarketWip']"
+wip_currentreqtitlesdisplayed_lctr = "xpath://div[@class='x-grid3-cell-inner x-grid3-col-RequestingTitleWip']"
+wip_reqbyme_clearfilterbutton_lctr = "xpath://table[@id='cq-reservationadmin-requestedby-actions-clear-filters']/tbody/tr/td/em/button[text()='Clear Filters']"
+
+#Syndbefrpublreqofmetab
+
+reqofme_wipLayoutmarketdropdownicon = "xpath:(//img[@src='/libs/cq/ui/resources/0.gif'])[19]"
+reqofme_wipLayoutmarketlist = "xpath://div[@class=' x-column']/div[@tabindex='-1']"
+reqofme_wipLayouttitledropdownicon = "xpath:(//img[@src='/libs/cq/ui/resources/0.gif'])[21]"
+reqofme_wipLayouttitlelist = "xpath://div[@class=' x-column']/div[@tabindex='-1']"
+reqofme_wipRequestingmarketdropdownicon = "xpath:(//img[@src='/libs/cq/ui/resources/0.gif'])[23]"
+reqofme_wipRequestingmarketlist = "xpath://div[@class=' x-column']/div[@tabindex='-1']"
+reqofme_wipRequestingtitledropdownicon = "xpath:(//img[@src='/libs/cq/ui/resources/0.gif'])[25]"
+reqofme_wipRequestingtitlelist = "xpath://div[@class=' x-column']/div[@tabindex='-1']"
+reqofme_wip_currentlayoutmarketsdisplayed = "xpath://div[@id='cq-reservationadmin-requestedof-grid']/div/div/div/div/div/div/div/table/tbody/tr/td/div[@class='x-grid3-cell-inner x-grid3-col-layoutMarketWip']"
+reqofme_wip_currentlayouttitlesdisplayed = "xpath://div[@id='cq-reservationadmin-requestedof-grid']/div/div/div/div/div/div/div/table/tbody/tr/td/div[@class='x-grid3-cell-inner x-grid3-col-layoutTitleWip']"
+reqofme_wip_currentreqmarketsdisplayed = "xpath://div[@id='cq-reservationadmin-requestedof-grid']/div/div/div/div/div/div/div/table/tbody/tr/td/div[@class='x-grid3-cell-inner x-grid3-col-RequestingMarketWip']"
+reqofme_wip_currentreqtitlesdisplayed = "xpath://div[@id='cq-reservationadmin-requestedof-grid']/div/div/div/div/div/div/div/table/tbody/tr/td/div[@class='x-grid3-cell-inner x-grid3-col-RequestingTitleWip']"
+reqofme_wip_clearfilterbutton = "xpath://table[@id='cq-reservationadmin-requestedof-actions-clear-filters']/tbody/tr/td/em/button[text()='Clear Filters']"
+
+#Syndaftrpublreqofmetab
+
+reqofmetab =  "xpath://span[text()='Requested Of Me']"
+reqofme_Layoutmarketdropdownicon = "xpath:(//img[@src='/libs/cq/ui/resources/0.gif'])[26]"
+reqofme_Layoutmarketlist = "xpath:(//div[@class=' x-column'])[1]/div[@tabindex='-1']"
+reqofme_Layouttitledropdownicon = "xpath:(//img[@src='/libs/cq/ui/resources/0.gif'])[28]"
+reqofme_Layouttitlelist = "xpath:(//div[@class=' x-column'])[1]/div[@tabindex='-1']"
+reqofme_Requestingmarketdropdownicon = "xpath:(//img[@src='/libs/cq/ui/resources/0.gif'])[30]"
+reqofme_Requestingmarketlist = "xpath:(//div[@class=' x-column'])[1]/div[@tabindex='-1']"
+reqofme_Requestingtitledropdownicon = "xpath:(//img[@src='/libs/cq/ui/resources/0.gif'])[32]"
+reqofme_Requestingtitlelist = "xpath:(//div[@class=' x-column'])[1]/div[@tabindex='-1']"
+reqofme_currentlayoutmarketsdisplayed = "xpath://div[@id='cq-reservationadmin-requestedof-grid']/div/div/div/div/div/div/div/table/tbody/tr/td/div[@class='x-grid3-cell-inner x-grid3-col-layoutMarket']"
+reqofme_currentlayouttitlesdisplayed =   "xpath://div[@id='cq-reservationadmin-requestedof-grid']/div/div/div/div/div/div/div/table/tbody/tr/td/div[@class='x-grid3-cell-inner x-grid3-col-layoutTitle']"
+reqofme_currentreqlayoutmarketsdisplayed = "xpath://div[@id='cq-reservationadmin-requestedof-grid']/div/div/div/div/div/div/div/table/tbody/tr/td/div[@class='x-grid3-cell-inner x-grid3-col-RequestingMarket']"
+reqofme_currentreqlayouttitlesdisplayed = "xpath://div[@id='cq-reservationadmin-requestedof-grid']/div/div/div/div/div/div/div/table/tbody/tr/td/div[@class='x-grid3-cell-inner x-grid3-col-RequestingTitle']"
+reqofme_clearfilterbutton = "xpath://table[@id='cq-reservationadmin-requestedof-actions-clear-filters']/tbody/tr/td/em/button[text()='Clear Filters']"
+
+

@@ -1,0 +1,22 @@
+==============================================================================
+TestCases                                                                     
+==============================================================================
+TestCases.Assetnavigationtests                                                
+==============================================================================
+TestCases.Assetnavigationtests.Differentmarketpublicassetnavigationtest       
+==============================================================================
+DifferentmarketPublicassetnavigationtest using tw-gq-ebt2@condenas... | PASS |
+------------------------------------------------------------------------------
+DifferentmarketPublicassetnavigationtest using uk-glamour-picturee... | FAIL |
+Keyword 'Go to publishertypefolder' failed after retrying 3 times. The last error was: Element 'xpath://div[text()='unknown']/parent::td' not visible after 30 seconds.
+------------------------------------------------------------------------------
+TestCases.Assetnavigationtests.Differentmarketpublicassetnavigatio... | FAIL |
+2 tests, 1 passed, 1 failed
+==============================================================================
+TestCases.Assetnavigationtests                                        | FAIL |
+2 tests, 1 passed, 1 failed
+==============================================================================
+TestCases                                                             | FAIL |
+2 tests, 1 passed, 1 failed
+==============================================================================
+Output:  /Users/hsreekum/PycharmProjects/DAMrobotAutomationframeworktwo/pabot_results/0/output.xml
